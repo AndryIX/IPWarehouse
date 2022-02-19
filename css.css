@@ -214,12 +214,12 @@ body {
 /* Авторизация */
 
 .authForm {
-    /* position: absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
     background-color: #fff;
-    box-shadow: 0 0 5px gray;
+    box-shadow: 0 0 10px gray;
     border-radius: 25px;
 }
 
@@ -227,50 +227,52 @@ body {
     margin: 15px 100px;
     text-align: center;
     color: #1240AB;
-    font-size: 14pt;
+    font-size: 18pt;
 }
 
 .inputAuthForm {
-    margin: 15px 20px;
+    margin: 30px 20px;
     text-align: center;
 }
 
 .inputAuthForm input {
     padding: 10px;
-    width: 100px;
+    width: 100%;
 }
 
-.inputAuthForm input[type="text"],
-.inputAuthForm input[type="password"] {
+.login,
+.password {
+    position: relative;
     font-size: 12pt;
     color: gray;
     outline: none;
     border: none;
     border-bottom: 1px solid gray;
-}
-
-.inputAuthForm input[type="text"]::before,
-.inputAuthForm input[type="password"]::before {
-    border-bottom: 1px solid #1240AB;
-    transform: translateX(-100%);
-    overflow: hidden;
     transition: .2s;
 }
 
-.inputAuthForm input[type="text"]:focus::before,
-.inputAuthForm input[type="password"]:focus::before {
+.login:before,
+.password:before {
+    position: absolute;
+    border-bottom: 2px solid #1240AB;
+}
+
+.login:focus:before,
+.password:focus:before {
     color: #1240AB;
     border-bottom: 1px solid #1240AB;
-    transform: translateX(0);
 }
 
 .inputAuthForm input[type="submit"] {
     font-size: 12pt;
+    font-weight: 600;
     padding: 15px;
     text-transform: uppercase;
     background-color: #1240AB;
     border: 1px solid #1240AB;
+    cursor: pointer;
     color: #fff;
+    width: 100px;
     border-radius: 25px;
     transition: .1s;
 }

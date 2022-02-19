@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
-    <div class="authForm">
+<div class="authForm">
     <form action="auth.php" method="post">
         <h1 class="authLab">Авторизация</h1>
         <div class="inputAuthForm">
-            <input type="text" plaseholder="Логин">
+            <input class="login" type="text" placeholder="Логин">
         </div>
         <div class="inputAuthForm">
-            <input type="password" plaseholder="Пароль">
+            <input class="password" type="password" placeholder="Пароль">
         </div>
         <div class="inputAuthForm">
             <input type="submit" value="Войти">
