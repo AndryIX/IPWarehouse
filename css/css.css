@@ -247,20 +247,23 @@ body {
     color: gray;
     outline: none;
     border: none;
+    overflow: hidden;
     border-bottom: 1px solid gray;
     transition: .2s;
 }
 
-.login:before,
-.password:before {
+.login::after,
+.password::after {
     position: absolute;
     border-bottom: 2px solid #1240AB;
+    transform: translate3d(-100%, 0, 0);
 }
 
-.login:focus:before,
-.password:focus:before {
+.login:focus::after,
+.password:focus::after {
     color: #1240AB;
     border-bottom: 1px solid #1240AB;
+    transform: translate3d(0, 0, 0);
 }
 
 .inputAuthForm input[type="submit"] {
