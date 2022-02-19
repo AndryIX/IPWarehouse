@@ -1,43 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Fira+Sans:wght@200&family=Inter:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css.css">
-    <title>Бургер</title>
-</head>
-<body>
-    
+<? require "header.php" ?>
+  
     <div class="wrapper">
-        <header class="header">
-            <div class="container">
-                <div class="header_body">
-                <a href="#" class="logo">
-                    <img src="logo.png" alt="Логотип" width="60px">
-                </a>
-                <div class="burger">
-                    <span></span>
-                </div>
-                <nav class="menu">
-                    <ul class="header_list">
-                        <li>
-                            <a href="#" class="header_link">Главная</a>
-                        </li>
-                        <li>
-                            <a href="#" class="header_link">О нас</a>
-                        </li>
-                        <li>
-                            <a href="#" class="header_link">Клиентам</a>
-                        </li>
-                        <li>
-                            <a href="#" class="header_link">Контакты</a>
-                        </li> 
-                    </ul>
-                </nav>
-            </div>
-            </div>
-        </header>
+        
         <div class="content">
             <div class="container">
                 <div class="content_text">
@@ -52,21 +16,6 @@
         </div>
     </div>
 
-    <footer class="footer">
-        <div class="conteiner">
-            <div class="rows">
+<? require "footer.php" ?>
 
-            <div class="row1">
-                <h3>Интернет-магазин</h3><br>
-                <p>О нас</p><br>
-                <p>О нас</p><br>
-            </div>
-
-        </div>
-        </div>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js.js"></script>
-</body>
-</html>
+   
