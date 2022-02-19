@@ -1,11 +1,14 @@
-*,*::after,*::before{
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
 }
 
-html,body{
+html,
+body {
     height: 100%;
     font-family: 'Inter', sans-serif;
 }
@@ -16,7 +19,9 @@ html,body{
     flex-direction: column;
 }
 
+
 /*ХЭДЕР       ХЭДЕР       ХЭДЕР       ХЭДЕР      ХЭДЕР       ХЭДЕР     ХЭДЕР      ХЭДЕР       ХЭДЕР       ХЭДЕР       ХЭДЕР*/
+
 .header {
     position: fixed;
     top: 0;
@@ -25,7 +30,7 @@ html,body{
     z-index: 50;
 }
 
-.header:before{
+.header:before {
     content: '';
     position: absolute;
     top: 0;
@@ -36,14 +41,13 @@ html,body{
     z-index: 2;
 }
 
-
 .container {
     max-width: 1180px;
     margin: 0px auto;
     padding: 0px 10px;
 }
 
-.header_body{
+.header_body {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -53,7 +57,6 @@ html,body{
 
 .logo {
     z-index: 3;
-    
     border-radius: 50px;
     overflow: hidden;
 }
@@ -67,9 +70,7 @@ html,body{
     display: none;
 }
 
-.menu {
-
-}
+.menu {}
 
 .header_list {
     display: flex;
@@ -89,20 +90,16 @@ html,body{
     text-decoration: none;
 }
 
-@media (max-width:767px){
-
-    body.lock{
+@media (max-width:767px) {
+    body.lock {
         overflow: hidden;
     }
-
-    .logo{
+    .logo {
         flex: 0 0 40px;
     }
-
-    .header_body{
+    .header_body {
         height: 50px;
     }
-
     .burger {
         display: block;
         position: relative;
@@ -110,8 +107,7 @@ html,body{
         height: 20px;
         z-index: 3;
     }
-
-    .burger span{
+    .burger span {
         position: absolute;
         background-color: #fff;
         top: 9px;
@@ -120,7 +116,6 @@ html,body{
         height: 2px;
         transition: all .3s ease 0s;
     }
-
     .burger:before,
     .burger:after {
         content: '';
@@ -130,61 +125,55 @@ html,body{
         height: 2px;
         left: 0;
         transition: all .3s ease 0s;
-    } 
-    .burger:before{
+    }
+    .burger:before {
         top: 0;
     }
-    .burger:after{
+    .burger:after {
         bottom: 0;
     }
-
     .menu {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #6C8CD5;
-    padding: 70px 10px 20px 10px;
-    transition: all .7s ease 0s;
-    overflow: auto;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #6C8CD5;
+        padding: 70px 10px 20px 10px;
+        transition: all .7s ease 0s;
+        overflow: auto;
     }
-
-    .menu.active{
+    .menu.active {
         top: 0;
     }
-
-    .header_list{
+    .header_list {
         display: block;
     }
-
     .header_list li {
         margin: 0px 0px 20px 0px;
     }
-
-    .burger.active:before{
+    .burger.active:before {
         transform: rotate(45deg);
         top: 9px;
         transition: all .3s ease 0s;
     }
-    .burger.active:after{
+    .burger.active:after {
         transform: rotate(-45deg);
         bottom: 9px;
         transition: all .3s ease 0s;
     }
-
-    .burger.active span{
+    .burger.active span {
         transform: scale(0);
         transition: all .3s ease 0s;
     }
-
-    .header_link{
+    .header_link {
         font-size: 24px;
     }
 }
 
 
 /*КОНТЕНТ     КОНТЕНТ     КОНТЕНТ     КОНТЕНТ     КОНТЕНТ     КОНТЕНТ     КОНТЕНТ     КОНТЕНТ     КОНТЕНТ     КОНТЕНТ*/
+
 .content {
     flex: 1 1 auto;
     padding: 100px 0px 0px 0px;
@@ -199,8 +188,8 @@ html,body{
     margin: 0px 0px 20px 0px;
 }
 
-@media (max-width:767px){
-    .content{
+@media (max-width:767px) {
+    .content {
         padding: 70px 0px 0px 0px;
     }
 }
@@ -208,15 +197,90 @@ html,body{
 
 /*ФУТЕР     ФУТЕР      ФУТЕР      ФУТЕР       ФУТЕР       ФУТЕР      ФУТЕР         ФУТЕР      ФУТЕР      ФУТЕР         ФУТЕР*/
 
-@media (max-width:767px){
-    .rows{
+@media (max-width:767px) {
+    .rows {
         font-size: 15px;
     }
 }
 
-.footer{
+.footer {
     background-color: #06266F;
     padding: 30px;
     text-align: center;
+    color: #fff;
+}
+
+
+/* Авторизация */
+
+.authForm {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    background-color: #fff;
+    box-shadow: 0 0 5px gray;
+    border-radius: 25px;
+}
+
+.authLab {
+    margin: 15px 100px;
+    text-align: center;
+    color: #1240AB;
+    font-size: 14pt;
+}
+
+.inputAuthForm {
+    margin: 15px 20px;
+    text-align: center;
+}
+
+.inputAuthForm input {
+    padding: 10px;
+    width: 100px;
+}
+
+.inputAuthForm input[type="text"],
+.inputAuthForm input[type="password"] {
+    font-size: 12pt;
+    color: gray;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.inputAuthForm input[type="text"]::before,
+.inputAuthForm input[type="password"]::before {
+    border-bottom: 1px solid #1240AB;
+    transform: translateX(-100%);
+    overflow: hidden;
+    transition: .2s;
+}
+
+.inputAuthForm input[type="text"]:focus::before,
+.inputAuthForm input[type="password"]:focus::before {
+    color: #1240AB;
+    border-bottom: 1px solid #1240AB;
+    transform: translateX(0);
+}
+
+.inputAuthForm input[type="submit"] {
+    font-size: 12pt;
+    padding: 15px;
+    text-transform: uppercase;
+    background-color: #1240AB;
+    border: 1px solid #1240AB;
+    color: #fff;
+    border-radius: 25px;
+    transition: .1s;
+}
+
+.inputAuthForm input[type="submit"]:hover {
+    background-color: #fff;
+    color: #1240AB;
+}
+
+.inputAuthForm input[type="submit"]:active {
+    background-color: #6C8CD5;
     color: #fff;
 }
