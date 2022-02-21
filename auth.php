@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/authCss.css">
 </head>
 <body>
-    <div class="authForm">
+    <div class="authform">
 
         <div class="divLogo">
                 <img width="100" height="100" src="img/logo-blue.svg" alt="">
