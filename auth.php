@@ -10,19 +10,25 @@
 </head>
 <body>
     <div class="authForm">
-    <form action="auth.php" method="post">
-        <h1 class="authLab">Авторизация</h1>
-        <div class="inputAuthForm">
-            <input class="login" type="text" placeholder="Логин">
+
+        <div class="divLogo">
+                <img width="100" height="100" src="img/logo-blue.svg" alt="">
         </div>
-        <div class="inputAuthForm">
-            <input class="password" type="password" placeholder="Пароль">
-        </div>
-        <div class="inputAuthForm">
-            <input type="submit" value="Войти">
-        </div>
-    </form>
-</div>
+
+        <form class="form" action="auth.php" method="post">
+                <h1 class="authLab">Авторизация</h1>
+                <div class="inputAuthForm">
+                    <input class="login" type="text" placeholder="Логин">
+                </div>
+                <div class="inputAuthForm">
+                    <input class="password" type="password" placeholder="Пароль">
+                </div>
+                <div class="inputAuthForm">
+                    <input type="submit" value="Войти">
+                </div>
+        </form>
+
+    </div>
 </body>
 </html>
 
