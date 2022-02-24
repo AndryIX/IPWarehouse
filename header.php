@@ -1,3 +1,9 @@
+<?session_start();
+if(isset($_POST['btn_exit'])){
+    unset($_SESSION['login']);
+    header("Location: auth.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,8 +36,14 @@
                         </li>
                         <li>
                             <a href="#" class="header_link">Контакты</a>
-                        </li> 
+                        </li>
+                        <?if($_SESSION['login']): ?>
+                            <form class=form__exit method="post">
+                                <button type="submit" name="btn_exit" class="btn__exit"><?echo 'Выйти из: '.$_SESSION['login'];?></button>
+                            </form>
+                        <?endif;?>
                     </ul>
+                   
                 </nav>
             </div>
             </div>
