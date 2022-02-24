@@ -316,3 +316,21 @@ a:focus::after {
     text-align: center;
     color: #fff;
 }
+
+.btn__exit {
+    display: block;
+    color: #fff;
+    font-family: 'Comfortaa', cursive;
+    font-size: 18px;
+    background: transparent;
+    margin: -5px 0 0 0;
+    padding: 5px;
+    border: 2px solid #6c8bd5e1;
+    border-radius: 10px;
+    transition: .2s;
+}
+
+.btn__exit:hover {
+    color: #06266F;
+    background-color: #fff;
+}

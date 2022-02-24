@@ -9,9 +9,9 @@ if(isset($_POST['btn_exit'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Fira+Sans:wght@200&family=Inter:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/css.css">
     <title>Бургер</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Fira+Sans:wght@200&family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
         <header class="header">
@@ -38,9 +38,11 @@ if(isset($_POST['btn_exit'])){
                             <a href="#" class="header_link">Контакты</a>
                         </li>
                         <?if($_SESSION['login']): ?>
-                            <form class=form__exit method="post">
-                                <button type="submit" name="btn_exit" class="btn__exit"><?echo 'Выйти из: '.$_SESSION['login'];?></button>
-                            </form>
+                            <li>
+                                <form class="form__exit" method="post">
+                                    <button type="submit" name="btn_exit" class="btn__exit"><?echo 'Выйти'?></button>
+                                </form>
+                            </li>
                         <?endif;?>
                     </ul>
                    
