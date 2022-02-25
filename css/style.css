@@ -317,6 +317,127 @@ a:focus::after {
     color: #fff;
 }
 
+
+/*ТАБЛИЦА      ТАБЛИЦА       ТАБЛИЦА       ТАБЛИЦА      ТАБЛИЦА       ТАБЛИЦА         ТАБЛИЦА         ТАБЛИЦА        ТАБЛИЦА*/
+
+.table {
+    border-collapse: collapse;
+    border: 1px solid #000;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.table thead th {
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    padding: 10px 15px;
+    background: #d8d8d8;
+    font-size: 14px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.table tbody td {
+    text-align: left;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 10px 15px;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.table thead tr th:first-child,
+.table tbody tr td:first-child {
+    border-left: none;
+}
+
+.table thead tr th:last-child,
+.table tbody tr td:last-child {
+    border-right: none;
+}
+
+.table tbody tr:nth-child(even) {
+    background: #f3f3f3;
+}
+
+
+/*САЙДБАР     САЙДБАР     САЙДБАР         САЙДБАР    САЙДБАР     САЙДБАР       САЙДБАР       САЙДБАР        САЙДБАР*/
+
+.sidebar {
+    font-family: 'Comfortaa', cursive;
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -100%;
+    background-color: #6c8bd5e1;
+    overflow-x: hidden;
+    padding-top: 20px;
+    overflow: hidden;
+    transition: all .5s ease 0s;
+}
+
+.sidebar a {
+    padding: 30px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar.active {
+    position: fixed;
+    left: 0;
+}
+
+.showsidebar {
+    cursor: pointer;
+    text-align: center;
+    height: 30px;
+    width: 150px;
+    margin: 0 0 5px 40px;
+    position: relative;
+    border: 2px solid #000;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #4c78df;
+    transition: all .5s ease 0s;
+}
+
+.hidesidebar {
+    cursor: pointer;
+    text-align: center;
+    height: 30px;
+    width: 150px;
+    margin: 0 0 5px 40px;
+    position: relative;
+    border: 2px solid #000;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #4c78df;
+    display: none;
+    transition: all .5s ease 0s;
+    box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
+    vertical-align: middle;
+}
+
+.hidesidebar.active {
+    display: block;
+}
+
+.showsidebar.active {
+    display: none;
+}
+
+
+/* --------------------------------------------------------------------------------------------- */
+
 .btn__exit {
     display: block;
     color: #fff;

@@ -15,4 +15,12 @@ if(pg_num_rows($result) > 0){
     header("Location: ../auth.php");
     exit;
 }
+pg_close($db);
+
+
+
+
+
+
+
 ?>

@@ -14,6 +14,7 @@ if(isset($_POST['btn_exit'])){
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="wrapper">
         <header class="header">
             <div class="container">
                 <div class="header_body">
@@ -23,30 +24,30 @@ if(isset($_POST['btn_exit'])){
                 <div class="burger">
                     <span></span>
                 </div>
-                <nav class="menu">
-                    <ul class="header_list">
-                        <li>
-                            <a href="#" class="header_link">Главная</a>
-                        </li>
-                        <li>
-                            <a href="#" class="header_link">О нас</a>
-                        </li>
-                        <li>
-                            <a href="#" class="header_link">Клиентам</a>
-                        </li>
-                        <li>
-                            <a href="#" class="header_link">Контакты</a>
-                        </li>
-                        <?if($_SESSION['login']): ?>
+                    <nav class="menu">
+                        <ul class="header_list">
                             <li>
-                                <form class="form__exit" method="post">
-                                    <button type="submit" name="btn_exit" class="btn__exit"><?echo 'Выйти'?></button>
-                                </form>
+                                <a href="index.php" class="header_link">Главная</a>
                             </li>
-                        <?endif;?>
-                    </ul>
-                   
-                </nav>
-            </div>
+                            <li>
+                                <a href="work.php" class="header_link">Работа</a>
+                            </li>
+                            <li>
+                                <a href="#" class="header_link">Клиентам</a>
+                            </li>
+                            <li>
+                                <a href="#" class="header_link">Контакты</a>
+                            </li>
+                            <?if($_SESSION['login']): ?>
+                                <li>
+                                    <form class="form__exit" method="post">
+                                        <button type="submit" name="btn_exit" class="btn__exit"><?echo 'Выйти'?></button>
+                                    </form>
+                                </li>
+                            <?endif;?>
+                        </ul>
+                    
+                    </nav>
+                </div>
             </div>
         </header>
