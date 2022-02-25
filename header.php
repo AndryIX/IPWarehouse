@@ -30,10 +30,7 @@ if(isset($_POST['btn_exit'])){
                                 <a href="index.php" class="header_link">Главная</a>
                             </li>
                             <li>
-                                <a href="work.php" class="header_link">Работа</a>
-                            </li>
-                            <li>
-                                <a href="#" class="header_link">Клиентам</a>
+                                <a href="work.php" class="header_link">Сотрудники</a>
                             </li>
                             <li>
                                 <a href="#" class="header_link">Контакты</a>

@@ -175,7 +175,7 @@ a::after {
     left: 0;
     width: 100%;
     height: 0.1em;
-    background-color: hotpink;
+    background-color: #fff;
     opacity: 0;
     transition: opacity 300ms, transform 300ms;
 }
@@ -321,10 +321,11 @@ a:focus::after {
 /*ТАБЛИЦА      ТАБЛИЦА       ТАБЛИЦА       ТАБЛИЦА      ТАБЛИЦА       ТАБЛИЦА         ТАБЛИЦА         ТАБЛИЦА        ТАБЛИЦА*/
 
 .table {
+    border: none;
     border-collapse: collapse;
-    border: 1px solid #000;
     width: 100%;
     margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 .table thead th {
@@ -334,14 +335,10 @@ a:focus::after {
     padding: 10px 15px;
     background: #d8d8d8;
     font-size: 14px;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
 }
 
 .table tbody td {
     text-align: left;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
     padding: 10px 15px;
     font-size: 14px;
     vertical-align: top;

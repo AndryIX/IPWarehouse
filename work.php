@@ -2,8 +2,9 @@
 if(!$_SESSION['login']){
     header('Location: auth.php');
 }
-
-require "header.php";?>
+require "header.php";
+require "handlers/db_connect.php";
+?>
 
         <div class="content">
             <div class="container">
@@ -23,34 +24,25 @@ require "header.php";?>
                     <a href="#">Ссылка</a>
                 </div>
                 <div class="content_text">
+
+                
                     <table class="table">
                         <thead class="tablehead">
                             <tr>
-                                <th>Заголовок1</th>
-                                <th>Заголовок1</th>
-                                <th>Заголовок1</th>
-                                <th>Заголовок1</th>
-                                <th>Заголовок1</th>
-                                <th>Заголовок1</th>
+                                <th>ID</th>
+                                <th>Login</th>
                             </tr>
                         </thead>
                         <tbody class="table_body">
-                            <tr>
-                                <td>Текст</td>
-                                <td>Текст</td>
-                                <td>Текст</td>
-                                <td>Текст</td>
-                                <td>Текст</td>
-                                <td>Текст</td>
-                            </tr>
-                            <tr>
-                                <td>Текст</td>
-                                <td>Текст</td>
-                                <td>Текст</td>
-                                <td>Текст</td>
-                                <td>Текст</td>
-                                <td>Текст</td>
-                            </tr>
+
+                            <?$result = pg_query($db, "select id_user, login from users");
+                            while($row = pg_fetch_assoc($result)):?>
+                                <tr>
+                                    <td><?= $row['id_user']?></td>
+                                    <td><?= $row['login']?></td>
+                                </tr>
+                            <?endwhile;?>
+
                         </tbody>
                     </table>
                 </div>
