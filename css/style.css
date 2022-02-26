@@ -323,7 +323,7 @@ a:focus::after {
 .table {
     border: none;
     border-collapse: collapse;
-    width: 100%;
+    width: 50%;
     margin-bottom: 20px;
     border-radius: 10px;
 }
@@ -342,6 +342,8 @@ a:focus::after {
     padding: 10px 15px;
     font-size: 14px;
     vertical-align: top;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .table thead tr th:first-child,

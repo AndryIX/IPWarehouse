@@ -35,11 +35,13 @@ require "handlers/db_connect.php";
                         </thead>
                         <tbody class="table_body">
 
-                            <?$result = pg_query($db, "select id_user, login from users");
-                            while($row = pg_fetch_assoc($result)):?>
+                            <?
+                            $result = $db -> query("select id_user, login from users");
+                            
+                            while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
                                 <tr>
-                                    <td><?= $row['id_user']?></td>
-                                    <td><?= $row['login']?></td>
+                                    <td><?= $row->id_user?></td>
+                                    <td><?= $row->login?></td>
                                 </tr>
                             <?endwhile;?>
 

@@ -3,10 +3,11 @@ require 'db_connect.php';
 
 $login = $_POST['login'];
 $password = $_POST['password'];
-$_SESSION = [];
 
-$result = pg_query($db, "select * from users where login = '$login' and password = '".md5($password)."'");
-if(pg_num_rows($result) > 0){
+$result = $db -> query("select * from users where login = '$login' and password = '".md5($password)."'");
+$num_rows = $result -> rowCount();
+
+if($num_rows > 0){
     $_SESSION['login'] = $login;
     header('Location: ../index.php');
     exit;
@@ -15,12 +16,4 @@ if(pg_num_rows($result) > 0){
     header("Location: ../auth.php");
     exit;
 }
-pg_close($db);
-
-
-
-
-
-
-
 ?>
