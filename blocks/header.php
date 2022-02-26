@@ -1,4 +1,9 @@
 <?session_start();
+if(!$_SESSION['login']){
+    header('Location: auth.php');
+    exit;
+}
+
 if(isset($_POST['btn_exit'])){
     unset($_SESSION['login']);
     header("Location: auth.php");

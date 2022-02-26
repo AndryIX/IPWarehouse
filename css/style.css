@@ -366,10 +366,9 @@ a:focus::after {
 .sidebar {
     font-family: 'Comfortaa', cursive;
     height: 100%;
-    width: 160px;
     position: fixed;
     z-index: 1;
-    top: 0;
+    top: 40px;
     left: -100%;
     background-color: #6c8bd5e1;
     overflow-x: hidden;
@@ -381,7 +380,7 @@ a:focus::after {
 .sidebar a {
     padding: 30px 8px 6px 16px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 14pt;
     color: #fff;
     display: block;
 }
@@ -453,4 +452,68 @@ a:focus::after {
 .btn__exit:hover {
     color: #06266F;
     background-color: #fff;
+}
+
+
+/* Добавление ----------------- */
+
+.add__form {
+    width: 100%;
+}
+
+.add__lab {
+    margin-bottom: 15px;
+    text-align: left;
+    color: #1240AB;
+    font-size: 18pt;
+    font-weight: bold;
+    font-family: 'Comfortaa';
+    text-transform: none;
+}
+
+.add {
+    display: block;
+    width: 100%;
+}
+
+.add__user {
+    display: block;
+    padding: 10px;
+    font-size: 12pt;
+    margin: 15px 0;
+    font-family: 'Comfortaa';
+    width: 300px;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    border: 2px solid #dcdcdc;
+}
+
+.add__user:focus {
+    color: #1240AB;
+    border: 2px solid #1240AB;
+}
+
+.btn__add {
+    font-size: 10pt;
+    font-weight: normal;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #1240AB;
+    border: 1px solid #1240AB;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 10px;
+    transition: .1s;
+}
+
+.btn__add:hover {
+    background-color: #fff;
+    color: #1240AB;
+}
+
+.btn__add:active {
+    background-color: #6C8CD5;
+    color: #fff;
 }

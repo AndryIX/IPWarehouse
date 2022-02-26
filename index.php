@@ -3,7 +3,7 @@ if(!$_SESSION['login']){
     header('Location: auth.php');
 }
 
-require "header.php";?>
+require "blocks/header.php";?>
 
         <div class="content">
             <div class="container">
@@ -18,6 +18,6 @@ require "header.php";?>
             </div>
         </div>
         
-<? require "footer.php"; ?>
+<? require "blocks/footer.php"; ?>
 
    
