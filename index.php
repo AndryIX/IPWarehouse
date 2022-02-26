@@ -1,7 +1,10 @@
-<? require "header.php" ?>
-  
-    <div class="wrapper">
-        
+<? session_start();
+if(!$_SESSION['login']){
+    header('Location: auth.php');
+}
+
+require "blocks/header.php";?>
+
         <div class="content">
             <div class="container">
                 <div class="content_text">
@@ -14,8 +17,7 @@
                 </div>
             </div>
         </div>
-    </div>
-
-<? require "footer.php" ?>
+        
+<? require "blocks/footer.php"; ?>
 
    

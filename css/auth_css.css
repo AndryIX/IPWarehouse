@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+.auth__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    padding-bottom: 30vh;
+}
+
+.div__logo {
+    margin-bottom: 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px gray;
+}
+
+.form {
+    background-color: #fff;
+    box-shadow: 0 0 15px gray;
+    border-radius: 25px;
+}
+
+.auth__lab {
+    margin: 30px 80px;
+    text-align: center;
+    color: #1240AB;
+    font-size: 18pt;
+    font-weight: 600;
+    font-family: sans-serif;
+    text-transform: none;
+}
+
+input {
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+}
+
+.input__auth {
+    text-align: center;
+    margin: 30px 20px;
+}
+
+.login,
+.password {
+    padding: 10px;
+    width: 100%;
+    font-size: 14pt;
+    color: rgb(80, 80, 80);
+    overflow: hidden;
+    background-color: #f3f3f3;
+    border-radius: 5px 5px 4px 4px;
+    border-bottom: 2px solid rgb(189, 189, 189);
+    transition: .3s;
+}
+
+.login:focus,
+.password:focus {
+    color: #1240AB;
+    border-bottom: 2px solid #1240AB;
+}
+
+.input__auth input[type="submit"] {
+    font-size: 12pt;
+    width: 100%;
+    font-weight: 600;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: #1240AB;
+    border: 1px solid #1240AB;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 25px;
+    transition: .1s;
+}
+
+.input__auth input[type="submit"]:hover {
+    background-color: #fff;
+    color: #1240AB;
+}
+
+.input__auth input[type="submit"]:active {
+    background-color: #6C8CD5;
+    color: #fff;
+}
