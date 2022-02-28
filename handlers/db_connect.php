@@ -4,8 +4,9 @@
         die("Error: failed connect to DataBase!");
     }
 
-    function AI($db, $sql){
-        $autoi = $db -> query("$sql") -> rowCount() + 1;
+    function AI($db, $table, $id){
+        $result = $db -> query("select max($id) as id from $table") -> fetch(PDO::FETCH_OBJ);
+        $autoi = $result -> id + 1;
         return $autoi;
     }
 

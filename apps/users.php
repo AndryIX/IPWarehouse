@@ -2,6 +2,7 @@
 if(!$_SESSION['login']){
     header('Location: ../auth.php');
 }
+
 require "../blocks/header.php";
 require "../handlers/db_connect.php";
 ?>
@@ -9,14 +10,11 @@ require "../handlers/db_connect.php";
         <div class="content">
             <div class="container">
                 <div class="content_text">
-
-                    
                     <div class="view">
-                    <h1>Пользователи</h1>
-                        <a href="../handlers/handler_addUser.php">Добавить пользователя</a>
-
-                        <?
-                        $result = $db -> query("select id_user, login from users");
+                        <h1>Пользователи</h1>
+                        <a href="../apps/addUser.php" class="inter">Добавить пользователя</a>
+                        
+                        <?$result = $db -> query("select id_user, login, password from users order by id_user asc");
                         while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
                             <ul>
                                 <li>
@@ -26,12 +24,10 @@ require "../handlers/db_connect.php";
                                             <a href="../handlers/delete_user.php?id_user=<?=$row->id_user?>">Удалить</a>
                                         <?endif;?>
                                         <?if($_SESSION['login'] == "admin"):?>
-                                            <a href="../handlers/update_user.php?id_user=<?=$row->id_user?>">Изменить</a>
+                                            <a href="updateUser.php?id_user=<?=$row->id_user?>&login=<?=$row->login?>&password=<?=$row->password?>">Изменить</a>
                                         <?endif;?>
-                                        
                                     </div>
                                 </li>
-                                
                             </ul>
                         <?endwhile;?>
                         

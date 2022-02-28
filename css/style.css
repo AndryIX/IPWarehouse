@@ -508,7 +508,7 @@ a:focus::after {
     font-size: 12pt;
     margin: 15px 0;
     font-family: 'Comfortaa';
-    width: 300px;
+    width: 25%;
     font-weight: bold;
     background-color: #f0f0f0;
     border-radius: 10px;
@@ -525,6 +525,7 @@ a:focus::after {
     font-weight: normal;
     padding: 10px;
     text-align: center;
+    width: 25%;
     text-transform: uppercase;
     background-color: #1240AB;
     border: 1px solid #1240AB;
@@ -556,22 +557,23 @@ a:focus::after {
     text-transform: none;
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 60%;
     padding: 10px 30px;
     font-size: 12pt;
     font-family: 'Comfortaa';
+    font-weight: bold;
     background-color: #fff;
     box-shadow: 0 0 5px gray;
     border-radius: 15px;
     margin-top: 10px;
 }
 
-.view a {
+.inter {
     margin-top: 20px;
     display: inline-block;
     font-size: 12pt;
     font-family: 'Comfortaa';
-    padding: 10px;
+    padding: 5px 15px;
     margin-bottom: 10px;
     border-radius: 25px;
     border: 1px solid #1240AB;
@@ -591,7 +593,6 @@ a:focus::after {
     color: #fff;
     font-size: 10pt;
     padding: 0 10px;
-    margin: 0 auto;
     cursor: pointer;
     border: 1px solid #1240AB;
     border-radius: 25px;

@@ -1,12 +1,12 @@
 <?session_start();
 if(!$_SESSION['login']){
-    header('Location: auth.php');
+    header('Location: ../auth.php');
     exit;
 }
 
 if(isset($_POST['btn_exit'])){
     unset($_SESSION['login']);
-    header("Location: auth.php");
+    header("Location: ../auth.php");
 }
 ?>
 <!DOCTYPE html>
@@ -33,10 +33,10 @@ if(isset($_POST['btn_exit'])){
                         <ul class="header_list">
                             <li>
                                 <div class="showsidebar">
-                                    <p>+</p>
+                                <p>＋</p>
                                 </div>
                                 <div class="hidesidebar">
-                                    <p>-</p>
+                                <p>ー</p>
                                 </div>
                                 <div class="sidebar">
                                     <?if($_SESSION['login']== "admin"):?>
