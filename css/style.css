@@ -288,7 +288,6 @@ a:focus::after {
     font-size: 16px;
     line-height: 25px;
     text-align: justify;
-    text-indent: 1.25cm;
 }
 
 .content_text p {
@@ -368,17 +367,30 @@ a:focus::after {
     height: 100%;
     position: fixed;
     z-index: 1;
-    top: 40px;
+    top: 80px;
     left: -100%;
+    padding: 0 15px;
     background-color: #6c8bd5e1;
     overflow-x: hidden;
-    padding-top: 20px;
     overflow: hidden;
     transition: all .5s ease 0s;
 }
 
+.sidebar h1 {
+    font-size: 14pt;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.sidebar div {
+    margin-bottom: 30px;
+    padding-left: 10px;
+}
+
 .sidebar a {
-    padding: 30px 8px 6px 16px;
+    margin-top: 10px;
+    padding: 20px, 20px;
     text-decoration: none;
     font-size: 14pt;
     color: #fff;
@@ -395,38 +407,52 @@ a:focus::after {
 }
 
 .showsidebar {
-    cursor: pointer;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
     height: 30px;
-    width: 150px;
-    margin: 0 0 5px 40px;
-    position: relative;
-    border: 2px solid #000;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 16px;
+    border: 2px solid #6c8bd5e1;
     border-radius: 10px;
     color: #fff;
-    background-color: #4c78df;
-    transition: all .5s ease 0s;
+    background-color: transparent;
+    transition: .2s ease 0s;
+}
+
+.showsidebar:hover {
+    background-color: #fff;
+    color: #06266F;
 }
 
 .hidesidebar {
-    cursor: pointer;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
     height: 30px;
-    width: 150px;
-    margin: 0 0 5px 40px;
-    position: relative;
-    border: 2px solid #000;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 16px;
+    border: 2px solid #6c8bd5e1;
     border-radius: 10px;
     color: #fff;
     background-color: #4c78df;
     display: none;
     transition: all .5s ease 0s;
-    box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     vertical-align: middle;
 }
 
+.hidesidebar {
+    background-color: #fff;
+    color: #06266F;
+}
+
 .hidesidebar.active {
-    display: block;
+    display: flex;
 }
 
 .showsidebar.active {
@@ -440,7 +466,7 @@ a:focus::after {
     display: block;
     color: #fff;
     font-family: 'Comfortaa', cursive;
-    font-size: 18px;
+    font-size: 14pt;
     background: transparent;
     margin: -5px 0 0 0;
     padding: 5px;
@@ -516,4 +542,63 @@ a:focus::after {
 .btn__add:active {
     background-color: #6C8CD5;
     color: #fff;
+}
+
+.view h1 {
+    font-size: 16pt;
+    color: #1240AB;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+}
+
+.view li {
+    text-decoration: none;
+    text-transform: none;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    padding: 10px 30px;
+    font-size: 12pt;
+    font-family: 'Comfortaa';
+    background-color: #fff;
+    box-shadow: 0 0 5px gray;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.view a {
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 12pt;
+    font-family: 'Comfortaa';
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    border: 1px solid #1240AB;
+    background-color: #1240AB;
+    color: #fff;
+    transition: .2s;
+}
+
+.view a:hover {
+    color: #1240AB;
+    background-color: #fff;
+}
+
+.interaction a {
+    display: inline-flex;
+    background-color: #1240AB;
+    color: #fff;
+    font-size: 10pt;
+    padding: 0 10px;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 1px solid #1240AB;
+    border-radius: 25px;
+    transition: .2s;
+}
+
+.interaction a:hover {
+    background-color: #fff;
+    color: #1240AB;
 }

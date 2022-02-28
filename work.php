@@ -8,25 +8,8 @@ require "handlers/db_connect.php";
 
         <div class="content">
             <div class="container">
-                <div class="showsidebar">
-                    Меню пользователя
-                </div>
-                <div class="hidesidebar">
-                    Скрыть меню
-                </div>
-                <div class="selctrole">
-                    <p class="role_list">Выбрать роль</p>
-                </div>
-                <div class="sidebar">
-                    <a href="addUser.php">Добавить пользователя</a>
-                    <a href="#">Ссылка</a>
-                    <a href="#">Ссылка</a>
-                    <a href="#">Ссылка</a>
-                </div>
+               
                 <div class="content_text">
-
-
-                
                     <table class="table">
                         <thead class="tablehead">
                             <tr>

@@ -7,15 +7,14 @@
 
 
     if($add_password === $confirm_pass){
-        $autoi = $db -> query("select * from users") -> rowCount();
+        $autoi = AI($db, "select * from users");
         $result = $db -> prepare("INSERT INTO users VALUES(:id, :add_user, :add_password)");
-
-        $result -> execute(['id' => $autoi+1, 'add_user' => $add_user, 'add_password' => sha1($add_password)]);
-
-        header('Location: ../addUser.php');
-    }else{    
+        $result -> execute(['id' => $autoi, 'add_user' => $add_user, 'add_password' => sha1($add_password)]);
+        header('Location: ../apps/users.php');
+        exit;
+    }else{
         $_SESSION['error_pass'] = "Пароли не совпадают!";
-        header('Location: ../addUser.php');
+        header('Location: ../apps/addUser.php');
         exit;
     }
 

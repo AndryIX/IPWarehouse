@@ -1,6 +1,6 @@
 <? session_start();
 if (!$_SESSION['login'] == "admin"){
-    header('Location: index.php');
+    header('Location: /');
 }
 
 if($_SESSION['error_pass']){
@@ -8,11 +8,11 @@ if($_SESSION['error_pass']){
 }
 unset($_SESSION['error_pass']);
 
-require "blocks/header.php";?>
+require "../blocks/header.php";?>
 
     <div class="content">
         <div class="container">
-            <form class="add__form" action="handlers/handler_addUser.php" method="post">
+            <form class="add__form" action="../handlers/handler_addUser.php" method="post">
                 <h1 class="add__lab">Добавление пользователя</h1>
                 <div class="add">
                     <input class="add__user" name="add_user" type="text" placeholder="Придумайте логин.." required>
@@ -24,4 +24,4 @@ require "blocks/header.php";?>
         </div>
     </div>
 
-<? require "blocks/footer.php"; ?>
+<? require "../blocks/footer.php"; ?>
