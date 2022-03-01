@@ -12,7 +12,7 @@ require "../handlers/db_connect.php";
                 <div class="content_text">
                     <div class="view">
                         <h1>Пользователи</h1>
-                        <a href="../apps/addUser.php" class="inter">Добавить пользователя</a>
+                        <a href="addUser.php" class="inter">Добавить пользователя</a>
                         
                         <?$result = $db -> query("select id_user, login, password from users order by id_user asc");
                         while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
@@ -21,7 +21,7 @@ require "../handlers/db_connect.php";
                                     <?= $row->login?>
                                     <div class="interaction">
                                         <?if(!$chrck = $row->login == "admin"):?>
-                                            <a href="../handlers/delete_user.php?id_user=<?=$row->id_user?>">Удалить</a>
+                                            <a href="../handlers/h_moderation/delete_user.php?id_user=<?=$row->id_user?>">Удалить</a>
                                         <?endif;?>
                                         <?if($_SESSION['login'] == "admin"):?>
                                             <a href="updateUser.php?id_user=<?=$row->id_user?>&login=<?=$row->login?>&password=<?=$row->password?>">Изменить</a>

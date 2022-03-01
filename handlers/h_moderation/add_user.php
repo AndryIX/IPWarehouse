@@ -1,5 +1,5 @@
 <?session_start();
-    require "db_connect.php";
+    require "../db_connect.php";
 
     $add_user = trim($_POST['add_login']);
     $add_password = trim($_POST['add_password']);
@@ -10,11 +10,11 @@
         $autoi = AI($db, "users", "id_user");
         $result = $db -> prepare("INSERT INTO users VALUES(:id, :add_login, :add_password)");
         $result -> execute(['id' => $autoi, 'add_user' => $add_login, 'add_password' => sha1($add_password)]);
-        header('Location: ../apps/users.php');
+        header('Location: ../../m_moderation/users.php');
         exit;
     }else{
         $_SESSION['error_pass'] = "Пароли не совпадают!";
-        header('Location: ../apps/addUser.php');
+        header('Location: ../../m_moderation/addUser.php');
         exit;
     }
 

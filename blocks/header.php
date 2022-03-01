@@ -9,6 +9,7 @@ if(isset($_POST['btn_exit'])){
     header("Location: ../auth.php");
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,8 +43,8 @@ if(isset($_POST['btn_exit'])){
                                     <?if($_SESSION['login']== "admin"):?>
                                         <h1>Авторизирование</h1>
                                         <div>
-                                            <a href="../apps/users.php">Пользователи</a>
-                                            <a href="">Роли</a>
+                                            <a href="../m_moderation/users.php">Пользователи</a>
+                                            <a href="../m_moderation/roles.php">Роли</a>
                                             <a href="">Назначения</a>
                                             <a href="">Приложения</a>
                                             <a href="">Доступы к приложениям</a>

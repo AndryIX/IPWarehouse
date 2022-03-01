@@ -13,17 +13,15 @@ require "handlers/db_connect.php";
                     <table class="table">
                         <thead class="tablehead">
                             <tr>
-                                <th>ID</th>
                                 <th>Login</th>
                             </tr>
                         </thead>
                         <tbody class="table_body">
 
                             <?
-                            $result = $db -> query("select id_user, login from users");
+                            $result = $db -> query("select login from users");
                             while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
                                 <tr>
-                                    <td><?= $row->id_user?></td>
                                     <td><?= $row->login?></td>
                                 </tr>
                             <?endwhile;?>

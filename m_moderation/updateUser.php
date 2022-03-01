@@ -14,11 +14,10 @@ require "../blocks/header.php";?>
 
 <div class="content">
     <div class="container">
-        <form class="add__form" action="../handlers/update_user.php" method="post">
+        <form class="add__form" action="../handlers/h_moderation/update_user.php" method="post">
             <h1 class="add__lab">Изменение пользователя</h1>
             <div class="add">
-                <input class="add__user" name="update_login" type="text" value="<?=$login?>" placeholder="Логин.." required>
-                <input class="add__user" name="update_password" type="password" placeholder="Пароль..">
+                <input class="add__input" name="update_login" type="text" value="<?=$login?>" placeholder="Роль.." required>
                 <input class="btn__add" type="submit" name="btn_update" value="ОК">
             </div>
         </form>

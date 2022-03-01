@@ -1,5 +1,5 @@
 <?session_start();
-    require "../handlers/db_connect.php";
+    require "../db_connect.php";
 
     $login = trim($_POST['update_login']);
 
@@ -14,5 +14,5 @@
     $result = $db -> prepare("update users set id_user=?, login=?, password=? where id_user=?");
     $result -> execute([$id_user, $login, sha1($password), $id_user]);
 
-    header('Location: ../apps/users.php');
+    header('Location: ../../m_moderation/users.php');
 ?>

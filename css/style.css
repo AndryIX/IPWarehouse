@@ -502,7 +502,7 @@ a:focus::after {
     width: 100%;
 }
 
-.add__user {
+.add__input {
     display: block;
     padding: 10px;
     font-size: 12pt;
@@ -515,7 +515,7 @@ a:focus::after {
     border: 2px solid #dcdcdc;
 }
 
-.add__user:focus {
+.add__input:focus {
     color: #1240AB;
     border: 2px solid #1240AB;
 }
