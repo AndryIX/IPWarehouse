@@ -1,5 +1,5 @@
 <? session_start();
-if(!$_SESSION['login']){
+if($_SESSION['login'] != "admin"){
     header('Location: ../auth.php');
 }
 
@@ -20,10 +20,9 @@ require "../handlers/db_connect.php";
                                 <li>
                                     <?= $row->login?>
                                     <div class="interaction">
-                                        <?if(!$chrck = $row->login == "admin"):?>
+                                        <?if($row -> login != "admin"):?>
                                             <a href="../handlers/h_moderation/delete_user.php?id_user=<?=$row->id_user?>">Удалить</a>
-                                        <?endif;?>
-                                        <?if($_SESSION['login'] == "admin"):?>
+                                        <?elseif($_SESSION['login'] == "admin"):?>
                                             <a href="updateUser.php?id_user=<?=$row->id_user?>&login=<?=$row->login?>&password=<?=$row->password?>">Изменить</a>
                                         <?endif;?>
                                     </div>

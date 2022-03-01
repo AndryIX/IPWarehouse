@@ -45,7 +45,7 @@ if(isset($_POST['btn_exit'])){
                                         <div>
                                             <a href="../m_moderation/users.php">Пользователи</a>
                                             <a href="../m_moderation/roles.php">Роли</a>
-                                            <a href="">Назначения</a>
+                                            <a href="../m_moderation/assign.php">Назначения</a>
                                             <a href="">Приложения</a>
                                             <a href="">Доступы к приложениям</a>
                                         </div>

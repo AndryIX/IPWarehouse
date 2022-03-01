@@ -603,3 +603,42 @@ a:focus::after {
     background-color: #fff;
     color: #1240AB;
 }
+
+.selection {
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 10px;
+    font-size: 12pt;
+    border-radius: 5px;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    background-color: #f0f0f0;
+    border: 2px solid #dcdcdc;
+}
+
+option {
+    font-size: 12pt;
+    background-color: #fff;
+    color: #1240AB;
+}
+
+.btn__search {
+    display: inline-block;
+    font-size: 10pt;
+    font-weight: normal;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #1240AB;
+    border: 1px solid #1240AB;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 10px;
+    transition: .1s;
+}
+
+.btn__search:hover {
+    background-color: #fff;
+    color: #1240AB;
+}

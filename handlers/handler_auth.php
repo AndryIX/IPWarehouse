@@ -12,7 +12,7 @@ if($num_rows > 0){
     header('Location: ../index.php');
     exit;
 }else{
-    $_SESSION['error'] = "Неправильно введён логин или пароль!";
+    $_SESSION['error'] = "Неправильно введён логин или пароль! ".sha1($password);
     header("Location: ../auth.php");
     exit;
 }

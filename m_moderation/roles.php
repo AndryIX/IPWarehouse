@@ -1,5 +1,5 @@
 <? session_start();
-if(!$_SESSION['login']){
+if($_SESSION['login'] != "admin"){
     header('Location: ../auth.php');
 }
 
@@ -18,12 +18,10 @@ require "../handlers/db_connect.php";
                         while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
                             <ul>
                                 <li>
-                                    <?= $row->role_name?>
+                                    <div><?= $row->role_name?></div>
                                     <div class="interaction">
-                                        <?if(!$chrck = $row->role_name == "Администратор"):?>
+                                        <?if($row -> role_name != "Администратор"):?>
                                             <a href="../handlers/h_moderation/delete_role.php?id_role=<?=$row->id_role?>">Удалить</a>
-                                        <?endif;?>
-                                        <?if($_SESSION['login'] == "admin"):?>
                                             <a href="updateRole.php?id_role=<?=$row->id_role?>&role_name=<?=$row->role_name?>">Изменить</a>
                                         <?endif;?>
                                     </div>
