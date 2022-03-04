@@ -16,7 +16,7 @@ require "../blocks/header.php";?>
             <h1 class="add__lab">Изменение пользователя</h1>
             <div class="add">
                 <input class="add__input" name="update_role" type="text" value="<?=$role_name?>" placeholder="Логин.." required>
-                <input class="btn__add" type="submit" name="btn_update" value="ОК">
+                <input class="btn__add" type="submit" value="ОК">
             </div>
         </form>
     </div>

@@ -27,7 +27,7 @@ require "../handlers/db_connect.php";
                                     <?endif;?>
                                 <?endwhile;?>
                             </select>
-                            <button type="submit" class="btn__search" name="btn_search">Показать</button>
+                            <button type="submit" class="btn__search" name="">Показать</button>
                         </form>
                         <a href="addAssign.php" class="inter">Назначить роль</a>
                         
@@ -52,10 +52,9 @@ require "../handlers/db_connect.php";
                                 <li>
                                     <div><?= $row->login?></div>
                                     <div class="interaction">
-                                        <?if($row->login == "admin"):?>
-                                        <?elseif($_SESSION['login'] == "admin"):?>
-                                            <a href="../handlers/h_moderation/delete_role.php?id_role=<?=$row->id_role?>">Удалить</a>
-                                            <a href="updateRole.php?id_role=<?=$row->id_role?>&role_name=<?=$row->role_name?>">Изменить</a>
+                                        <?if($row->login != "admin"):?>
+                                            <a href="../handlers/h_moderation/delete_assign.php?id_role=<?=$row->id_role?>&id_user=<?=$row->id_user?>">Удалить</a>
+                                            <a href="updateAssign.php?id_role=<?=$row->id_role?>&id_user=<?=$row->id_user?>">Изменить</a>
                                         <?endif;?>
                                     </div>
                                 </li>

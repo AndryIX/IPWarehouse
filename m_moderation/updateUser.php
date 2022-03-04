@@ -8,7 +8,7 @@ $login = trim($_GET['login']);
 $password = trim($_GET['password']);
 
 $_SESSION['upd_id'] = $id_user;
-$_SESSION['upd_pass'] = $password;
+$_SESSION['pass'] = $password;
 
 require "../blocks/header.php";?>
 
@@ -23,7 +23,7 @@ require "../blocks/header.php";?>
                     <input class="add__input" name="update_login" type="text" value="<?=$login?>" placeholder="Логин.." required>
                 <?endif;?>
                 <input class="add__input" name="update_password" type="text" placeholder="Пароль..">
-                <input class="btn__add" type="submit" name="btn_update" value="ОК">
+                <input class="btn__add" type="submit" value="ОК">
             </div>
         </form>
     </div>

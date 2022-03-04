@@ -41,7 +41,7 @@ if(isset($_POST['btn_exit'])){
                                 </div>
                                 <div class="sidebar">
                                     <?if($_SESSION['login']== "admin"):?>
-                                        <h1>Авторизирование</h1>
+                                        <h1>Аадминистрирование</h1>
                                         <div>
                                             <a href="../m_moderation/users.php">Пользователи</a>
                                             <a href="../m_moderation/roles.php">Роли</a>
