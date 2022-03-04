@@ -22,6 +22,7 @@ require "../handlers/db_connect.php";
                                     <div class="interaction">
                                         <?if($row -> login != "admin"):?>
                                             <a href="../handlers/h_moderation/delete_user.php?id_user=<?=$row->id_user?>">Удалить</a>
+                                            <a href="updateUser.php?id_user=<?=$row->id_user?>&login=<?=$row->login?>&password=<?=$row->password?>">Изменить</a>
                                         <?elseif($_SESSION['login'] == "admin"):?>
                                             <a href="updateUser.php?id_user=<?=$row->id_user?>&login=<?=$row->login?>&password=<?=$row->password?>">Изменить</a>
                                         <?endif;?>

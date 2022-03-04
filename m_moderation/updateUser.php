@@ -17,8 +17,10 @@ require "../blocks/header.php";?>
         <form class="add__form" action="../handlers/h_moderation/update_user.php" method="post">
             <h1 class="add__lab">Изменение пользователя</h1>
             <div class="add">
-                <?if($_SESSION['login'] == "admin"):?>
+                <?if($login == "admin"):?>
                 <input class="add__input" name="update_login" type="text" value="<?=$login?>" readonly placeholder="Логин.." required>
+                <?elseif($login != "admin"):?>
+                    <input class="add__input" name="update_login" type="text" value="<?=$login?>" placeholder="Логин.." required>
                 <?endif;?>
                 <input class="add__input" name="update_password" type="text" placeholder="Пароль..">
                 <input class="btn__add" type="submit" name="btn_update" value="ОК">
