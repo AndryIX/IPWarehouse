@@ -1,5 +1,5 @@
 <? session_start();
-if($_SESSION['login'] != "admin"){
+if($_SESSION['role'] != 'Администратор'){
     header('Location: ../auth.php');
     exit;
 }
@@ -15,7 +15,7 @@ require "../handlers/db_connect.php";
             <div class="container">
                 <div class="content_text">
                     <div class="view">
-                        <h1>Назначения</h1>
+                        <h1>Доступы к приложениям</h1>
                         <form action="assign.php" method="get">
                             <select name="selected" class="selection">
                                 <?$search = $db -> query("select * from roles");
@@ -29,33 +29,31 @@ require "../handlers/db_connect.php";
                             </select>
                             <button type="submit" class="btn__search" name="">Показать</button>
                         </form>
-                        <a href="addAssign.php" class="inter">Назначить роль</a>
+                        <a href="addAccess.php" class="inter">Назначить доступ</a>
                         
                         <?if(isset($selected)){
-                            $result = $db -> query("select assignments.id_role, role_name, assignments.id_user, login 
-                            from assignments, roles, users 
-                            where assignments.id_user = users.id_user
-                            and assignments.id_role = roles.id_role
-                            and assignments.id_role = $selected
-                            order by id_user asc");
+                            $result = $db -> query("select accesses.id_role, role_name, accesses.id_app, app_name
+                            from accesses, roles, apps 
+                            where accesses.id_app = apps.id_app
+                            and accesses.id_role = roles.id_role
+                            and accesses.id_role = $selected
+                            order by id_app asc");
                         }else{
-                            $result = $db -> query("select assignments.id_role, role_name, assignments.id_user, login 
-                            from assignments, roles, users 
-                            where assignments.id_user = users.id_user
-                            and assignments.id_role = roles.id_role
-                            and assignments.id_role = 1 
-                            order by id_user asc");
+                            $result = $db -> query("select accesses.id_role, role_name, accesses.id_app, app_name
+                            from accesses, roles, apps 
+                            where accesses.id_app = apps.id_app
+                            and accesses.id_role = roles.id_role
+                            and accesses.id_role = 1
+                            order by id_app asc");
                         }
 
                         while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
                             <ul>
                                 <li>
-                                    <div><?= $row->login?></div>
+                                    <div><?= $row->app_name?></div>
                                     <div class="interaction">
-                                        <?if($row->login != "admin"):?>
-                                            <a href="../handlers/h_moderation/delete_assign.php?id_role=<?=$row->id_role?>&id_user=<?=$row->id_user?>">Удалить</a>
-                                            <a href="updateAssign.php?id_role=<?=$row->id_role?>&id_user=<?=$row->id_user?>">Изменить</a>
-                                        <?endif;?>
+                                        <a href="../handlers/h_moderation/delete_access.php?id_role=<?=$row->id_role?>&id_app=<?=$row->id_app?>">Удалить</a>
+                                        <a href="updateAccess.php?id_role=<?=$row->id_role?>&id_app=<?=$row->id_app?>">Изменить</a>
                                     </div>
                                 </li>
                             </ul>

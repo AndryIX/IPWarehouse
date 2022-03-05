@@ -1,13 +1,27 @@
 <?session_start();
-if(!$_SESSION['login']){
+if(isset($_POST['btn_exit'])){
+    unset($_SESSION['role']);
+    header("Location: ../auth.php");
+}
+
+if(!$_SESSION['role']){
     header('Location: ../auth.php');
     exit;
 }
+    $role = $_SESSION['role'];
 
-if(isset($_POST['btn_exit'])){
-    unset($_SESSION['login']);
-    header("Location: ../auth.php");
-}
+    $db = new PDO("pgsql:host=localhost;port=5432;dbname=IPWarehouse;user=postgres;password=veresen333");
+        if(!$db){
+            die("Error: failed connect to DataBase!");
+        }
+
+    $result = $db -> query("select role_name, app_name, url_address
+                            from accesses, apps, roles
+                            where accesses.id_app = apps.id_app
+                            and accesses.id_role = roles.id_role
+                            and role_name = '$role'");
+
+
 ?>
 
 <!DOCTYPE html>
@@ -40,14 +54,12 @@ if(isset($_POST['btn_exit'])){
                                 <p>ー</p>
                                 </div>
                                 <div class="sidebar">
-                                    <?if($_SESSION['login']== "admin"):?>
+                                    <?if($_SESSION['role'] == 'Администратор'):?>
                                         <h1>Аадминистрирование</h1>
                                         <div>
-                                            <a href="../m_moderation/users.php">Пользователи</a>
-                                            <a href="../m_moderation/roles.php">Роли</a>
-                                            <a href="../m_moderation/assign.php">Назначения</a>
-                                            <a href="">Приложения</a>
-                                            <a href="">Доступы к приложениям</a>
+                                            <?while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
+                                                <a href="<?=$row->url_address?>"><?=$row->app_name?></a>
+                                            <?endwhile;?>
                                         </div>
                                     <?endif;?>
                                     <a href="#">Ссылка</a>
@@ -63,13 +75,11 @@ if(isset($_POST['btn_exit'])){
                             <li>
                                 <a href="#" class="header_link">Контакты</a>
                             </li>
-                            <?if($_SESSION['login']): ?>
                                 <li>
                                     <form class="form__exit" method="post">
                                         <button type="submit" name="btn_exit" class="btn__exit">Выйти</button>
                                     </form>
                                 </li>
-                            <?endif;?>
                         </ul>
                     
                     </nav>

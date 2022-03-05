@@ -558,7 +558,7 @@ a:focus::after {
     display: flex;
     justify-content: space-between;
     width: 60%;
-    padding: 10px 30px;
+    padding: 10px 15px;
     font-size: 12pt;
     font-family: 'Comfortaa';
     font-weight: bold;
@@ -595,7 +595,7 @@ a:focus::after {
     padding: 0 10px;
     cursor: pointer;
     border: 1px solid #1240AB;
-    border-radius: 25px;
+    border-radius: 10px;
     transition: .2s;
 }
 

@@ -1,5 +1,5 @@
 <? session_start();
-if ($_SESSION['login'] != "admin"){
+if ($_SESSION['role'] != 'Администратор'){
     header('Location: ../auth.php');
 }
 
@@ -16,7 +16,7 @@ require "../blocks/header.php";?>
     <div class="content">
         <div class="container">
             <form class="add__form" action="../handlers/h_moderation/update_assign.php" method="post">
-                <h1 class="add__lab">Назначение роли</h1>
+                <h1 class="add__lab">Переопределение роли</h1>
                 <div class="add">
                     <select name="upd_user_ass" class="selection">
                         <?$search_user = $db -> query("select * from users order by id_user asc");

@@ -12,5 +12,5 @@
 
     unset($_SESSION['upd_id_user'], $_SESSION['upd_id_role']);
 
-    header('Location: ../../m_moderation/assign.php');
+    header('Location: ../../m_moderation/assigns.php');
 ?>

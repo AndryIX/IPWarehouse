@@ -1,5 +1,5 @@
 <? session_start();
-if($_SESSION['login'] != "admin"){
+if($_SESSION['role'] != 'Администратор'){
     header('Location: ../auth.php');
 }
 

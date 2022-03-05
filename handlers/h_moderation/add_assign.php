@@ -6,6 +6,6 @@
 
     $result = $db -> prepare("INSERT INTO assignments VALUES(?, ?)");
     $result -> execute([$id_user, $id_role]);
-    header('Location: ../../m_moderation/assign.php');
+    header('Location: ../../m_moderation/assigns.php');
     exit;
 ?>

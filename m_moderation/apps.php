@@ -11,19 +11,17 @@ require "../handlers/db_connect.php";
             <div class="container">
                 <div class="content_text">
                     <div class="view">
-                        <h1>Роли</h1>
-                        <a href="addRole.php" class="inter">Добавить роль</a>
+                        <h1>Приложения</h1>
+                        <a href="addApp.php" class="inter">Добавить приложение</a>
                         
-                        <?$result = $db -> query("select id_role, role_name from roles order by id_role asc");
+                        <?$result = $db -> query("select id_app, app_name, url_address from apps order by id_app asc");
                         while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
                             <ul>
                                 <li>
-                                    <div><?= $row->role_name?></div>
+                                    <div><?= $row->app_name?></div>
                                     <div class="interaction">
-                                        <?if($row -> role_name != "Администратор"):?>
-                                            <a href="../handlers/h_moderation/delete_role.php?id_role=<?=$row->id_role?>">Удалить</a>
-                                            <a href="updateRole.php?id_role=<?=$row->id_role?>&role_name=<?=$row->role_name?>">Изменить</a>
-                                        <?endif;?>
+                                        <a href="../handlers/h_moderation/delete_app.php?id_app=<?=$row->id_app?>">Удалить</a>
+                                        <a href="updateApp.php?id_app=<?=$row->id_app?>&app_name=<?=$row->app_name?>&url_address=<?=$row->url_address?>">Изменить</a>
                                     </div>
                                 </li>
                             </ul>

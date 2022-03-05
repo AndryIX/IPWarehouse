@@ -1,5 +1,5 @@
 <? session_start();
-if ($_SESSION['login'] != "admin"){
+if ($_SESSION['role'] != 'Администратор'){
     header('Location: ../auth.php');
 }
 
@@ -13,7 +13,7 @@ require "../blocks/header.php";?>
 <div class="content">
     <div class="container">
         <form class="add__form" action="../handlers/h_moderation/update_role.php" method="post">
-            <h1 class="add__lab">Изменение пользователя</h1>
+            <h1 class="add__lab">Изменение роли</h1>
             <div class="add">
                 <input class="add__input" name="update_role" type="text" value="<?=$role_name?>" placeholder="Логин.." required>
                 <input class="btn__add" type="submit" value="ОК">
