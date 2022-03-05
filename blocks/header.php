@@ -9,17 +9,12 @@ if(!$_SESSION['role']){
     exit;
 }
     $role = $_SESSION['role'];
-
-    $db = new PDO("pgsql:host=localhost;port=5432;dbname=IPWarehouse;user=postgres;password=veresen333");
-        if(!$db){
-            die("Error: failed connect to DataBase!");
-        }
-
-    $result = $db -> query("select role_name, app_name, url_address
+    $menu = $db -> query("select role_name, app_name, url_address
                             from accesses, apps, roles
                             where accesses.id_app = apps.id_app
                             and accesses.id_role = roles.id_role
                             and role_name = '$role'");
+    
 
 
 ?>
@@ -57,9 +52,10 @@ if(!$_SESSION['role']){
                                     <?if($_SESSION['role'] == 'Администратор'):?>
                                         <h1>Аадминистрирование</h1>
                                         <div>
-                                            <?while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
-                                                <a href="<?=$row->url_address?>"><?=$row->app_name?></a>
+                                            <?while($link = $menu -> fetch(PDO::FETCH_OBJ)):?>
+                                                <a href="<?=$link->url_address?>"><?=$link->app_name?></a>
                                             <?endwhile;?>
+                                            <a href="../m_moderation/accesses.php">Доступы к приложениям</a>
                                         </div>
                                     <?endif;?>
                                     <a href="#">Ссылка</a>

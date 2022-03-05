@@ -1,9 +1,10 @@
 <? session_start();
-if(!$_SESSION['login']){
+if(!$_SESSION['role']){
     header('Location: auth.php');
 }
-require "blocks/header.php";
+
 require "handlers/db_connect.php";
+require "blocks/header.php";
 ?>
 
         <div class="content">

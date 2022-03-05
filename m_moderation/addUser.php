@@ -8,6 +8,7 @@ if($_SESSION['error_pass']){
 }
 unset($_SESSION['error_pass']);
 
+require "../handlers/db_connect.php";
 require "../blocks/header.php";?>
 
     <div class="content">

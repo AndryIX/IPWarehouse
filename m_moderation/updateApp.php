@@ -9,6 +9,7 @@ $url_address = trim($_GET['url_address']);
 
 $_SESSION['upd_id'] = $id_app;
 
+require "../handlers/db_connect.php";
 require "../blocks/header.php";?>
 
 <div class="content">

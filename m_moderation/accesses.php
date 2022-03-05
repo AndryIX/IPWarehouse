@@ -7,8 +7,8 @@ if($_SESSION['role'] != 'Администратор'){
 
 $selected = $_GET['selected'];
 
-require "../blocks/header.php";
 require "../handlers/db_connect.php";
+require "../blocks/header.php";
 ?>
 
         <div class="content">
@@ -16,7 +16,7 @@ require "../handlers/db_connect.php";
                 <div class="content_text">
                     <div class="view">
                         <h1>Доступы к приложениям</h1>
-                        <form action="assign.php" method="get">
+                        <form action="accesses.php" method="get">
                             <select name="selected" class="selection">
                                 <?$search = $db -> query("select * from roles");
                                 while($row = $search -> fetch(PDO::FETCH_OBJ)):

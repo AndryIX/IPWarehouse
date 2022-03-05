@@ -8,6 +8,7 @@ $role_name = trim($_GET['role_name']);
 
 $_SESSION['upd_id'] = $id_role;
 
+require "../handlers/db_connect.php";
 require "../blocks/header.php";?>
 
 <div class="content">

@@ -3,8 +3,8 @@ if($_SESSION['role'] != 'Администратор'){
     header('Location: ../auth.php');
 }
 
-require "../blocks/header.php";
 require "../handlers/db_connect.php";
+require "../blocks/header.php";
 ?>
 
         <div class="content">

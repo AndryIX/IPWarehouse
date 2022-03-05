@@ -5,8 +5,8 @@
     }
 
     function AI($db, $table, $id){
-        $result = $db -> query("select max($id) as id from $table") -> fetch(PDO::FETCH_OBJ);
-        $autoi = $result -> id + 1;
+        $side = $db -> query("select max($id) as id from $table") -> fetch(PDO::FETCH_OBJ);
+        $autoi = $side -> id + 1;
         return $autoi;
     }
 
