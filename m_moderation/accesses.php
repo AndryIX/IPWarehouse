@@ -15,7 +15,9 @@ require "../blocks/header.php";
             <div class="container">
                 <div class="content_text">
                     <div class="view">
+
                         <h1>Доступы к приложениям</h1>
+
                         <form action="accesses.php" method="get">
                             <select name="selected" class="selection">
                                 <?$search = $db -> query("select * from roles");
@@ -29,7 +31,8 @@ require "../blocks/header.php";
                             </select>
                             <button type="submit" class="btn__search" name="">Показать</button>
                         </form>
-                        <a href="addAccess.php" class="inter">Назначить доступ</a>
+
+                        <a href="addAccess.php" class="inter">Добавление доступа</a>
                         
                         <?if(isset($selected)){
                             $result = $db -> query("select accesses.id_role, role_name, accesses.id_app, app_name

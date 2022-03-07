@@ -16,14 +16,14 @@ $selected = $_GET['selected'];
                 <div class="content_text">
                     <div class="view">
                         <h1>Назначения</h1>
-                        <form action="assigns.php" method="get">
+                        <form action="assigns_by_role.php" method="get">
                             <select name="selected" class="selection">
-                                <?$search = $db -> query("select * from users order by id_user asc");
+                                <?$search = $db -> query("select * from roles order by id_role asc");
                                 while($row = $search -> fetch(PDO::FETCH_OBJ)):
-                                    if($row -> id_user == $selected):?>
-                                        <option value="<?=$row->id_user?>" selected><?=$row->login?></option>
+                                    if($row -> id_role == $selected):?>
+                                        <option value="<?=$row->id_role?>" selected><?=$row->role_name?></option>
                                     <?else:?>
-                                        <option value="<?=$row->id_user?>"><?=$row->login?></option>
+                                        <option value="<?=$row->id_role?>"><?=$row->role_name?></option>
                                     <?endif;?>
                                 <?endwhile;?>
                             </select>
@@ -31,31 +31,31 @@ $selected = $_GET['selected'];
                         </form>
 
                         <a href="addAssign.php" class="inter">Назначить роль</a>
-
-                        <a href="assigns_by_role.php" class="inter">Просмотр пользователей по ролям</a>
+                        
+                        <a href="assigns.php" class="inter">Просмотр ролей по пользователям</a>
                         
                         <?if(isset($selected)){
                             $result = $db -> query("select assignments.id_role, role_name, assignments.id_user, login 
                             from assignments, roles, users 
                             where assignments.id_user = users.id_user
                             and assignments.id_role = roles.id_role
-                            and assignments.id_user = $selected
-                            order by id_role asc");
+                            and assignments.id_role = $selected
+                            order by id_user asc");
                         }else{
                             $result = $db -> query("select assignments.id_role, role_name, assignments.id_user, login 
                             from assignments, roles, users 
                             where assignments.id_user = users.id_user
                             and assignments.id_role = roles.id_role
-                            and assignments.id_user = 1 
-                            order by id_role asc");
+                            and assignments.id_role = 1 
+                            order by id_user asc");
                         }
 
                         while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
                             <ul>
                                 <li>
-                                    <div><?= $row->role_name?></div>
+                                    <div><?= $row->login?></div>
                                     <div class="interaction">
-                                        <?if($row->role_name != "Администратор"):?>
+                                        <?if($row->login != "admin"):?>
                                             <a href="../handlers/h_moderation/delete_assign.php?id_role=<?=$row->id_role?>&id_user=<?=$row->id_user?>">Удалить</a>
                                             <a href="updateAssign.php?id_role=<?=$row->id_role?>&id_user=<?=$row->id_user?>">Изменить</a>
                                         <?endif;?>
