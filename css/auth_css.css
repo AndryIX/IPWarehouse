@@ -76,12 +76,15 @@ h6 {
     font-weight: 400;
 }
 
+/***********************************************************************************************************************************/
+
 .auth__form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    margin: 0 auto;
     padding-bottom: 30vh;
 }
 

@@ -85,6 +85,12 @@ h6 {
     flex-direction: column;
 }
 
+.content-center{
+    border: 1px solid #000;
+    width: 100%;
+    padding: 0 30px;
+}
+
 
 /*ХЭДЕР       ХЭДЕР       ХЭДЕР       ХЭДЕР      ХЭДЕР       ХЭДЕР     ХЭДЕР      ХЭДЕР       ХЭДЕР       ХЭДЕР       ХЭДЕР*/
 
@@ -319,46 +325,19 @@ a:focus::after {
 
 /*ТАБЛИЦА      ТАБЛИЦА       ТАБЛИЦА       ТАБЛИЦА      ТАБЛИЦА       ТАБЛИЦА         ТАБЛИЦА         ТАБЛИЦА        ТАБЛИЦА*/
 
-.table {
-    border: none;
-    border-collapse: collapse;
-    width: 50%;
-    margin-bottom: 20px;
-    border-radius: 10px;
+.employ p{
+    display: block;
+    text-transform: uppercase;
+    background: #d3d2d2;
+    font-size: 24px;
+    color: #fff;
+    border: 1px solid #000;
+    width: 100%;
 }
 
-.table thead th {
-    font-weight: bold;
-    text-align: left;
-    border: none;
-    padding: 10px 15px;
-    background: #d8d8d8;
-    font-size: 14px;
+.employ {
+    text-align: center;
 }
-
-.table tbody td {
-    text-align: left;
-    padding: 10px 15px;
-    font-size: 14px;
-    vertical-align: top;
-    font-weight: bold;
-    font-style: italic;
-}
-
-.table thead tr th:first-child,
-.table tbody tr td:first-child {
-    border-left: none;
-}
-
-.table thead tr th:last-child,
-.table tbody tr td:last-child {
-    border-right: none;
-}
-
-.table tbody tr:nth-child(even) {
-    background: #f3f3f3;
-}
-
 
 /*САЙДБАР     САЙДБАР     САЙДБАР         САЙДБАР    САЙДБАР     САЙДБАР       САЙДБАР       САЙДБАР        САЙДБАР*/
 
@@ -407,19 +386,20 @@ a:focus::after {
 }
 
 .showsidebar {
+    position: absolute;
+    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 30px;
     height: 30px;
     cursor: pointer;
-    margin: 0 10px;
+    margin: 0 10px 0 70px;
     font-size: 16px;
     border: 2px solid #6c8bd5e1;
     border-radius: 10px;
     color: #fff;
     background-color: transparent;
-    transition: .2s ease 0s;
 }
 
 .showsidebar:hover {
@@ -428,20 +408,21 @@ a:focus::after {
 }
 
 .hidesidebar {
+    position: absolute;
+    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 30px;
     height: 30px;
     cursor: pointer;
-    margin: 0 10px;
+    margin: 0 10px 0 70px;
     font-size: 16px;
     border: 2px solid #6c8bd5e1;
     border-radius: 10px;
     color: #fff;
     background-color: #4c78df;
     display: none;
-    transition: all .5s ease 0s;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     vertical-align: middle;
 }
@@ -458,7 +439,6 @@ a:focus::after {
 .showsidebar.active {
     display: none;
 }
-
 
 /* --------------------------------------------------------------------------------------------- */
 
@@ -557,7 +537,7 @@ a:focus::after {
     text-transform: none;
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 100%;
     padding: 10px 15px;
     font-size: 12pt;
     font-family: 'Comfortaa';

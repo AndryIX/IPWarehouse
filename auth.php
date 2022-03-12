@@ -19,7 +19,7 @@
     <div class="auth__form">
 
         <div class="div__logo">
-                <img width="100" height="100" src="img/logo-blue.svg" alt="">
+                <img width="100" height="100" src="img/logo-blue.svg" alt="Логотип">
         </div>
         
         <form class="form" action="handlers/handler_auth.php" method="post">

@@ -36,13 +36,7 @@ if(!$_SESSION['role']){
                 <a href="#" class="logo">
                     <img src="../img/logo.svg" alt="Логотип" width="60px">
                 </a>
-                <div class="burger">
-                    <span></span>
-                </div>
-                    <nav class="menu">
-                        <ul class="header_list">
-                            <li>
-                                <div class="showsidebar">
+                <div class="showsidebar">
                                 <p>＋</p>
                                 </div>
                                 <div class="hidesidebar">
@@ -58,20 +52,23 @@ if(!$_SESSION['role']){
                                             <a href="../m_moderation/accesses.php">Доступы к приложениям</a>
                                         </div>
                                     <?endif;?>
-                                    <a href="#">Ссылка</a>
-                                    <a href="#">Ссылка</a>
                                 </div>
-                            </li>
-                            <li>
-                                <a href="../index.php" class="header_link">Главная</a>
-                            </li>
-                            <li>
-                                <a href="../work.php" class="header_link">Сотрудники</a>
-                            </li>
-                            <li>
-                                <a href="#" class="header_link">Контакты</a>
-                            </li>
+                <div class="burger">
+                    <span></span>
+                </div>
+                
+                    <nav class="menu">
+                            <ul class="header_list">
                                 <li>
+                                    <a href="../index.php" class="header_link">Главная</a>
+                                </li>
+                                <li>
+                                    <a href="../work.php" class="header_link">Сотрудники</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="header_link">Контакты</a>
+                                </li>
+                                    <li>
                                     <form class="form__exit" method="post">
                                         <button type="submit" name="btn_exit" class="btn__exit">Выйти</button>
                                     </form>

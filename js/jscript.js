@@ -8,5 +8,6 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('.showsidebar, .hidesidebar').click(function(event) {
         $('.sidebar, .showsidebar, .hidesidebar').toggleClass('active');
+        $('body').toggleClass('lock');
     });
 });
