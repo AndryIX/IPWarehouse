@@ -9,7 +9,8 @@ $result = $db -> query("select role_name, login, password
                         where assignments.id_role = roles.id_role
                         and assignments.id_user = users.id_user
                         and login = '$login' 
-                        and password = '".sha1($password)."'");
+                        and password = '".sha1($password)."'
+                        order by assignments.id_role asc");
 
 $num_rows = $result -> rowCount();
 
