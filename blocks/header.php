@@ -63,6 +63,9 @@ if(!$_SESSION['role']){
                                     <a href="../index.php" class="header_link">Главная</a>
                                 </li>
                                 <li>
+                                    <a href="../sklad.php" class="header_link">Склад</a>
+                                </li>
+                                <li>
                                     <a href="../work.php" class="header_link">Сотрудники</a>
                                 </li>
                                 <li>
