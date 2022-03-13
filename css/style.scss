@@ -104,7 +104,7 @@ h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #1240AB;
+    background-color: #1240ab8f;
     z-index: 2;
 }
 
@@ -279,11 +279,17 @@ h6 {
 
 /*КОНТЕНТ     КОНТЕНТ     КОНТЕНТ     КОНТЕНТ     КОНТЕНТ     КОНТЕНТ     КОНТЕНТ     КОНТЕНТ     КОНТЕНТ     КОНТЕНТ*/
 
+.body{
+    
+}
+
 .content {
+    height: 100vh;
     line-height: 1.5;
     font-family: 'Inter', sans-serif;
     flex: 1 1 auto;
     padding: 100px 0px 0px 0px;
+    background:  linear-gradient(to left, powderblue, rgb(206, 196, 198),powderblue) repeat-y;
 }
 
 .content_text {
@@ -310,8 +316,18 @@ h6 {
 }
 
 .title p {
+    z-index: 2;
     font-size: 18px;
     text-align: center;
+}
+
+.news-content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
 }
 
 .news-icon{
@@ -350,29 +366,18 @@ h6 {
     margin: 0;
 }
 
-.news-content{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-}
-
 .news-item{
-    position: relative;
+
     display: inline-block;
     text-align: justify;
     display: block;
     max-width: 300px;
     min-height: 150px;
-    padding: 10px 0 0 0;
 }
 
 
 .more-news{
-    position: absolute;
-    display: block;
+    display: inline-block;
     line-height: 44px;
     height: 37px;
     padding: 0 24px 10px 24px;
