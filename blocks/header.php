@@ -36,6 +36,7 @@ if(!$_SESSION['role']){
                 <a href="/index.php" class="logo">
                     <img src="../img/logo.svg" alt="Логотип" width="60px">
                 </a>
+                
                 <div class="showsidebar">
                                 <p>＋</p>
                                 </div>
@@ -52,7 +53,8 @@ if(!$_SESSION['role']){
                                             <a href="../m_moderation/accesses.php">Доступы к приложениям</a>
                                         </div>
                                     <?endif;?>
-                                </div>
+                </div>
+                
                 <div class="burger">
                     <span></span>
                 </div>
