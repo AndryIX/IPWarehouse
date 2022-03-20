@@ -1,7 +1,7 @@
 <?session_start();
     require "../db_connect.php";
 
-    $add_login = trim($_POST['add_login']);
+    $add_login = $_POST['add_login'];
     $add_password = sha1(trim($_POST['add_password']));
     $confirm_pass = sha1(trim($_POST['confirm_pass']));
     

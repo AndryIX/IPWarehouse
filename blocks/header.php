@@ -1,5 +1,6 @@
 <?session_start();
 if(isset($_POST['btn_exit'])){
+    $db = null;
     unset($_SESSION['role']);
     header("Location: ../auth.php");
 }
@@ -26,7 +27,7 @@ if(!$_SESSION['role']){
     <meta name="viewport" content="width=device-width">
     <title>Бургер</title>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Fira+Sans:wght@200&family=Inter:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.scss">
+    <link rel="stylesheet" href="/css/style.scss">
 </head>
 <body>
     <div class="wrapper">
@@ -34,7 +35,7 @@ if(!$_SESSION['role']){
             <div class="container">
                 <div class="header_body">
                 <a href="/index.php" class="logo">
-                    <img src="../img/logo.svg" alt="Логотип" width="60px">
+                    <img src="/img/logo.svg" alt="Логотип" width="60px">
                 </a>
                 
                 <div class="showsidebar">
@@ -45,7 +46,7 @@ if(!$_SESSION['role']){
                                 </div>
                                 <div class="sidebar">
                                     <?if($_SESSION['role'] == 'Администратор'):?>
-                                        <h1>Аадминистрирование</h1>
+                                        <h1>Модерация</h1>
                                         <div>
                                             <?while($link = $menu -> fetch(PDO::FETCH_OBJ)):?>
                                                 <a href="<?=$link->url_address?>"><?=$link->app_name?></a>

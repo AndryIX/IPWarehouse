@@ -24,7 +24,7 @@ require "../blocks/header.php";?>
                 <?elseif($login != "admin"):?>
                     <input class="add__input" name="update_login" type="text" value="<?=$login?>" placeholder="Логин.." required>
                 <?endif;?>
-                <input class="add__input" name="update_password" type="text" placeholder="Пароль..">
+                <input class="add__input" name="update_password" type="password" placeholder="Пароль..">
                 <input class="btn__add" type="submit" value="ОК">
             </div>
         </form>

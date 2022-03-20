@@ -19,12 +19,8 @@ $selected = $_GET['selected'];
                         <form action="assigns.php" method="get">
                             <select name="selected" class="selection">
                                 <?$search = $db -> query("select * from users order by id_user asc");
-                                while($row = $search -> fetch(PDO::FETCH_OBJ)):
-                                    if($row -> id_user == $selected):?>
-                                        <option value="<?=$row->id_user?>" selected><?=$row->login?></option>
-                                    <?else:?>
-                                        <option value="<?=$row->id_user?>"><?=$row->login?></option>
-                                    <?endif;?>
+                                while($row = $search -> fetch(PDO::FETCH_OBJ)):?>
+                                        <option value="<?=$row->id_user?>" <?if($row -> id_user == $selected) echo 'selected';?>><?=$row->login?></option>
                                 <?endwhile;?>
                             </select>
                             <button type="submit" class="btn__search" name="">Показать</button>

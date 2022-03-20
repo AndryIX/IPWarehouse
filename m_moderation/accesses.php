@@ -21,12 +21,8 @@ require "../blocks/header.php";
                         <form action="accesses.php" method="get">
                             <select name="selected" class="selection">
                                 <?$search = $db -> query("select * from roles");
-                                while($row = $search -> fetch(PDO::FETCH_OBJ)):
-                                    if($row -> id_role == $selected):?>
-                                        <option value="<?=$row->id_role?>" selected><?=$row->role_name?></option>
-                                    <?else:?>
-                                        <option value="<?=$row->id_role?>"><?=$row->role_name?></option>
-                                    <?endif;?>
+                                while($row = $search -> fetch(PDO::FETCH_OBJ)):?>
+                                        <option value="<?=$row->id_role?>" <?if($row -> id_role == $selected) echo 'selected';?>><?=$row->role_name?></option>
                                 <?endwhile;?>
                             </select>
                             <button type="submit" class="btn__search" name="">Показать</button>
