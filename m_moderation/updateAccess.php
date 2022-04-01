@@ -15,7 +15,7 @@ require "../blocks/header.php";?>
     <div class="content">
         <div class="container">
             <form class="add__form" action="../handlers/h_moderation/update_access.php" method="post">
-                <h1 class="add__lab">Переопределение роли</h1>
+                <h1 class="add__lab">Переопределение приложения</h1>
                 <div class="add">
 
                     <select name="upd_role_acc" class="selection">

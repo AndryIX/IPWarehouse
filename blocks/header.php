@@ -39,21 +39,21 @@ if(!$_SESSION['role']){
                 </a>
                 
                 <div class="showsidebar">
-                                <p>＋</p>
-                                </div>
-                                <div class="hidesidebar">
-                                <p>ー</p>
-                                </div>
-                                <div class="sidebar">
-                                    <?if($_SESSION['role'] == 'Администратор'):?>
-                                        <h1>Модерация</h1>
-                                        <div>
-                                            <?while($link = $menu -> fetch(PDO::FETCH_OBJ)):?>
-                                                <a href="<?=$link->url_address?>"><?=$link->app_name?></a>
-                                            <?endwhile;?>
-                                            <a href="../m_moderation/accesses.php">Доступы к приложениям</a>
-                                        </div>
-                                    <?endif;?>
+                     <p>＋</p>
+                </div>
+                <div class="hidesidebar">
+                    <p>ー</p>
+                </div>
+                <div class="sidebar">
+                        <?if($_SESSION['role'] == 'Администратор'):?>
+                        <h1>Модерация</h1>
+                        <div>
+                            <?while($link = $menu -> fetch(PDO::FETCH_OBJ)):?>
+                                <a href="<?=$link->url_address?>"><?=$link->app_name?></a>
+                            <?endwhile;?>
+                            <a href="../m_moderation/accesses.php">Доступы к приложениям</a>
+                        </div>
+                    <?endif;?>
                 </div>
                 
                 <div class="burger">

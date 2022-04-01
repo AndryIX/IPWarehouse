@@ -4,7 +4,6 @@
     }catch (PDOException $e){
         echo "Ошибка: не удалось установить соединение с базой данных: ".$e -> getMessage();
     }
-    
 
     function AI($db, $table, $id){
         $result = $db -> query("select max($id) as id from $table") -> fetch(PDO::FETCH_OBJ);
@@ -12,5 +11,3 @@
         return $autoi;
     }
 
-
-?>
