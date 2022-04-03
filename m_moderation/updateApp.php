@@ -1,7 +1,8 @@
 <? session_start();
-if ($_SESSION['role'] != 'Администратор'){
-    header('Location: ../auth.php');
+if(!$_SESSION['login']){
+    header('Location: auth.php');
 }
+
 
 $id_app = trim($_GET['id_app']);
 $app_name = trim($_GET['app_name']);

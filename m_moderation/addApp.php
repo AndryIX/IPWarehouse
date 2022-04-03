@@ -1,7 +1,8 @@
 <? session_start();
-if ($_SESSION['role'] != 'Администратор'){
-    header('Location: ../auth.php');
+if(!$_SESSION['login']){
+    header('Location: auth.php');
 }
+
 
 require "../handlers/db_connect.php";
 require "../blocks/header.php";?>

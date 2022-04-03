@@ -1,21 +1,38 @@
 <?session_start();
 if(isset($_POST['btn_exit'])){
     $db = null;
-    unset($_SESSION['role']);
+    unset($_SESSION['login']);
     header("Location: ../auth.php");
 }
 
-if(!$_SESSION['role']){
+if(!$_SESSION['login']){
     header('Location: ../auth.php');
     exit;
 }
-    $role = $_SESSION['role'];
-    $menu = $db -> query("select role_name, app_name, url_address
-                            from accesses, apps, roles
-                            where accesses.id_app = apps.id_app
-                            and accesses.id_role = roles.id_role
-                            and role_name = '$role'");
+
+    $login = $_SESSION['login'];
     
+    $result = $db -> query("select role_name, login, password  
+                        from assignments, users, roles
+                        where assignments.id_role = roles.id_role
+                        and assignments.id_user = users.id_user
+                        and login = '$login'");
+    $num_rows = $result -> rowCount();
+
+    $roles = array();
+    for($i = 0; $i < $num_rows; $i++){
+        $roles[$i] = $result -> fetch(PDO::FETCH_OBJ) -> role_name;
+    }
+
+    function Menu($db, $role){
+        $menu = $db -> query("select role_name, app_name, url_address
+        from accesses, apps, roles
+        where accesses.id_app = apps.id_app
+        and accesses.id_role = roles.id_role
+        and role_name = '$role'");
+        return $menu;
+    }
+
 
 
 ?>
@@ -45,15 +62,21 @@ if(!$_SESSION['role']){
                     <p>ー</p>
                 </div>
                 <div class="sidebar">
-                        <?if($_SESSION['role'] == 'Администратор'):?>
-                        <h1>Модерация</h1>
-                        <div>
-                            <?while($link = $menu -> fetch(PDO::FETCH_OBJ)):?>
-                                <a href="<?=$link->url_address?>"><?=$link->app_name?></a>
-                            <?endwhile;?>
-                            <a href="../m_moderation/accesses.php">Доступы к приложениям</a>
-                        </div>
-                    <?endif;?>
+                        
+                        <?
+                        for($i = 0; $i < count($roles); $i++){
+                            if($roles[$i] == 'Администратор'):
+                                $menu = Menu($db, $roles[$i]);?>
+                                <h1>Модерация</h1>
+                                <div>
+                                    <?while($link = $menu -> fetch(PDO::FETCH_OBJ)):?>
+                                        <a href="<?=$link->url_address?>"><?=$link->app_name?></a>
+                                    <?endwhile;?>
+                                    <a href="../m_moderation/accesses.php">Доступы к приложениям</a>
+                                </div>
+                            <?endif;
+                        }
+                        ?>
                 </div>
                 
                 <div class="burger">

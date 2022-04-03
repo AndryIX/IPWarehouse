@@ -1,5 +1,5 @@
 <? session_start();
-if(!$_SESSION['role']){
+if(!$_SESSION['login']){
     header('Location: auth.php');
 }
 
