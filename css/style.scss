@@ -763,8 +763,73 @@ option {
     color: #1240AB;
 }
 
-/*----------------------------------------------------------------------------------------------------------------------*/
-.content_carousel{
-    margin: 40px 0 0 0;
+/*-------------Продажи--------------------------------Продажи-----------------------Продажи------------------------------*/
+
+.sells__title h1{
+    font-size: 16pt;
+    color: #1240AB;
+    font-family: 'Comfortaa';
+    font-weight: bold;
 }
 
+.sells__add a{
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 12pt;
+    font-family: 'Comfortaa';
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    border: 1px solid #1240AB;
+    background-color: #1240AB;
+    color: #fff;
+    transition: .2s;
+}
+
+.sells__row{
+    display: flex;
+    margin: 0 -22.5px;
+}
+
+.sells__items{
+    margin: 22.5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+.sells__item{
+    background-color: #445162;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #445162;
+    padding: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    margin: 7px 0 23px 15px;
+
+    -webkit-box-shadow: 7px 6px 12px 0px rgba(0, 0, 0, 0.37);
+    -moz-box-shadow: 7px 6px 12px 0px rgba(0, 0, 0, 0.37);
+    box-shadow: 7px 6px 12px 0px rgba(0, 0, 0, 0.37);
+}
+
+.sells__body{
+    max-width: 990px;
+    margin: 0 auto;
+}
+
+.sells__item__title{
+    font-size: 15px;
+    text-align: center;
+    padding: 0 0 7px 0;
+}
+
+.sells__item__count{
+    padding: 0 5px;
+    margin: 0 0 5px 0;
+}
+
+.sells__item__price{
+    padding: 0 5px;
+}

@@ -68,6 +68,9 @@ if(!$_SESSION['role']){
                                 <li>
                                     <a href="#" class="header_link">Контакты</a>
                                 </li>
+                                <li>
+                                    <a href="/sells.php" class="header_link">Продажи</a>
+                                </li>
                                     <li>
                                     <form class="form__exit" method="post">
                                         <button type="submit" name="btn_exit" class="btn__exit">Выйти</button>
