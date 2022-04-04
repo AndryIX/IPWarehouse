@@ -12,11 +12,12 @@ if(!$_SESSION['login']){
 
     $login = $_SESSION['login'];
     
-    $result = $db -> query("select role_name, login, password  
+    $result = $db -> query("select role_name, login, assignments.id_role  
                         from assignments, users, roles
                         where assignments.id_role = roles.id_role
                         and assignments.id_user = users.id_user
-                        and login = '$login'");
+                        and login = '$login'
+                        order by id_role asc");
     $num_rows = $result -> rowCount();
 
     $roles = array();
