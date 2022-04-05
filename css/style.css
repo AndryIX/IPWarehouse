@@ -564,7 +564,7 @@ h6 {
     color: #fff;
 }
 
-.view h1 {
+h1 {
     font-size: 16pt;
     color: #1240AB;
     font-family: 'Comfortaa';
@@ -758,4 +758,64 @@ option {
     .add {
         width: 100%;
     }
+}
+
+/*----------------ПРОДАЖИ-------------------------------------*/
+.sells{
+    padding: 0 0 0 50px;
+    margin: 0 auto;
+}
+
+.sells__row{
+    display: flex;
+}
+
+.sells__body{
+    max-width: 990px;
+    margin: 0 auto;
+}
+
+.sells__items{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sells__column{
+    display: flex;
+    margin: 0 auto;
+}
+
+.sells__item{
+    margin: 30px 15px 10px 15px;
+    display: flex;
+    background-color: #445162;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #445162;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+.sells__add a {
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 12pt;
+    font-family: 'Comfortaa';
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    border: 1px solid #1240AB;
+    background-color: #1240AB;
+    color: #fff;
+    transition: .2s;
+}
+
+.sells__add a:hover{
+    color: #1240AB;
+    background-color: #fff;
+}
+
+.sells__add a:focus{
+    color: #1240AB;
+    background-color: rgb(227, 227, 227);
 }

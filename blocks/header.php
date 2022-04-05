@@ -45,7 +45,7 @@ if(!$_SESSION['login']){
     <meta name="viewport" content="width=device-width">
     <title>Бургер</title>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Fira+Sans:wght@200&family=Inter:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.scss">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <div class="wrapper">
@@ -91,6 +91,9 @@ if(!$_SESSION['login']){
                                 </li>
                                 <li>
                                     <a href="../work.php" class="header_link">Сотрудники</a>
+                                </li>
+                                <li>
+                                    <a href="../sells.php" class="header_link">Продажи</a>
                                 </li>
                                 <li>
                                     <a href="#" class="header_link">Контакты</a>
