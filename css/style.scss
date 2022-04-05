@@ -786,6 +786,16 @@ option {
     transition: .2s;
 }
 
+.sells__add a:hover{
+    color: #1240AB;
+    background-color: #fff;
+}
+
+.sells__add a:active{
+    background-color: #6C8CD5;
+    color: #fff;
+}
+
 .sells__row{
     display: flex;
     margin: 0 -22.5px;
@@ -832,4 +842,58 @@ option {
 
 .sells__item__price{
     padding: 0 5px;
+}
+
+
+
+.sells__add__body input{
+    display: block;
+    padding: 10px;
+    font-size: 12pt;
+    margin: 15px 0;
+    font-family: 'Comfortaa';
+    width: 25%;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    border: 2px solid #dcdcdc;
+}
+
+.sells__add__body select{
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 10px;
+    font-size: 12pt;
+    border-radius: 5px;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    background-color: #fff;
+    border: 2px solid #dcdcdc;
+    width: 100px;
+    height: 35px;
+}
+
+.sells__add__body a{
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 12pt;
+    font-family: 'Comfortaa';
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    border: 1px solid #1240AB;
+    background-color: #1240AB;
+    color: #fff;
+    transition: .2s;
+}
+
+.sells__add__body a:hover{
+    color: #1240AB;
+    background-color: #fff;
+}
+
+.sells__add__body a:active{
+    background-color: #6C8CD5;
+    color: #fff;
 }

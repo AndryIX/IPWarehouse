@@ -3,8 +3,8 @@ if(!$_SESSION['role']){
     header('Location: auth.php');
 }
 
-require "handlers/db_connect.php";
-require "blocks/header.php";
+require "../handlers/db_connect.php";
+require "../blocks/header.php";
 ?>
 
 
@@ -17,7 +17,7 @@ require "blocks/header.php";
                     <h1>Продажи</h1>
                 </div>
                 <div class="sells__add">
-                    <a href="#">Оформить накладную</a>
+                    <a href="../m_sells/sells__add.php">Оформить накладную</a>
                 </div>
             </div>
             <div class="sells__body">
