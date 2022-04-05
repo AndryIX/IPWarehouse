@@ -826,3 +826,20 @@ option {
 .sells__item__price {
     padding: 3px 5px;
 }
+
+.sells__add__body select,.sells__add__body input{
+    display: inline-block;
+    padding: 10px 10px;
+    font-size: 12pt;
+    border-radius: 5px;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    background-color: #fff;
+    border: 2px solid #dcdcdc;
+    width: 125px;
+    margin: 20px 10px 10px 0;
+}
+
+.sells__add__body input{
+    width: 165px;
+}
