@@ -16,7 +16,7 @@ require "blocks/header.php";
                 </div>
                 <div class="sells__add">
                     <a href="../m_sells/sells__add.php">Оформить накладную</a>
-                </div>
+                    <a href="../m_sells/sells__add.php">Просмотр накладных</a>
             </div>
             <div class="sells__body">
                 <div class="sells__row">

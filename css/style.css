@@ -804,6 +804,7 @@ option {
     padding: 5px 15px;
     margin-bottom: 10px;
     border-radius: 25px;
+    margin-left: 7px;
     border: 1px solid #1240AB;
     background-color: #1240AB;
     color: #fff;
@@ -818,4 +819,10 @@ option {
 .sells__add a:focus{
     color: #1240AB;
     background-color: rgb(227, 227, 227);
+}
+
+.sells__item__title,
+.sells__item__count,
+.sells__item__price {
+    padding: 3px 5px;
 }
