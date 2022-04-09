@@ -564,6 +564,10 @@ h6 {
     color: #fff;
 }
 
+.view {
+    margin-bottom: 10%;
+}
+
 .view h1 {
     font-size: 16pt;
     color: #1240AB;

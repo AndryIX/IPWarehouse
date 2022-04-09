@@ -14,7 +14,7 @@ require "../blocks/header.php";
             <div class="view">
                 <h1>Пользователи</h1>
                 <a href="addUser.php" class="inter">Добавить пользователя</a>
-                <div class="content-center">
+                <div class="view">
                     <?$result = $db -> query("select id_user, login, password from users order by id_user asc");
                         while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
                             <ul>

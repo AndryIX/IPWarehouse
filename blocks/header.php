@@ -10,13 +10,13 @@ if(!$_SESSION['login']){
     exit;
 }
 
-    $login = $_SESSION['login'];
+    $login_chk = $_SESSION['login'];
     
     $result = $db -> query("select role_name, login, assignments.id_role  
                         from assignments, users, roles
                         where assignments.id_role = roles.id_role
                         and assignments.id_user = users.id_user
-                        and login = '$login'
+                        and login = '$login_chk'
                         order by id_role asc");
     $num_rows = $result -> rowCount();
 
@@ -45,7 +45,7 @@ if(!$_SESSION['login']){
     <meta name="viewport" content="width=device-width">
     <title>Бургер</title>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Fira+Sans:wght@200&family=Inter:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.scss">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <div class="wrapper">
