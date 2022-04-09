@@ -2,6 +2,9 @@
 if(!$_SESSION['login']){
     header('Location: auth.php');
 }
+if($_SESSION['check_succ'])
+    echo "<script>alert(\"".$_SESSION['check_succ']."\");</script>";
+    unset($_SESSION['check_succ']);
 
 require "../handlers/db_connect.php";
 require "../blocks/header.php";?>

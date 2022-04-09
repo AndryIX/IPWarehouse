@@ -10,3 +10,63 @@ $(document).ready(function() {
         $('.sidebar, .showsidebar, .hidesidebar').toggleClass('active');
     });
 });
+
+function validateFormAuth() {
+    var inlogin = document.forms["fauth"]["login"].value;
+    var inpassword = document.forms["fauth"]["password"].value;
+
+    if (inlogin == "") {
+        alert("Введите логин!");
+        return false;
+    }
+    if (inpassword == "") {
+        alert("Введите пароль!");
+        return false;
+    }
+}
+
+function validateFormAddUser() {
+    var addlogin = document.forms["fadduser"]["add_login"].value;
+    var addpassword = document.forms["fadduser"]["add_password"].value;
+    var confirmpass = document.forms["fadduser"]["confirm_pass"].value;
+
+    if (addlogin == "") {
+        alert("Заполните поле: Логин!");
+        return false;
+    }
+    if (addpassword == "") {
+        alert("Заполните поле: Пароль!");
+        return false;
+    }
+    if (confirmpass == "") {
+        alert("Заполните поле: Подтвердите пароль!");
+        return false;
+    }
+    if (addpassword !== confirmpass) {
+        alert("Пароли не совпадают!");
+        return false;
+    }
+}
+
+function validateFormAddRole() {
+    var addrole = document.forms["faddrole"]["add_role"].value;
+
+    if (addrole == "") {
+        alert("Заполните поле: Роль!");
+        return false;
+    }
+}
+
+function validateFormAddApp() {
+    var addapp = document.forms["faddapp"]["add_app_name"].value;
+    var addurl = document.forms["faddapp"]["add_app_url"].value;
+
+    if (addapp == "") {
+        alert("Заполните поле: Название приложения!");
+        return false;
+    }
+    if (addurl == "") {
+        alert("Заполните поле: Url адрес!");
+        return false;
+    }
+}
