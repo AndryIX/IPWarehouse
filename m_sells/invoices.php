@@ -34,7 +34,7 @@ require "../blocks/header.php";
         <?$result = $db -> query("
 select number_invoice, date_invoice, contacts.nomer_contract, contacts.date_contact, name_product, units.title, products_invoice.quantity, products_invoice.price, currencies.currencies_name
 from warehouse.contacts, warehouse.currencies, warehouse.invoices, warehouse.products, warehouse.units, warehouse.products_invoice
-where units.id_unit = products.id_unit and currencies.id_currency = products_invoice.id_currency and contacts.id_contract = invoices.id_contract and products.id_product = products_invoice.id_product");
+where units.id_unit = products.id_unit and currencies.id_currency = products_invoice.id_currency and contacts.id_contract = invoices.id_contract and products.id_product = products_invoice.id_product and invoices.id_invoice = products_invoice.id_invoice");
                         while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
                         <tr>
                         <td><?= $row->number_invoice?></td>

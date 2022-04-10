@@ -28,8 +28,8 @@ require "../blocks/header.php";
                                             <option value="<?=$row->id_product?>" ><?=$row->name_product?></option>
                                     <?endwhile;?>
                         </select>
-                        <input type="text"  name="count" placeholder="Введите кол-во" >
-                        <input type="text"  name="price" placeholder="Введите цену" >
+                        <input type="text"  name="count" placeholder="Введите кол-во" required>
+                        <input type="text"  name="price" placeholder="Введите цену" required>
                         <select class="currency__select" name="selected_currency">
                         <?$search = $db -> query("select * from warehouse.currencies order by id_currency asc");
                                     while($row = $search -> fetch(PDO::FETCH_OBJ)):?>

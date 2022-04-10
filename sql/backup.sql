@@ -5,7 +5,7 @@
 -- Dumped from database version 10.20
 -- Dumped by pg_dump version 10.20
 
--- Started on 2022-04-04 13:24:03
+-- Started on 2022-04-10 20:47:42
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -19,7 +19,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- TOC entry 5 (class 2615 OID 24577)
+-- TOC entry 8 (class 2615 OID 16490)
 -- Name: warehouse; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
@@ -50,7 +50,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 197 (class 1259 OID 24578)
+-- TOC entry 197 (class 1259 OID 16491)
 -- Name: accesses; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -63,7 +63,7 @@ CREATE TABLE public.accesses (
 ALTER TABLE public.accesses OWNER TO postgres;
 
 --
--- TOC entry 198 (class 1259 OID 24581)
+-- TOC entry 198 (class 1259 OID 16494)
 -- Name: apps; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -77,7 +77,7 @@ CREATE TABLE public.apps (
 ALTER TABLE public.apps OWNER TO postgres;
 
 --
--- TOC entry 199 (class 1259 OID 24587)
+-- TOC entry 199 (class 1259 OID 16500)
 -- Name: assignments; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -90,7 +90,7 @@ CREATE TABLE public.assignments (
 ALTER TABLE public.assignments OWNER TO postgres;
 
 --
--- TOC entry 200 (class 1259 OID 24590)
+-- TOC entry 200 (class 1259 OID 16503)
 -- Name: roles; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -103,7 +103,7 @@ CREATE TABLE public.roles (
 ALTER TABLE public.roles OWNER TO postgres;
 
 --
--- TOC entry 201 (class 1259 OID 24593)
+-- TOC entry 201 (class 1259 OID 16506)
 -- Name: users; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -117,7 +117,7 @@ CREATE TABLE public.users (
 ALTER TABLE public.users OWNER TO postgres;
 
 --
--- TOC entry 202 (class 1259 OID 24596)
+-- TOC entry 202 (class 1259 OID 16509)
 -- Name: contacts; Type: TABLE; Schema: warehouse; Owner: postgres
 --
 
@@ -133,7 +133,7 @@ CREATE TABLE warehouse.contacts (
 ALTER TABLE warehouse.contacts OWNER TO postgres;
 
 --
--- TOC entry 203 (class 1259 OID 24599)
+-- TOC entry 203 (class 1259 OID 16512)
 -- Name: counterparties; Type: TABLE; Schema: warehouse; Owner: postgres
 --
 
@@ -160,7 +160,7 @@ CREATE TABLE warehouse.counterparties (
 ALTER TABLE warehouse.counterparties OWNER TO postgres;
 
 --
--- TOC entry 204 (class 1259 OID 24602)
+-- TOC entry 204 (class 1259 OID 16515)
 -- Name: countries; Type: TABLE; Schema: warehouse; Owner: postgres
 --
 
@@ -173,7 +173,7 @@ CREATE TABLE warehouse.countries (
 ALTER TABLE warehouse.countries OWNER TO postgres;
 
 --
--- TOC entry 205 (class 1259 OID 24605)
+-- TOC entry 205 (class 1259 OID 16518)
 -- Name: currencies; Type: TABLE; Schema: warehouse; Owner: postgres
 --
 
@@ -187,7 +187,7 @@ CREATE TABLE warehouse.currencies (
 ALTER TABLE warehouse.currencies OWNER TO postgres;
 
 --
--- TOC entry 206 (class 1259 OID 24608)
+-- TOC entry 206 (class 1259 OID 16521)
 -- Name: income_price; Type: TABLE; Schema: warehouse; Owner: postgres
 --
 
@@ -202,7 +202,7 @@ CREATE TABLE warehouse.income_price (
 ALTER TABLE warehouse.income_price OWNER TO postgres;
 
 --
--- TOC entry 213 (class 1259 OID 24718)
+-- TOC entry 207 (class 1259 OID 16524)
 -- Name: invoices; Type: TABLE; Schema: warehouse; Owner: postgres
 --
 
@@ -217,7 +217,7 @@ CREATE TABLE warehouse.invoices (
 ALTER TABLE warehouse.invoices OWNER TO postgres;
 
 --
--- TOC entry 207 (class 1259 OID 24611)
+-- TOC entry 208 (class 1259 OID 16530)
 -- Name: products; Type: TABLE; Schema: warehouse; Owner: postgres
 --
 
@@ -234,7 +234,7 @@ CREATE TABLE warehouse.products (
 ALTER TABLE warehouse.products OWNER TO postgres;
 
 --
--- TOC entry 214 (class 1259 OID 24726)
+-- TOC entry 209 (class 1259 OID 16534)
 -- Name: products_invoice; Type: TABLE; Schema: warehouse; Owner: postgres
 --
 
@@ -250,7 +250,7 @@ CREATE TABLE warehouse.products_invoice (
 ALTER TABLE warehouse.products_invoice OWNER TO postgres;
 
 --
--- TOC entry 208 (class 1259 OID 24615)
+-- TOC entry 210 (class 1259 OID 16540)
 -- Name: sheets; Type: TABLE; Schema: warehouse; Owner: postgres
 --
 
@@ -264,7 +264,7 @@ CREATE TABLE warehouse.sheets (
 ALTER TABLE warehouse.sheets OWNER TO postgres;
 
 --
--- TOC entry 209 (class 1259 OID 24619)
+-- TOC entry 211 (class 1259 OID 16544)
 -- Name: status; Type: TABLE; Schema: warehouse; Owner: postgres
 --
 
@@ -277,21 +277,21 @@ CREATE TABLE warehouse.status (
 ALTER TABLE warehouse.status OWNER TO postgres;
 
 --
--- TOC entry 210 (class 1259 OID 24622)
+-- TOC entry 212 (class 1259 OID 16547)
 -- Name: units; Type: TABLE; Schema: warehouse; Owner: postgres
 --
 
 CREATE TABLE warehouse.units (
     id_unit integer NOT NULL,
     title character varying(10),
-    "Designation" character varying(20)
+    "Designation" character varying(50)
 );
 
 
 ALTER TABLE warehouse.units OWNER TO postgres;
 
 --
--- TOC entry 211 (class 1259 OID 24625)
+-- TOC entry 213 (class 1259 OID 16550)
 -- Name: warehouse; Type: TABLE; Schema: warehouse; Owner: postgres
 --
 
@@ -305,7 +305,7 @@ CREATE TABLE warehouse.warehouse (
 ALTER TABLE warehouse.warehouse OWNER TO postgres;
 
 --
--- TOC entry 212 (class 1259 OID 24632)
+-- TOC entry 214 (class 1259 OID 16557)
 -- Name: сategories; Type: TABLE; Schema: warehouse; Owner: postgres
 --
 
@@ -318,7 +318,7 @@ CREATE TABLE warehouse."сategories" (
 ALTER TABLE warehouse."сategories" OWNER TO postgres;
 
 --
--- TOC entry 2916 (class 0 OID 24578)
+-- TOC entry 2916 (class 0 OID 16491)
 -- Dependencies: 197
 -- Data for Name: accesses; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -330,7 +330,7 @@ INSERT INTO public.accesses (id_role, id_app) VALUES (1, 4);
 
 
 --
--- TOC entry 2917 (class 0 OID 24581)
+-- TOC entry 2917 (class 0 OID 16494)
 -- Dependencies: 198
 -- Data for Name: apps; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -342,7 +342,7 @@ INSERT INTO public.apps (id_app, app_name, url_address) VALUES (1, 'Пользо
 
 
 --
--- TOC entry 2918 (class 0 OID 24587)
+-- TOC entry 2918 (class 0 OID 16500)
 -- Dependencies: 199
 -- Data for Name: assignments; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -365,7 +365,7 @@ INSERT INTO public.assignments (id_user, id_role) VALUES (7, 5);
 
 
 --
--- TOC entry 2919 (class 0 OID 24590)
+-- TOC entry 2919 (class 0 OID 16503)
 -- Dependencies: 200
 -- Data for Name: roles; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -381,7 +381,7 @@ INSERT INTO public.roles (id_role, role_name) VALUES (2, 'Сис. Админ');
 
 
 --
--- TOC entry 2920 (class 0 OID 24593)
+-- TOC entry 2920 (class 0 OID 16506)
 -- Dependencies: 201
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -399,39 +399,44 @@ INSERT INTO public.users (id_user, login, password) VALUES (5, 'Суханов',
 
 
 --
--- TOC entry 2921 (class 0 OID 24596)
+-- TOC entry 2921 (class 0 OID 16509)
 -- Dependencies: 202
 -- Data for Name: contacts; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
 
+INSERT INTO warehouse.contacts (id_contract, nomer_contract, date_contact, id_counterparty, id_status) VALUES (1, '0001', '2022-04-01', 1, 2);
+INSERT INTO warehouse.contacts (id_contract, nomer_contract, date_contact, id_counterparty, id_status) VALUES (2, '0002', '2022-03-28', 1, 2);
 
 
 --
--- TOC entry 2922 (class 0 OID 24599)
+-- TOC entry 2922 (class 0 OID 16512)
 -- Dependencies: 203
 -- Data for Name: counterparties; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
 
+INSERT INTO warehouse.counterparties (id_counterparty, counterparty_name, "INN", "KPP", "OGRN", "OKPO", address, phone, email, "BIK", bank, "KS", "RS", "FIO", "FIO_otv", id_country) VALUES (1, 'ТоргХим', '1234567891', '251243441', '3071205010489', '10495', 'г Москва, ул. Пушкина', '89372885687', 'torgchim@gmail.ru', '627865410', 'АфроБанк', '1', '1', 'Александр Александович Алепкин', 'Александр Александович Алепкин', 1);
 
 
 --
--- TOC entry 2923 (class 0 OID 24602)
+-- TOC entry 2923 (class 0 OID 16515)
 -- Dependencies: 204
 -- Data for Name: countries; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
 
+INSERT INTO warehouse.countries (id_country, country_name) VALUES (1, 'Россия');
 
 
 --
--- TOC entry 2924 (class 0 OID 24605)
+-- TOC entry 2924 (class 0 OID 16518)
 -- Dependencies: 205
 -- Data for Name: currencies; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
 
+INSERT INTO warehouse.currencies (id_currency, currencies_name, designation) VALUES (1, 'Рубль', '₽');
 
 
 --
--- TOC entry 2925 (class 0 OID 24608)
+-- TOC entry 2925 (class 0 OID 16521)
 -- Dependencies: 206
 -- Data for Name: income_price; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
@@ -439,32 +444,39 @@ INSERT INTO public.users (id_user, login, password) VALUES (5, 'Суханов',
 
 
 --
--- TOC entry 2932 (class 0 OID 24718)
--- Dependencies: 213
+-- TOC entry 2926 (class 0 OID 16524)
+-- Dependencies: 207
 -- Data for Name: invoices; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
 
+INSERT INTO warehouse.invoices (id_invoice, number_invoice, date_invoice, id_contract) VALUES (1, '001', '2022-04-01', 1);
+INSERT INTO warehouse.invoices (id_invoice, number_invoice, date_invoice, id_contract) VALUES (4, '004', '2022-04-09', 1);
+INSERT INTO warehouse.invoices (id_invoice, number_invoice, date_invoice, id_contract) VALUES (2, '2', '2022-03-28', 1);
+INSERT INTO warehouse.invoices (id_invoice, number_invoice, date_invoice, id_contract) VALUES (3, '3', '2022-03-27', 1);
 
 
 --
--- TOC entry 2926 (class 0 OID 24611)
--- Dependencies: 207
+-- TOC entry 2927 (class 0 OID 16530)
+-- Dependencies: 208
 -- Data for Name: products; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
 
+INSERT INTO warehouse.products (id_product, name_product, condition, id_unit, id_warehouse, "id_сategory") VALUES (1, 'Монитор 23.8 дюйма', '1920x1080, 60 Гц, IPS, черный', 1, 1, 1);
+INSERT INTO warehouse.products (id_product, name_product, condition, id_unit, id_warehouse, "id_сategory") VALUES (2, 'Компьютер', '8 ГБ, 256 ГБ SSD, AMD Radeon RX Vega 3', 1, 1, 1);
 
 
 --
--- TOC entry 2933 (class 0 OID 24726)
--- Dependencies: 214
+-- TOC entry 2928 (class 0 OID 16534)
+-- Dependencies: 209
 -- Data for Name: products_invoice; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
 
+INSERT INTO warehouse.products_invoice (id_invoice, id_product, quantity, price, id_currency) VALUES (1, 1, 5, 1010101, 1);
 
 
 --
--- TOC entry 2927 (class 0 OID 24615)
--- Dependencies: 208
+-- TOC entry 2929 (class 0 OID 16540)
+-- Dependencies: 210
 -- Data for Name: sheets; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
 
@@ -472,39 +484,47 @@ INSERT INTO warehouse.sheets (id_price, start_date, end_date) VALUES (1, '2022-0
 
 
 --
--- TOC entry 2928 (class 0 OID 24619)
--- Dependencies: 209
+-- TOC entry 2930 (class 0 OID 16544)
+-- Dependencies: 211
 -- Data for Name: status; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
 
+INSERT INTO warehouse.status (id_status, status_name) VALUES (1, 'Покупка');
+INSERT INTO warehouse.status (id_status, status_name) VALUES (2, 'Продажа');
 
 
 --
--- TOC entry 2929 (class 0 OID 24622)
--- Dependencies: 210
+-- TOC entry 2931 (class 0 OID 16547)
+-- Dependencies: 212
 -- Data for Name: units; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
 
+INSERT INTO warehouse.units (id_unit, title, "Designation") VALUES (1, 'штук', 'шт');
+INSERT INTO warehouse.units (id_unit, title, "Designation") VALUES (2, 'килограмм', 'кг');
 
 
 --
--- TOC entry 2930 (class 0 OID 24625)
--- Dependencies: 211
+-- TOC entry 2932 (class 0 OID 16550)
+-- Dependencies: 213
 -- Data for Name: warehouse; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
 
+INSERT INTO warehouse.warehouse (id_warehouse, denomination, footnote) VALUES (1, 'Склад 1', 'Склад для храния техники');
+INSERT INTO warehouse.warehouse (id_warehouse, denomination, footnote) VALUES (2, 'Склад 2', 'Склад для храния химии');
 
 
 --
--- TOC entry 2931 (class 0 OID 24632)
--- Dependencies: 212
+-- TOC entry 2933 (class 0 OID 16557)
+-- Dependencies: 214
 -- Data for Name: сategories; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
 
+INSERT INTO warehouse."сategories" (id_categ, title) VALUES (1, 'Техника');
+INSERT INTO warehouse."сategories" (id_categ, title) VALUES (2, 'Химия');
 
 
 --
--- TOC entry 2746 (class 2606 OID 24637)
+-- TOC entry 2746 (class 2606 OID 16562)
 -- Name: accesses accesses_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -513,7 +533,7 @@ ALTER TABLE ONLY public.accesses
 
 
 --
--- TOC entry 2748 (class 2606 OID 24639)
+-- TOC entry 2748 (class 2606 OID 16564)
 -- Name: apps apps_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -522,7 +542,7 @@ ALTER TABLE ONLY public.apps
 
 
 --
--- TOC entry 2750 (class 2606 OID 24641)
+-- TOC entry 2750 (class 2606 OID 16566)
 -- Name: assignments assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -531,7 +551,7 @@ ALTER TABLE ONLY public.assignments
 
 
 --
--- TOC entry 2752 (class 2606 OID 24643)
+-- TOC entry 2752 (class 2606 OID 16568)
 -- Name: roles roles_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -540,7 +560,7 @@ ALTER TABLE ONLY public.roles
 
 
 --
--- TOC entry 2754 (class 2606 OID 24645)
+-- TOC entry 2754 (class 2606 OID 16570)
 -- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -549,7 +569,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- TOC entry 2758 (class 2606 OID 24647)
+-- TOC entry 2758 (class 2606 OID 16572)
 -- Name: counterparties Counterparties_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -558,7 +578,7 @@ ALTER TABLE ONLY warehouse.counterparties
 
 
 --
--- TOC entry 2770 (class 2606 OID 24649)
+-- TOC entry 2774 (class 2606 OID 16574)
 -- Name: status Status_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -567,7 +587,7 @@ ALTER TABLE ONLY warehouse.status
 
 
 --
--- TOC entry 2756 (class 2606 OID 24651)
+-- TOC entry 2756 (class 2606 OID 16576)
 -- Name: contacts contacts_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -576,7 +596,7 @@ ALTER TABLE ONLY warehouse.contacts
 
 
 --
--- TOC entry 2760 (class 2606 OID 24653)
+-- TOC entry 2760 (class 2606 OID 16578)
 -- Name: countries countries_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -585,7 +605,7 @@ ALTER TABLE ONLY warehouse.countries
 
 
 --
--- TOC entry 2762 (class 2606 OID 24655)
+-- TOC entry 2762 (class 2606 OID 16580)
 -- Name: currencies currencies_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -594,7 +614,7 @@ ALTER TABLE ONLY warehouse.currencies
 
 
 --
--- TOC entry 2764 (class 2606 OID 24657)
+-- TOC entry 2764 (class 2606 OID 16582)
 -- Name: income_price income_price_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -603,7 +623,7 @@ ALTER TABLE ONLY warehouse.income_price
 
 
 --
--- TOC entry 2778 (class 2606 OID 24725)
+-- TOC entry 2766 (class 2606 OID 16584)
 -- Name: invoices invoices_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -612,7 +632,7 @@ ALTER TABLE ONLY warehouse.invoices
 
 
 --
--- TOC entry 2768 (class 2606 OID 24659)
+-- TOC entry 2772 (class 2606 OID 16586)
 -- Name: sheets price_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -621,7 +641,7 @@ ALTER TABLE ONLY warehouse.sheets
 
 
 --
--- TOC entry 2776 (class 2606 OID 24661)
+-- TOC entry 2780 (class 2606 OID 16588)
 -- Name: сategories prod_categ_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -630,7 +650,7 @@ ALTER TABLE ONLY warehouse."сategories"
 
 
 --
--- TOC entry 2780 (class 2606 OID 24733)
+-- TOC entry 2770 (class 2606 OID 16590)
 -- Name: products_invoice products_invoice_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -639,7 +659,7 @@ ALTER TABLE ONLY warehouse.products_invoice
 
 
 --
--- TOC entry 2766 (class 2606 OID 24663)
+-- TOC entry 2768 (class 2606 OID 16592)
 -- Name: products products_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -648,7 +668,7 @@ ALTER TABLE ONLY warehouse.products
 
 
 --
--- TOC entry 2772 (class 2606 OID 24665)
+-- TOC entry 2776 (class 2606 OID 16594)
 -- Name: units units_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -657,7 +677,7 @@ ALTER TABLE ONLY warehouse.units
 
 
 --
--- TOC entry 2774 (class 2606 OID 24667)
+-- TOC entry 2778 (class 2606 OID 16596)
 -- Name: warehouse warehouse_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -666,7 +686,7 @@ ALTER TABLE ONLY warehouse.warehouse
 
 
 --
--- TOC entry 2781 (class 2606 OID 24668)
+-- TOC entry 2781 (class 2606 OID 16597)
 -- Name: accesses accesses_id_app_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -675,7 +695,7 @@ ALTER TABLE ONLY public.accesses
 
 
 --
--- TOC entry 2782 (class 2606 OID 24673)
+-- TOC entry 2782 (class 2606 OID 16602)
 -- Name: accesses accesses_id_role_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -684,7 +704,7 @@ ALTER TABLE ONLY public.accesses
 
 
 --
--- TOC entry 2783 (class 2606 OID 24678)
+-- TOC entry 2783 (class 2606 OID 16607)
 -- Name: assignments assignments_id_role_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -693,7 +713,7 @@ ALTER TABLE ONLY public.assignments
 
 
 --
--- TOC entry 2784 (class 2606 OID 24683)
+-- TOC entry 2784 (class 2606 OID 16612)
 -- Name: assignments assignments_id_user_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -702,7 +722,7 @@ ALTER TABLE ONLY public.assignments
 
 
 --
--- TOC entry 2785 (class 2606 OID 24688)
+-- TOC entry 2785 (class 2606 OID 16617)
 -- Name: contacts contacts_id_counterparty_fkey; Type: FK CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -711,7 +731,7 @@ ALTER TABLE ONLY warehouse.contacts
 
 
 --
--- TOC entry 2786 (class 2606 OID 24693)
+-- TOC entry 2786 (class 2606 OID 16622)
 -- Name: contacts contacts_id_status_fkey; Type: FK CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -720,7 +740,7 @@ ALTER TABLE ONLY warehouse.contacts
 
 
 --
--- TOC entry 2787 (class 2606 OID 24698)
+-- TOC entry 2787 (class 2606 OID 16627)
 -- Name: counterparties counterparties_id_country_fkey; Type: FK CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -729,7 +749,7 @@ ALTER TABLE ONLY warehouse.counterparties
 
 
 --
--- TOC entry 2791 (class 2606 OID 24734)
+-- TOC entry 2788 (class 2606 OID 16632)
 -- Name: invoices invoices_id_contract_fkey; Type: FK CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -738,7 +758,7 @@ ALTER TABLE ONLY warehouse.invoices
 
 
 --
--- TOC entry 2788 (class 2606 OID 24703)
+-- TOC entry 2789 (class 2606 OID 16637)
 -- Name: products products_id_unit_fkey; Type: FK CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -747,7 +767,7 @@ ALTER TABLE ONLY warehouse.products
 
 
 --
--- TOC entry 2789 (class 2606 OID 24708)
+-- TOC entry 2790 (class 2606 OID 16642)
 -- Name: products products_id_warehouse_fkey; Type: FK CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -756,7 +776,7 @@ ALTER TABLE ONLY warehouse.products
 
 
 --
--- TOC entry 2790 (class 2606 OID 24713)
+-- TOC entry 2791 (class 2606 OID 16647)
 -- Name: products products_id_сategory_fkey; Type: FK CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -765,7 +785,7 @@ ALTER TABLE ONLY warehouse.products
 
 
 --
--- TOC entry 2794 (class 2606 OID 24749)
+-- TOC entry 2792 (class 2606 OID 16652)
 -- Name: products_invoice products_invoice_id_currency_fkey; Type: FK CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -774,7 +794,7 @@ ALTER TABLE ONLY warehouse.products_invoice
 
 
 --
--- TOC entry 2792 (class 2606 OID 24739)
+-- TOC entry 2793 (class 2606 OID 16657)
 -- Name: products_invoice products_invoice_id_invoice_fkey; Type: FK CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -783,7 +803,7 @@ ALTER TABLE ONLY warehouse.products_invoice
 
 
 --
--- TOC entry 2793 (class 2606 OID 24744)
+-- TOC entry 2794 (class 2606 OID 16662)
 -- Name: products_invoice products_invoice_id_product_fkey; Type: FK CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -793,14 +813,14 @@ ALTER TABLE ONLY warehouse.products_invoice
 
 --
 -- TOC entry 2941 (class 0 OID 0)
--- Dependencies: 5
+-- Dependencies: 8
 -- Name: SCHEMA warehouse; Type: ACL; Schema: -; Owner: postgres
 --
 
 GRANT ALL ON SCHEMA warehouse TO PUBLIC;
 
 
--- Completed on 2022-04-04 13:24:03
+-- Completed on 2022-04-10 20:47:42
 
 --
 -- PostgreSQL database dump complete
