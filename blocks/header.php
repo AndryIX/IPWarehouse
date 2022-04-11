@@ -93,6 +93,9 @@ if(!$_SESSION['login']){
                                     <a href="../work.php" class="header_link">Сотрудники</a>
                                 </li>
                                 <li>
+                                    <a href="../buy.php" class="header_link">Покупка</a>
+                                </li>
+                                <li>
                                     <a href="../sells.php" class="header_link">Продажи</a>
                                 </li>
                                 <li>
