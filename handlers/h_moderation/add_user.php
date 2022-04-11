@@ -19,9 +19,4 @@
         header('Location: ../../m_moderation/addUser.php');
         exit;
     }
-
-   
-
-    
-
 ?>

@@ -18,5 +18,4 @@
         header('Location: ../../m_moderation/addApp.php');
         exit;
     }
-        
 ?>

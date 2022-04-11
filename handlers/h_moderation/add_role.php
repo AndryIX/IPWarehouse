@@ -13,7 +13,7 @@
         header('Location: ../../m_moderation/roles.php');
         exit;
     }else {
-        $_SESSION['check_succ'] = "Роль с таким именем уже существует!";
+        $_SESSION['check_succ'] = "Роль с таким названием уже существует!";
         header('Location: ../../m_moderation/addRole.php');
         exit;
     }
