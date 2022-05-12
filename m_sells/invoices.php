@@ -17,8 +17,8 @@ require "../blocks/header.php";
 
                 <div class="sells__add">
                     <a href="sells_sort.php">Накладные за заданный период</a>
-                    <a href="">Просмотр накладные по контрагенту</a>
-                    <a href="">Просмотр накладные по товару</a>
+                    <a href="counterparties.php">Просмотр накладные по контрагенту</a>
+                    <a href="products.php">Просмотр накладные по товару</a>
                 </div>
 
                 <table class="table">
