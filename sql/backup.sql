@@ -5,7 +5,7 @@
 -- Dumped from database version 10.20
 -- Dumped by pg_dump version 10.20
 
--- Started on 2022-04-10 20:47:42
+-- Started on 2022-05-12 14:23:28
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -327,6 +327,8 @@ INSERT INTO public.accesses (id_role, id_app) VALUES (1, 1);
 INSERT INTO public.accesses (id_role, id_app) VALUES (1, 2);
 INSERT INTO public.accesses (id_role, id_app) VALUES (1, 3);
 INSERT INTO public.accesses (id_role, id_app) VALUES (1, 4);
+INSERT INTO public.accesses (id_role, id_app) VALUES (1, 5);
+INSERT INTO public.accesses (id_role, id_app) VALUES (3, 5);
 
 
 --
@@ -339,6 +341,7 @@ INSERT INTO public.apps (id_app, app_name, url_address) VALUES (2, 'Роли', '
 INSERT INTO public.apps (id_app, app_name, url_address) VALUES (3, 'Назначения', '../m_moderation/assigns.php');
 INSERT INTO public.apps (id_app, app_name, url_address) VALUES (4, 'Приложения', '../m_moderation/apps.php');
 INSERT INTO public.apps (id_app, app_name, url_address) VALUES (1, 'Пользователи', '../m_moderation/users.php');
+INSERT INTO public.apps (id_app, app_name, url_address) VALUES (5, 'Продажи', '../sells.php');
 
 
 --
@@ -362,6 +365,7 @@ INSERT INTO public.assignments (id_user, id_role) VALUES (11, 2);
 INSERT INTO public.assignments (id_user, id_role) VALUES (8, 6);
 INSERT INTO public.assignments (id_user, id_role) VALUES (10, 4);
 INSERT INTO public.assignments (id_user, id_role) VALUES (7, 5);
+INSERT INTO public.assignments (id_user, id_role) VALUES (12, 3);
 
 
 --
@@ -396,6 +400,7 @@ INSERT INTO public.users (id_user, login, password) VALUES (10, 'Илья', 'e3b
 INSERT INTO public.users (id_user, login, password) VALUES (11, 'Антон', '60fbb7713999ac287be814420c77f68214977384');
 INSERT INTO public.users (id_user, login, password) VALUES (6, 'Савощенко', 'df6ad19037c97987c4ff9792810c0e145356717c');
 INSERT INTO public.users (id_user, login, password) VALUES (5, 'Суханов', 'b1b3773a05c0ed0176787a4f1574ff0075f7521e');
+INSERT INTO public.users (id_user, login, password) VALUES (12, 'Димон', '58656eff23e80c676873896d01d77996072c24b9');
 
 
 --
@@ -463,6 +468,11 @@ INSERT INTO warehouse.invoices (id_invoice, number_invoice, date_invoice, id_con
 
 INSERT INTO warehouse.products (id_product, name_product, condition, id_unit, id_warehouse, "id_сategory") VALUES (1, 'Монитор 23.8 дюйма', '1920x1080, 60 Гц, IPS, черный', 1, 1, 1);
 INSERT INTO warehouse.products (id_product, name_product, condition, id_unit, id_warehouse, "id_сategory") VALUES (2, 'Компьютер', '8 ГБ, 256 ГБ SSD, AMD Radeon RX Vega 3', 1, 1, 1);
+INSERT INTO warehouse.products (id_product, name_product, condition, id_unit, id_warehouse, "id_сategory") VALUES (3, 'Клавиатура', 'Oklick 120M', 1, 1, 1);
+INSERT INTO warehouse.products (id_product, name_product, condition, id_unit, id_warehouse, "id_сategory") VALUES (4, 'Цемент', 'Стройматериал', 2, 2, 2);
+INSERT INTO warehouse.products (id_product, name_product, condition, id_unit, id_warehouse, "id_сategory") VALUES (5, 'Кирпич', 'Стройматериал', 2, 2, 2);
+INSERT INTO warehouse.products (id_product, name_product, condition, id_unit, id_warehouse, "id_сategory") VALUES (6, 'Щебень', 'Стройматериал', 2, 2, 2);
+INSERT INTO warehouse.products (id_product, name_product, condition, id_unit, id_warehouse, "id_сategory") VALUES (7, 'Мышь компьютерная', 'Logitech M590 Multi-Device Silent, графитовый', 1, 1, 1);
 
 
 --
@@ -472,6 +482,10 @@ INSERT INTO warehouse.products (id_product, name_product, condition, id_unit, id
 --
 
 INSERT INTO warehouse.products_invoice (id_invoice, id_product, quantity, price, id_currency) VALUES (1, 1, 5, 1010101, 1);
+INSERT INTO warehouse.products_invoice (id_invoice, id_product, quantity, price, id_currency) VALUES (4, 4, 50, 120, 1);
+INSERT INTO warehouse.products_invoice (id_invoice, id_product, quantity, price, id_currency) VALUES (1, 6, 20, 130, 1);
+INSERT INTO warehouse.products_invoice (id_invoice, id_product, quantity, price, id_currency) VALUES (1, 7, 12, 500, 1);
+INSERT INTO warehouse.products_invoice (id_invoice, id_product, quantity, price, id_currency) VALUES (3, 3, 25, 750, 1);
 
 
 --
@@ -820,7 +834,7 @@ ALTER TABLE ONLY warehouse.products_invoice
 GRANT ALL ON SCHEMA warehouse TO PUBLIC;
 
 
--- Completed on 2022-04-10 20:47:42
+-- Completed on 2022-05-12 14:23:29
 
 --
 -- PostgreSQL database dump complete

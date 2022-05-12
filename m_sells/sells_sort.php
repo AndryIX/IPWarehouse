@@ -9,6 +9,7 @@ require "../blocks/header.php";
 $date_first = $_POST['date_first'];
 $date_second = $_POST['date_second'];
 
+
 ?>
 
 <div class="content">
@@ -39,24 +40,26 @@ $date_second = $_POST['date_second'];
     
 	<tbody>
 
-        <?if(gettype($date_first)!= 'string' || gettype($date_second) != 'string'){
-        $result = $db -> query("
-select number_invoice, date_invoice, name_product, units.title, products_invoice.quantity, products_invoice.price
-from warehouse.invoices, warehouse.products, warehouse.units, warehouse.products_invoice
-where date_invoice BETWEEN '$date_first' AND '$date_second' and units.id_unit = products.id_unit and products.id_product = products_invoice.id_product and invoices.id_invoice = products_invoice.id_invoice");
+        <?if(isset($date_first) || isset($date_second)){
+        $result = $db -> query("select number_invoice, date_invoice, name_product, units.title, products_invoice.quantity, products_invoice.price
+            from warehouse.invoices, warehouse.products, warehouse.units, warehouse.products_invoice
+            where date_invoice BETWEEN '$date_first' AND '$date_second' 
+            and units.id_unit = products.id_unit 
+            and products.id_product = products_invoice.id_product 
+            and invoices.id_invoice = products_invoice.id_invoice");
                         
-                        while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
-                        <tr>
-                        <td><?= $row->number_invoice?></td>
-                        <td><?= $row->date_invoice?></td>
-                        <td><?= $row->name_product?></td>
-                        <td><?= $row->title?></td>
-                        <td><?= $row->quantity?></td>
-                        <td><?= $row->price?></td>
-                        <td>СУММА</td>
-                        <td></td>
-                        </tr>
-                        <?endwhile;}?>
+            while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
+            <tr>
+            <td><?= $row->number_invoice?></td>
+            <td><?= $row->date_invoice?></td>
+            <td><?= $row->name_product?></td>
+            <td><?= $row->title?></td>
+            <td><?= $row->quantity?></td>
+            <td><?= $row->price?></td>
+            <td>СУММА</td>
+            <td></td>
+            </tr>
+            <?endwhile;}?>
                     
                         
 	</tbody>
