@@ -12,8 +12,15 @@ require "../blocks/header.php";
         <div class="container">
             <div class="sells__header">
                 <div class="sells__title">
-                    <h1>Просмотр</h1>
+                    <h1>Список реализованных товаров</h1>
                 </div>
+
+                <div class="sells__add">
+                    <a href="sells_sort.php">Накладные за заданный период</a>
+                    <a href="">Просмотр накладные по контрагенту</a>
+                    <a href="">Просмотр накладные по товару</a>
+                </div>
+
                 <table class="table">
 	<thead>
 		<tr>
@@ -21,11 +28,7 @@ require "../blocks/header.php";
 			<th>Дата накладной</th>
 			<th>Номер договора</th>
 			<th>Дата договора</th>
-			<th>Наименование товара</th>
-			<th>Единицы измерения</th>
-			<th>Количество</th>
-            <th>Цена</th>
-            <th>Валюта</th>
+            <th></th>
 		</tr>
 	</thead>
     
@@ -41,11 +44,7 @@ where units.id_unit = products.id_unit and currencies.id_currency = products_inv
                         <td><?= $row->date_invoice?></td>
                         <td><?= $row->nomer_contract?></td>
                         <td><?= $row->date_contact?></td>
-                        <td><?= $row->name_product?></td>
-                        <td><?= $row->title?></td>
-                        <td><?= $row->quantity?></td>
-                        <td><?= $row->price?></td>
-                        <td><?= $row->currencies_name?></td>
+                        <td></td>
                         </tr>
                         <?endwhile;?>
 	</tbody>

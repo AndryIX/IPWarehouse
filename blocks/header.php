@@ -96,9 +96,6 @@ if(!$_SESSION['login']){
                                     <a href="../buy.php" class="header_link">Покупка</a>
                                 </li>
                                 <li>
-                                    <a href="../sells.php" class="header_link">Продажи</a>
-                                </li>
-                                <li>
                                     <a href="#" class="header_link">Контакты</a>
                                 </li>
                                     <li>

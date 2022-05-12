@@ -836,6 +836,13 @@ option {
     width: 165px;
 }
 
+.selected_product{
+    width: 100px;
+}
+
+.information{
+    margin: 10px 0 0 0;
+}
 /*ТАБЛИЦААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААА*/
 .table {
 	width: 100%;
