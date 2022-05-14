@@ -18,14 +18,18 @@ require "../blocks/header.php";?>
 <div class="content">
     <div class="container">
         <form class="add__form" action="../handlers/h_moderation/update_user.php" method="post">
-            <h1 class="add__lab">Изменение пользователя</h1>
             <div class="add">
+                <h1 class="add__lab">Изменение пользователя</h1>
+
                 <?if($login == "admin"):?>
-                    <input class="add__input" name="update_login" type="text" value="<?=$login?>" readonly placeholder="Логин.." required>
+                    <label for="updlogin">Логин</label>
+                    <input class="add__input" id="updlogin" name="update_login" type="text" value="<?=$login?>" readonly placeholder="Логин.." required>
                 <?elseif($login != "admin"):?>
-                    <input class="add__input" name="update_login" type="text" value="<?=$login?>" placeholder="Логин.." required>
+                    <label for="updlogin">Логин</label>
+                    <input class="add__input" id="updlogin" name="update_login" type="text" value="<?=$login?>" placeholder="Логин.." required>
                 <?endif;?>
-                <input class="add__input" name="update_password" type="password" placeholder="Пароль..">
+                <label for="updpassword">Пароль</label>
+                <input class="add__input" id="password" name="update_password" type="password" placeholder="Пароль..">
                 <input class="btn__add" type="submit" value="ОК">
             </div>
         </form>

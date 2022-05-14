@@ -505,6 +505,7 @@ h6 {
 /* Добавление ----------------- */
 
 .add__form {
+    display: flex;
     width: 100%;
 }
 
@@ -519,15 +520,17 @@ h6 {
 }
 
 .add {
-    display: block;
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 35%;
 }
 
 .add__input {
     display: block;
+    width: 100%;
     padding: 10px;
     font-size: 12pt;
-    margin: 15px 0;
+    margin: 5px 0;
     font-family: 'Comfortaa';
     font-weight: bold;
     background-color: #f0f0f0;
@@ -562,6 +565,13 @@ h6 {
 .btn__add:active {
     background-color: #6C8CD5;
     color: #fff;
+}
+
+label {
+    font-size: 12pt;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    color: #1240AB;
 }
 
 .view {
@@ -629,8 +639,7 @@ h6 {
 
 .selection {
     display: inline-block;
-    margin-top: 20px;
-    margin-right: 10px;
+    margin: 5px 0;
     padding: 10px 10px;
     font-size: 12pt;
     border-radius: 5px;

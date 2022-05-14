@@ -13,17 +13,18 @@ require "../blocks/header.php";?>
 <div class="content">
     <div class="container">
         <form class="add__form" action="../handlers/h_moderation/add_access.php" method="post">
-            <h1 class="add__lab">Добавление доступа</h1>
             <div class="add">
-
-                <select name="select_role" class="selection">
+                <h1 class="add__lab">Добавление доступа</h1>
+                <label for="selectrole">Роль</label>
+                <select name="select_role" id="selectrole" class="selection">
                     <?$search_role = $db -> query("select * from roles order by id_role asc");
                         while($row = $search_role -> fetch(PDO::FETCH_OBJ)):?>
                     <option value="<?=$row->id_role?>"><?=$row->role_name?></option>
                     <?endwhile;?>
                 </select>
 
-                <select name="select_app" class="selection">
+                <label for="selectapp">Приложение</label>
+                <select name="select_app" id="selectapp" class="selection">
                     <?$search_user = $db -> query("select * from apps order by id_app asc");
                         while($row = $search_user -> fetch(PDO::FETCH_OBJ)):?>
                     <option value="<?=$row->id_app?>"><?=$row->app_name?></option>

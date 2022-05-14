@@ -18,11 +18,14 @@ require "../blocks/header.php";?>
     <div class="content">
         <div class="container">
             <form class="add__form" action="../handlers/h_moderation/add_user.php" method="post" name="fadduser" onsubmit="return validateFormAddUser()">
-                <h1 class="add__lab">Добавление пользователя</h1>
                 <div class="add">
-                    <input class="add__input" name="add_login" type="text" placeholder="Придумайте логин..">
-                    <input class="add__input" name="add_password" type="password" placeholder="Придумайте пароль..">
-                    <input class="add__input" name="confirm_pass" type="password" placeholder="Подтвердите пароль..">
+                    <h1 class="add__lab">Добавление пользователя</h1>
+                    <label for="login">Логин</label>
+                    <input class="add__input" id="login" name="add_login" type="text" placeholder="Логин..">
+                    <label for="password">Пароль</label>
+                    <input class="add__input" id="password" name="add_password" type="password" placeholder="Пароль..">
+                    <label for="confirm_pass">Подтвердите пароль</label>
+                    <input class="add__input" id="confirm_pass" name="confirm_pass" type="password" placeholder="Подтвердите пароль..">
                     <input class="btn__add" type="submit" name="btn_add" value="Добавить">
                 </div>
             </form>
