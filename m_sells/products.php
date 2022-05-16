@@ -16,7 +16,7 @@ $product = $_GET['product'];
     <div class="container">
         <div class="content_text">
             <div class="view">
-                <h1>Список реализованных товаров по контрагенту</h1>
+                <h1>Список реализованного товара</h1>
                 <div class="information">
                     <form action="products.php" method="get">
                         <input type="date" name="date_first" value="<?=$date_first?>">
