@@ -75,6 +75,17 @@ if(!$_SESSION['login']){
                                     <?endwhile;?>
                                     <a href="../m_moderation/accesses.php">Доступы к приложениям</a>
                                 </div>
+                                
+                            <?endif;
+                            if($roles[$i] == 'Кладовщик'):
+                                $menu = Menu($db, $roles[$i]);?>
+                                <h1>Продажи</h1>
+                                <div>
+                                    <?while($link = $menu -> fetch(PDO::FETCH_OBJ)):?>
+                                        <a href="<?=$link->url_address?>"><?=$link->app_name?></a>
+                                    <?endwhile;?>
+                                </div>
+                                
                             <?endif;
                         }
                         ?>

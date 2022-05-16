@@ -19,9 +19,9 @@ $date_second = $_POST['date_second'];
                 <h1>Список реализованных товаров за заданный период</h1>
                 <div class="information">
                     <form action="sells_sort.php" method="post">
-                        <input type="date" name="date_first">
-                        <input type="date" name="date_second">
-                        <input type="submit" name="btn_add" value="Просмотр" class="btn__add">
+                        <input type="date" name="date_first" value="<?=$date_first?>">
+                        <input type="date" name="date_second" value="<?=$date_second?>">
+                        <input type="submit" name="btn_add" value="Показать" class="btn__add">
                     </form>
                 </div>
                 <table class="table">
@@ -29,10 +29,8 @@ $date_second = $_POST['date_second'];
 		<tr>
 			<th>Номер накладной</th>
 			<th>Дата накладной</th>
-			<th>Наименование товара</th>
-            <th>Цена (руб.)</th>
-            <th>Количество</th>
-            <th>Сумма (руб.)</th>
+            <th>Номер контракта</th>
+            <th>Контрагент</th>
             <th></th>
 		</tr>
 	</thead>
@@ -40,23 +38,21 @@ $date_second = $_POST['date_second'];
 	<tbody>
 
         <?if(isset($date_first) || isset($date_second)){
-        $result = $db -> query("select number_invoice, date_invoice, name_product, units.title, products_invoice.quantity, products_invoice.price
-            from warehouse.invoices, warehouse.products, warehouse.units, warehouse.products_invoice
-            where date_invoice BETWEEN '$date_first' AND '$date_second' 
-            and units.id_unit = products.id_unit 
-            and products.id_product = products_invoice.id_product 
-            and invoices.id_invoice = products_invoice.id_invoice");
+        $result = $db -> query("select number_invoice, date_invoice, contacts.nomer_contract, counterparties.counterparty_name
+            from warehouse.invoices, warehouse.contacts, warehouse.counterparties
+            where date_invoice BETWEEN '$date_first' AND '$date_second'
+            and warehouse.invoices.id_contract = warehouse.contacts.id_contract
+            order by number_invoice asc");
                         
             while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
             <tr>
             <td><?= $row->number_invoice?></td>
             <td><?= $row->date_invoice?></td>
-            <td><?= $row->name_product?></td>
-            <td><?= $row->title?></td>
-            <td><?= $row->price?></td>
-            <td><?= $row->quantity?></td>
-            <td>СУММА</td>
-            <td></td>
+            <td><?= $row->nomer_contract?></td>
+            <td><?= $row->counterparty_name?></td>
+            <td><div class="interaction">
+                    <a href="invoice_review.php?number_invoice=<?=$row->number_invoice?>">Просмотр</a>
+                </div></td>
             </tr>
             <?endwhile;}?>
                     
