@@ -6,9 +6,9 @@ if(!$_SESSION['login']){
 require "../handlers/db_connect.php";
 require "../blocks/header.php";
 
-$date_first = $_POST['date_first'];
-$date_second = $_POST['date_second'];
-$counterparty = $_POST['counterparty'];
+$date_first = $_GET['date_first'];
+$date_second = $_GET['date_second'];
+$counterparty = $_GET['counterparty'];
 
 ?>
 
@@ -18,13 +18,13 @@ $counterparty = $_POST['counterparty'];
             <div class="view">
                 <h1>Список реализованных товаров по контрагенту</h1>
                 <div class="information">
-                    <form action="counterparties.php" method="post">
-                        <input type="date" name="date_first">
-                        <input type="date" name="date_second">
+                    <form action="counterparties.php" method="get">
+                        <input type="date" name="date_first" value="<?=$date_first?>">
+                        <input type="date" name="date_second" value="<?=$date_second?>">
                         <select class="naklad__select" name="counterparty"> 
                         <?$search = $db -> query("select * from warehouse.counterparties order by id_counterparty asc");
                                     while($row = $search -> fetch(PDO::FETCH_OBJ)):?>
-                                            <option value="<?=$row->id_counterparty?>" ><?=$row->counterparty_name?></option>
+                                            <option value="<?=$row->id_counterparty?>" <?if($row -> id_counterparty == $counterparty) echo 'selected';?>><?=$row->counterparty_name?></option>
                                     <?endwhile;?>
                         </select>
                         <input type="submit" name="btn_add" value="Просмотр" class="btn__add">
@@ -36,11 +36,6 @@ $counterparty = $_POST['counterparty'];
 			<th>Номер накладной</th>
 			<th>Дата накладной</th>
             <th>Контрагент</th>
-			<th>Наименование товара</th>
-			<th>Единица измерения</th>
-            <th>Цена (руб.)</th>
-            <th>Количество</th>
-            <th>Сумма (руб.)</th>
             <th></th>
 		</tr>
 	</thead>
@@ -48,25 +43,22 @@ $counterparty = $_POST['counterparty'];
 	<tbody>
 
     <?if(isset($date_first) || isset($date_second) || isset($counterparty)){
-        $result = $db -> query("select counterparty_name,number_invoice, date_invoice, name_product, units.title, products_invoice.quantity, products_invoice.price
-            from warehouse.invoices, warehouse.products, warehouse.units, warehouse.products_invoice, warehouse.counterparties
-            where date_invoice BETWEEN '$date_first' AND '$date_second' 
-            and id_counterparty = $counterparty
-            and units.id_unit = products.id_unit 
-            and products.id_product = products_invoice.id_product 
-            and invoices.id_invoice = products_invoice.id_invoice");
+        $result = $db -> query("select number_invoice, date_invoice, contacts.nomer_contract, counterparties.counterparty_name
+        from warehouse.invoices, warehouse.contacts, warehouse.counterparties
+        where date_invoice BETWEEN '$date_first' AND '$date_second'
+        and warehouse.invoices.id_contract = warehouse.contacts.id_contract
+		and contacts.id_counterparty = counterparties.id_counterparty
+        and counterparties.id_counterparty = $counterparty
+        order by number_invoice asc");
                         
             while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
             <tr>
             <td><?= $row->number_invoice?></td>
             <td><?= $row->date_invoice?></td>
             <td><?= $row->counterparty_name?></td>
-            <td><?= $row->name_product?></td>
-            <td><?= $row->title?></td>
-            <td><?= $row->price?></td>
-            <td><?= $row->quantity?></td>
-            <td>СУММА</td>
-            <td></td>
+            <td><div class="interaction">
+                    <a href="invoice_review.php?number_invoice=<?=$row->number_invoice?>">Просмотр</a>
+                </div></td>
             </tr>
             <?endwhile;}?>
                     
