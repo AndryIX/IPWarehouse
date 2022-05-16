@@ -79,7 +79,7 @@ if(!$_SESSION['login']){
                             <?endif;
                             if($roles[$i] == 'Кладовщик'):
                                 $menu = Menu($db, $roles[$i]);?>
-                                <h1>Продажи</h1>
+                                <h1>Покупки и продажи</h1>
                                 <div>
                                     <?while($link = $menu -> fetch(PDO::FETCH_OBJ)):?>
                                         <a href="<?=$link->url_address?>"><?=$link->app_name?></a>
