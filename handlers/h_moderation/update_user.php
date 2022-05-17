@@ -1,15 +1,15 @@
 <?session_start();
     require "../db_connect.php";
 
-    $login = $_POST['update_login'];
+    $login = (string)$_POST['update_login'];
 
     if(trim($_POST['update_password']) == ''){
-        $password = $_SESSION['upd_pass'];
+        $password = (string)$_SESSION['upd_pass'];
     }else{
-        $password = sha1($_POST['update_password']);
+        $password = (string)sha1($_POST['update_password']);
     }
 
-    $id_user = $_SESSION['upd_id'];
+    $id_user = (int)$_SESSION['upd_id'];
 
 
     $result = $db -> prepare("update users set id_user=?, login=?, password=? where id_user=?");

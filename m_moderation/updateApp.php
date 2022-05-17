@@ -4,11 +4,10 @@ if(!$_SESSION['login']){
 }
 
 
-$id_app = trim($_GET['id_app']);
-$app_name = trim($_GET['app_name']);
-$url_address = trim($_GET['url_address']);
+$_SESSION['upd_id'] = (int)$_GET['id_app'];
+$app_name = (string)$_GET['app_name'];
+$url_address = (string)trim($_GET['url_address']);
 
-$_SESSION['upd_id'] = $id_app;
 
 require "../handlers/db_connect.php";
 require "../blocks/header.php";?>

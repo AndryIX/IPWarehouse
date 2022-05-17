@@ -15,7 +15,7 @@ require "../blocks/header.php";?>
                 <div class="add">
                     <h1 class="add__lab">Добавление роли</h1>
                     <label for="role">Роль</label>
-                    <input class="add__input" id="role" name="add_role" type="text" placeholder="Придумайте роль..">
+                    <input class="add__input" id="role" name="add_role" type="text" placeholder="Введите роль..">
                     <input class="btn__add" type="submit" name="btn_add" value="Добавить">
                 </div>
             </form>

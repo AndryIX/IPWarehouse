@@ -1,8 +1,8 @@
 <?session_start();
 require 'db_connect.php';
 
-$login = trim($_POST['login']);
-$password = trim($_POST['password']);
+$login = (string)$_POST['login'];
+$password = (string)$_POST['password'];
 
 $result = $db -> query("select role_name, login, password  
                         from assignments, users, roles

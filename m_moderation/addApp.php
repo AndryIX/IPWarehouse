@@ -16,9 +16,9 @@ require "../blocks/header.php";?>
                 <div class="add">
                     <h1 class="add__lab">Добавление приложения</h1>
                     <label for="appname">Название приложения</label>
-                    <input class="add__input" id="appname" name="add_app_name" type="text" placeholder="Название..">
+                    <input class="add__input" id="appname" name="add_app_name" type="text" placeholder="Введите название..">
                     <label for="appurl">URL адрес приложения</label>
-                    <input class="add__input" id="appurl" name="add_app_url" type="text" placeholder="Ссылка..">
+                    <input class="add__input" id="appurl" name="add_app_url" type="text" placeholder="Введите ссылку..">
                     <input class="btn__add" type="submit" name="btn_add" value="Добавить">
                 </div>
             </form>

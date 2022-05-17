@@ -3,12 +3,8 @@ if(!$_SESSION['login']){
     header('Location: auth.php');
 }
 
-
-$id_role = $_GET['id_role'];
-$id_app = $_GET['id_app'];
-
-$_SESSION['upd_id_role'] = $id_role;
-$_SESSION['upd_id_app'] = $id_app;
+$_SESSION['upd_id_role'] = $_GET['id_role'];
+$_SESSION['upd_id_app'] = $_GET['id_app'];
 
 require "../handlers/db_connect.php";
 require "../blocks/header.php";?>

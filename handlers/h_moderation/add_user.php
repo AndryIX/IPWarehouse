@@ -1,9 +1,9 @@
 <?session_start();
     require "../db_connect.php";
 
-    $add_login = $_POST['add_login'];
-    $add_password = sha1(trim($_POST['add_password']));
-    $confirm_pass = sha1(trim($_POST['confirm_pass']));
+    $add_login = (string)$_POST['add_login'];
+    $add_password = (string)sha1(trim($_POST['add_password']));
+    $confirm_pass = (string)sha1(trim($_POST['confirm_pass']));
     
     $result = $db -> query("select login from users where login = '$add_login'");
     $check = $result -> rowCount();

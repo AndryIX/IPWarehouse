@@ -1,8 +1,8 @@
 <?session_start();
     require "../db_connect.php";
 
-    $add_app_name = $_POST['add_app_name'];
-    $add_app_url = trim($_POST['add_app_url']);
+    $add_app_name = (string)$_POST['add_app_name'];
+    $add_app_url = (string)trim($_POST['add_app_url']);
 
     $result = $db -> query("select app_name, url_address from apps where app_name = '$add_app_name' and url_address = '$add_app_url'");
     $check = $result -> rowCount();

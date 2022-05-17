@@ -1,7 +1,7 @@
 <?session_start();
     require "../db_connect.php";
 
-    $add_role = trim($_POST['add_role']);
+    $add_role = (string)$_POST['add_role'];
 
     $result = $db -> query("select role_name from roles where role_name = '$add_role'");
     $check = $result -> rowCount();

@@ -4,13 +4,10 @@ if(!$_SESSION['login']){
 }
 
 
-$login = $_GET['login'];
+$login = (string)$_GET['login'];
 
-$id_user = trim($_GET['id_user']);
-$password = trim($_GET['password']);
-
-$_SESSION['upd_id'] = $id_user;
-$_SESSION['upd_pass'] = $password;
+$_SESSION['upd_id'] = $_GET['id_user'];
+$_SESSION['upd_pass'] = $_GET['password'];
 
 require "../handlers/db_connect.php";
 require "../blocks/header.php";?>

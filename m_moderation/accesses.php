@@ -4,7 +4,7 @@ if(!$_SESSION['login']){
 }
 
 
-$selected = $_GET['selected'];
+$selected = (int)$_GET['selected'];
 
 require "../handlers/db_connect.php";
 require "../blocks/header.php";

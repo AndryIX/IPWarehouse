@@ -1,8 +1,8 @@
 <?session_start();
     require "../db_connect.php";
 
-    $id_user = trim($_POST['select_user']);
-    $id_role = trim($_POST['select_role']);
+    $id_user = (int)$_POST['select_user'];
+    $id_role = (int)$_POST['select_role'];
 
     $result = $db -> query("select id_user, id_role from assignments where id_user = $id_user and id_role = $id_role");
     $check = $result -> rowCount();

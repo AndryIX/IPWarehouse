@@ -8,14 +8,14 @@ if(!$_SESSION['login']){
 require "../handlers/db_connect.php";
 require "../blocks/header.php";
 
-$selected = $_GET['selected'];
+$selected = (int)$_GET['selected'];
 ?>
 
 <div class="content">
     <div class="container">
         <div class="content_text">
             <div class="view">
-                <h1>Назначения</h1>
+                <h1>Назначения по ролям</h1>
                 <form action="assigns_by_role.php" method="get">
                     <select name="selected" class="selection">
                         <?$search = $db -> query("select * from roles order by id_role asc");
