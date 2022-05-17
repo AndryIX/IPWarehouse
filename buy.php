@@ -12,7 +12,7 @@ require "blocks/header.php";
         <div class="container">
             <div class="sells__header">
                 <div class="sells__title">
-                    <h1>Продажи</h1>
+                    <h1>Покупки</h1>
                 </div>
                 <div class="sells__add">
                     <a href="../m_sells/sells_add.php">Оформить накладную</a>
