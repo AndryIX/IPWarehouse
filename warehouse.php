@@ -1,7 +1,5 @@
 <? session_start();
-if(!$_SESSION['login']){
-    header('Location: auth.php');
-}
+
 
 
 require "handlers/db_connect.php";
