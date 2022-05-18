@@ -49,6 +49,7 @@ $counterparty = $_GET['counterparty'];
         and warehouse.invoices.id_contract = warehouse.contacts.id_contract
 		and contacts.id_counterparty = counterparties.id_counterparty
         and counterparties.id_counterparty = $counterparty
+        and contacts.id_status = 2
         order by number_invoice asc");
                         
             while($row = $result -> fetch(PDO::FETCH_OBJ)):?>

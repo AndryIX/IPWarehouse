@@ -48,6 +48,7 @@ $product = $_GET['product'];
         where date_invoice BETWEEN '$date_first' AND '$date_second'
         and warehouse.invoices.id_contract = warehouse.contacts.id_contract
         and products.id_product = $product
+        and contacts.id_status = 2
         order by number_invoice asc");
                         
             while($row = $result -> fetch(PDO::FETCH_OBJ)):?>

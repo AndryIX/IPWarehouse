@@ -21,7 +21,9 @@ require "../blocks/header.php";
                 <form action="../handlers/h_sells/add_product-in.php" method="post" name="f_add_invoice" onsubmit="return validateFormSells()"> 
                     <div class="sells__add__body">
                         <select class="naklad__select" name="selected_naklad"> 
-                        <?$search = $db -> query("select * from warehouse.invoices order by id_invoice asc");
+                        <?$search = $db -> query("select id_invoice, number_invoice, date_invoice, contacts.id_contract, id_status from warehouse.invoices, warehouse.contacts
+                          where id_status = 2 and contacts.id_contract = invoices.id_contract
+                          order by id_invoice asc");
                                     while($row = $search -> fetch(PDO::FETCH_OBJ)):?>
                                             <option value="<?=$row->id_invoice?>" ><?=$row->number_invoice?></option>
                                     <?endwhile;?>
