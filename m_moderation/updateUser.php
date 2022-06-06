@@ -5,6 +5,7 @@ if(!$_SESSION['login']){
 
 
 $login = (string)$_GET['login'];
+$fio = (string)$_GET['fio'];
 
 $_SESSION['upd_id'] = $_GET['id_user'];
 $_SESSION['upd_pass'] = $_GET['password'];
@@ -26,7 +27,7 @@ require "../blocks/header.php";?>
                     <input class="add__input" id="updlogin" name="update_login" type="text" value="<?=$login?>" placeholder="Логин.." required>
                 <?endif;?>
                 <label for="fio">ФИО</label>
-                <input class="add__input" id="fio" name="upd_fio" type="text" placeholder="ФИО..">
+                <input class="add__input" id="fio" name="upd_fio" type="text" value="<?=$fio?>" placeholder="ФИО..">
                 <label for="updpassword">Пароль</label>
                 <input class="add__input" id="password" name="update_password" type="password" placeholder="Пароль..">
                 <input class="btn__add" type="submit" value="ОК">

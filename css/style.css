@@ -590,6 +590,7 @@ label {
     text-transform: none;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     width: 100%;
     padding: 10px 15px;
     font-size: 12pt;
@@ -770,5 +771,12 @@ option {
     }
     .add {
         width: 100%;
+    }
+    .view li {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info {
+        margin-bottom: 10px;
     }
 }

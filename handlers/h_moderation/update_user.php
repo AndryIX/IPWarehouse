@@ -4,6 +4,8 @@
     $login = (string)$_POST['update_login'];
     $fio = (string)$_POST['upd_fio'];
 
+
+
     if(trim($_POST['update_password']) == ''){
         $password = (string)$_SESSION['upd_pass'];
     }else{
@@ -11,8 +13,8 @@
     }
 
     $id_user = (int)$_SESSION['upd_id'];
-    $result = $db -> prepare("update users set id_user=?, login=?, password=?, fio=? where id_user=?");
-    $result -> execute([$id_user, $login, $password, $id_user, $fio]);
+    $result = $db -> prepare("update users set login=?, password=?, fio=? where id_user=?");
+    $result -> execute([$login, $password, $fio, $id_user]);
     
     unset($_SESSION['upd_id'], $_SESSION['upd_pass']);
 

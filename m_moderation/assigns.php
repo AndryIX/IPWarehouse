@@ -20,7 +20,7 @@ $selected = (int)$_GET['selected'];
                             <select name="selected" class="selection">
                                 <?$search = $db -> query("select * from users order by id_user asc");
                                 while($row = $search -> fetch(PDO::FETCH_OBJ)):?>
-                                    <option value="<?=$row->id_user?>" <?if($row -> id_user == $selected) echo 'selected';?>><?=$row->login?></option>
+                                    <option value="<?=$row->id_user?>" <?if($row -> id_user == $selected) echo 'selected';?>><?=$row->fio?></option>
                                 <?endwhile;?>
                             </select>
                             <button type="submit" class="btn__search" name="">Показать</button>
