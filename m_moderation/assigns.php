@@ -3,12 +3,12 @@ if(!$_SESSION['login']){
     header('Location: auth.php');
 }
 
-
-
 require "../handlers/db_connect.php";
 require "../blocks/header.php";
 
 $selected = (int)$_GET['selected'];
+
+
 ?>
 
         <div class="content">
@@ -29,22 +29,14 @@ $selected = (int)$_GET['selected'];
                         <a href="addAssign.php" class="inter">Назначить роль</a>
 
                         <a href="assigns_by_role.php" class="inter">Просмотр пользователей по ролям</a>
+                        <?$result = $db -> query("select assignments.id_role, role_name, assignments.id_user, login 
+                            from assignments, roles, users 
+                            where assignments.id_user = users.id_user
+                            and assignments.id_role = roles.id_role
+                            and assignments.id_user = ". $select = isset($selected) ? $selected : 1 ."
+                            order by id_role asc");
                         
-                        <?if(isset($selected)){
-                            $result = $db -> query("select assignments.id_role, role_name, assignments.id_user, login 
-                            from assignments, roles, users 
-                            where assignments.id_user = users.id_user
-                            and assignments.id_role = roles.id_role
-                            and assignments.id_user = $selected
-                            order by id_role asc");
-                        }else{
-                            $result = $db -> query("select assignments.id_role, role_name, assignments.id_user, login 
-                            from assignments, roles, users 
-                            where assignments.id_user = users.id_user
-                            and assignments.id_role = roles.id_role
-                            and assignments.id_user = 1 
-                            order by id_role asc");
-                        }
+                          
 
                         while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
                             <ul>

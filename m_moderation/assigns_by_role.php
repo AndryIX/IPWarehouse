@@ -3,8 +3,6 @@ if(!$_SESSION['login']){
     header('Location: auth.php');
 }
 
-
-
 require "../handlers/db_connect.php";
 require "../blocks/header.php";
 
@@ -34,21 +32,12 @@ $selected = (int)$_GET['selected'];
 
                 <a href="assigns.php" class="inter">Просмотр ролей по пользователям</a>
 
-                <?if(isset($selected)){
-                            $result = $db -> query("select assignments.id_role, role_name, assignments.id_user, login 
+                <?$result = $db -> query("select assignments.id_role, role_name, assignments.id_user, login 
                             from assignments, roles, users 
                             where assignments.id_user = users.id_user
                             and assignments.id_role = roles.id_role
-                            and assignments.id_role = $selected
+                            and assignments.id_role = ". $select = isset($selected) ? $selected : 1 ." 
                             order by id_user asc");
-                        }else{
-                            $result = $db -> query("select assignments.id_role, role_name, assignments.id_user, login 
-                            from assignments, roles, users 
-                            where assignments.id_user = users.id_user
-                            and assignments.id_role = roles.id_role
-                            and assignments.id_role = 1 
-                            order by id_user asc");
-                        }
 
                         while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
                 <ul>

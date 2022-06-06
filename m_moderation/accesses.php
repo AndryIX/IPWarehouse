@@ -3,20 +3,16 @@ if(!$_SESSION['login']){
     header('Location: auth.php');
 }
 
-
-$selected = (int)$_GET['selected'];
-
 require "../handlers/db_connect.php";
 require "../blocks/header.php";
-?>
 
+$selected = (int)$_GET['selected'];
+?>
         <div class="content">
             <div class="container">
                 <div class="content_text">
                     <div class="view">
-
                         <h1>Доступы к приложениям</h1>
-
                         <form action="accesses.php" method="get">
                             <select name="selected" class="selection">
                                 <?$search = $db -> query("select * from roles");
@@ -26,24 +22,14 @@ require "../blocks/header.php";
                             </select>
                             <button type="submit" class="btn__search" name="">Показать</button>
                         </form>
-
                         <a href="addAccess.php" class="inter">Добавление доступа</a>
+                        <?$result = $db -> query("select accesses.id_role, role_name, accesses.id_app, app_name
+                            from accesses, roles, apps 
+                            where accesses.id_app = apps.id_app
+                            and accesses.id_role = roles.id_role
+                            and accesses.id_role = ". $select = isset($selected) ? $selected : 1 ."
+                            order by id_app asc");
                         
-                        <?if(isset($selected)){
-                            $result = $db -> query("select accesses.id_role, role_name, accesses.id_app, app_name
-                            from accesses, roles, apps 
-                            where accesses.id_app = apps.id_app
-                            and accesses.id_role = roles.id_role
-                            and accesses.id_role = $selected
-                            order by id_app asc");
-                        }else{
-                            $result = $db -> query("select accesses.id_role, role_name, accesses.id_app, app_name
-                            from accesses, roles, apps 
-                            where accesses.id_app = apps.id_app
-                            and accesses.id_role = roles.id_role
-                            and accesses.id_role = 1
-                            order by id_app asc");
-                        }
 
                         while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
                             <ul>

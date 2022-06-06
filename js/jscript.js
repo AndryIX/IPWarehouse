@@ -26,10 +26,15 @@ function validateFormAuth() {
 }
 
 function validateFormAddUser() {
-    var addlogin = document.forms["fadduser"]["add_login"].value;
-    var addpassword = document.forms["fadduser"]["add_password"].value;
-    var confirmpass = document.forms["fadduser"]["confirm_pass"].value;
+    let addFIO = document.forms["fadduser"]["add_FIO"].value;
+    let addlogin = document.forms["fadduser"]["add_login"].value;
+    let addpassword = document.forms["fadduser"]["add_password"].value;
+    let confirmpass = document.forms["fadduser"]["confirm_pass"].value;
 
+    if (addFIO == "") {
+        alert("Заполните поле: ФИО!");
+        return false;
+    }
     if (addlogin == "") {
         alert("Заполните поле: Логин!");
         return false;

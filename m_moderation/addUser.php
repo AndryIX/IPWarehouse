@@ -20,6 +20,8 @@ require "../blocks/header.php";?>
             <form class="add__form" action="../handlers/h_moderation/add_user.php" method="post" name="fadduser" onsubmit="return validateFormAddUser()">
                 <div class="add">
                     <h1 class="add__lab">Добавление пользователя</h1>
+                    <label for="fio">ФИО</label>
+                    <input class="add__input" id="fio" name="add_fio" type="text" placeholder="Введите ФИО..">
                     <label for="login">Логин</label>
                     <input class="add__input" id="login" name="add_login" type="text" placeholder="Введите логин..">
                     <label for="password">Пароль</label>
