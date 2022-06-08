@@ -43,7 +43,7 @@ if(!$_SESSION['login']){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Бургер</title>
+    <title>КуйбышевАзот</title>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Fira+Sans:wght@200&family=Inter:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 </head>

@@ -17,8 +17,6 @@ $number_invoice = $_GET['number_invoice'];
                 <table class="table">
 	<thead>
 		<tr>
-			<th>Номер накладной</th>
-			<th>Дата накладной</th>
 			<th>Наименование товара</th>
             <th>Контрагент</th>
             <th>Цена (руб.)</th>
@@ -30,18 +28,17 @@ $number_invoice = $_GET['number_invoice'];
 	<tbody>
 
         <?
-        $result = $db -> query("select (products_invoice.quantity * products_invoice.price) as sum, number_invoice, date_invoice, name_product, units.title, products_invoice.quantity, products_invoice.price, counterparties.counterparty_name
-            from warehouse.invoices, warehouse.products, warehouse.units, warehouse.products_invoice, warehouse.counterparties
-            where units.id_unit = products.id_unit 
-            and products.id_product = products_invoice.id_product 
-            and invoices.id_invoice = products_invoice.id_invoice
-            and number_invoice = '$number_invoice'
-            order by number_invoice asc");
+        $result = $db -> query("select number_invoice, name_product, title, quantity, price, counterparty_name, (quantity * price) as sum
+        from warehouse.products_invoice, warehouse.products,warehouse.invoices,warehouse.counterparties, warehouse.units, warehouse.contacts
+        where number_invoice = '$number_invoice'
+        and products_invoice.id_invoice = invoices.id_invoice
+        and products_invoice.id_product = products.id_product
+        and units.id_unit = products.id_unit
+        and invoices.id_contract = contacts.id_contract
+        and counterparties.id_counterparty = contacts.id_counterparty");
                         
             while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
             <tr>
-            <td><?= $row->number_invoice?></td>
-            <td><?= $row->date_invoice?></td>
             <td><?= $row->name_product?></td>
             <td><?= $row->counterparty_name?></td>
             <td><?= $row->price?></td>

@@ -22,7 +22,7 @@ require "../blocks/header.php";
                     <div class="sells__add__body">
                         <select class="naklad__select" name="selected_naklad"> 
                         <?$search = $db -> query("select id_invoice, number_invoice, date_invoice, contacts.id_contract, id_status from warehouse.invoices, warehouse.contacts
-                          where id_status = 2 and contacts.id_contract = invoices.id_contract
+                          where id_status = 1 and contacts.id_contract = invoices.id_contract
                           order by id_invoice asc");
                                     while($row = $search -> fetch(PDO::FETCH_OBJ)):?>
                                             <option value="<?=$row->id_invoice?>" ><?=$row->number_invoice?></option>

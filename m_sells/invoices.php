@@ -37,7 +37,7 @@ require "../blocks/header.php";
         <?$result = $db -> query("select number_invoice, date_invoice, contacts.nomer_contract, contacts.date_contact
             from warehouse.invoices, warehouse.contacts
             where warehouse.invoices.id_contract = warehouse.contacts.id_contract
-            and contacts.id_status = 2
+            and contacts.id_status = 1
             order by number_invoice asc");
                         while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
                         <tr>

@@ -42,7 +42,8 @@ $date_second = $_POST['date_second'];
             from warehouse.invoices, warehouse.contacts, warehouse.counterparties
             where date_invoice BETWEEN '$date_first' AND '$date_second'
             and warehouse.invoices.id_contract = warehouse.contacts.id_contract
-            and contacts.id_status = 2
+            and counterparties.id_counterparty = contacts.id_counterparty
+            and contacts.id_status = 1
             order by number_invoice asc");
                         
             while($row = $result -> fetch(PDO::FETCH_OBJ)):?>

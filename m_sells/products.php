@@ -44,11 +44,14 @@ $product = $_GET['product'];
 
     <?if(isset($date_first) || isset($date_second) || isset($product)){
         $result = $db -> query("select number_invoice, date_invoice, contacts.nomer_contract, products.name_product
-        from warehouse.invoices, warehouse.contacts, warehouse.products
+        from warehouse.invoices, warehouse.contacts, warehouse.products, warehouse.status, warehouse.products_invoice
         where date_invoice BETWEEN '$date_first' AND '$date_second'
         and warehouse.invoices.id_contract = warehouse.contacts.id_contract
         and products.id_product = $product
-        and contacts.id_status = 2
+        and contacts.id_status = 1
+		and contacts.id_status = status.id_status
+		and products_invoice.id_product = products.id_product
+		and products_invoice.id_invoice = invoices.id_invoice
         order by number_invoice asc");
                         
             while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
