@@ -24,30 +24,24 @@ require "blocks/header.php";?>
         <div class="news-content">
 
             <div class="news-item">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur temporibus labore aspernatur
-                asperiores ipsa molestiae numquam unde nulla magni illo. Id molestiae blanditiis fuga obcaecati nesciunt
-                numquam ad. Voluptatum, fugit?
-                <a href="#" class="more-news">
+            «КуйбышевАзот» объявил конкурс на разработку новой архитектурной концепции яхт-клуба «Дружба».
+                <a href="https://www.kuazot.ru/news/418-kuybyshevazot-obyavil-konkurs-na-razrabotku-novoy-/" class="more-news">
                     <span></span>
                 </a>
             </div>
 
 
             <div class="news-item">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sequi minima consectetur blanditiis,
-                nesciunt esse excepturi magnam doloremque quisquam distinctio assumenda dolorum deserunt iusto, ipsam
-                possimus et accusantium recusandae quam.
-                <a href="#" class="more-news">
+            «КуйбышевАзот» подвел итоги работы за I квартал 2022 года
+                <a href="https://www.kuazot.ru/news/417-kuybyshevazot-podvel-itogi-raboty-za-i-kvartal-202/" class="more-news">
                     <span></span>
                 </a>
             </div>
 
 
             <div class="news-item">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore amet molestias beatae saepe dolore
-                doloribus architecto. Cupiditate fugiat nam accusantium, unde ut doloribus alias voluptates ipsa illo
-                eius consequatur modi?
-                <a href="#" class="more-news">
+            «КуйбышевАзот» продолжает восстанавливать лес
+                <a href="https://www.kuazot.ru/news/416-kuybyshevazot-prodolzhaet-vosstanavlivat-les/" class="more-news">
                     <span></span>
                 </a>
             </div>

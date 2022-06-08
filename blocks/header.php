@@ -43,7 +43,7 @@ if(!$_SESSION['login']){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Бургер</title>
+    <title>КуйбышевАзот</title>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Fira+Sans:wght@200&family=Inter:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -75,6 +75,17 @@ if(!$_SESSION['login']){
                                     <?endwhile;?>
                                     <a href="../m_moderation/accesses.php">Доступы к приложениям</a>
                                 </div>
+                                
+                            <?endif;
+                            if($roles[$i] == 'Кладовщик'):
+                                $menu = Menu($db, $roles[$i]);?>
+                                <h1>Покупки и продажи</h1>
+                                <div>
+                                    <?while($link = $menu -> fetch(PDO::FETCH_OBJ)):?>
+                                        <a href="<?=$link->url_address?>"><?=$link->app_name?></a>
+                                    <?endwhile;?>
+                                </div>
+                                
                             <?endif;
                         }
                         ?>

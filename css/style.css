@@ -780,3 +780,141 @@ option {
         margin-bottom: 10px;
     }
 }
+
+
+/*----------------ПРОДАЖИ-------------------------------------*/
+
+.sells {
+    padding: 0 0 0 50px;
+    margin: 0 auto;
+}
+
+.sells__row {
+    display: flex;
+}
+
+.sells__body {
+    max-width: 990px;
+    margin: 0 auto;
+}
+
+.sells__items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sells__column {
+    display: flex;
+    margin: 0 auto;
+}
+
+.sells__item {
+    margin: 30px 15px 10px 15px;
+    display: flex;
+    background-color: #445162;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #445162;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+.sells__add a {
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 12pt;
+    font-family: 'Comfortaa';
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    margin-left: 7px;
+    border: 1px solid #1240AB;
+    background-color: #1240AB;
+    color: #fff;
+    transition: .2s;
+}
+
+.sells__add a:hover {
+    color: #1240AB;
+    background-color: #fff;
+}
+
+.sells__add a:focus {
+    color: #1240AB;
+    background-color: rgb(227, 227, 227);
+}
+
+.sells__item__title,
+.sells__item__count,
+.sells__item__price {
+    padding: 3px 5px;
+}
+
+.sells__add__body select,
+.sells__add__body input {
+    display: inline-block;
+    padding: 10px 10px;
+    font-size: 12pt;
+    border-radius: 5px;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    background-color: #fff;
+    border: 2px solid #dcdcdc;
+    width: 125px;
+    margin: 20px 10px 10px 0;
+}
+
+.sells__add__body input {
+    width: 165px;
+}
+
+.selected_product {
+    width: 100px;
+}
+
+.information {
+    margin: 10px 0 0 0;
+}
+
+
+/*ТАБЛИЦААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААА*/
+
+.table {
+    width: 100%;
+    border: none;
+    margin: 10px 0 0 0;
+}
+
+.table thead th {
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    padding: 10px 15px;
+    background: #d8d8d8;
+    font-size: 14px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.table tbody td {
+    text-align: left;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 10px 15px;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.table thead tr th:first-child,
+.table tbody tr td:first-child {
+    border-left: none;
+}
+
+.table thead tr th:last-child,
+.table tbody tr td:last-child {
+    border-right: none;
+}
+
+.table tbody tr:nth-child(even) {
+    background: #f3f3f3;
+}

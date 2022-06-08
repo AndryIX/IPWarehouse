@@ -21,7 +21,6 @@ function validateFormAuth() {
     }
     if (inpassword == "") {
         alert("Введите пароль!");
-        return false;
     }
 }
 
@@ -72,6 +71,20 @@ function validateFormAddApp() {
     }
     if (addurl == "") {
         alert("Заполните поле: Url адрес!");
+        return false;
+    }
+}
+
+function validateFormSells() {
+    var incount = document.forms["f_add_invoice"]["count"].value;
+    var inprice = document.forms["f_add_invoice"]["price"].value;
+
+    if (incount == "") {
+        alert("Введите Количество!");
+        return false;
+    }
+    if (inprice == "") {
+        alert("Введите цену!");
         return false;
     }
 }
