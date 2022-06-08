@@ -8,7 +8,6 @@ require "../blocks/header.php";
 
 $selected = (int)$_GET['selected'];
 
-
 ?>
 
         <div class="content">
@@ -33,7 +32,7 @@ $selected = (int)$_GET['selected'];
                             from assignments, roles, users 
                             where assignments.id_user = users.id_user
                             and assignments.id_role = roles.id_role
-                            and assignments.id_user = ". $select = isset($selected) ? $selected : 1 ."
+                            and assignments.id_user = ". $select = $selected != 0 ? $selected : 1 ."
                             order by id_role asc");
                         
                           
@@ -41,7 +40,7 @@ $selected = (int)$_GET['selected'];
                         while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
                             <ul>
                                 <li>
-                                    <div><?= $row->role_name?></div>
+                                    <div class="info"><?= $row->role_name?></div>
                                     <div class="interaction">
                                         <?if($row->role_name != "Администратор"):?>
                                             <a href="../handlers/h_moderation/delete_assign.php?id_role=<?=$row->id_role?>&id_user=<?=$row->id_user?>">Удалить</a>

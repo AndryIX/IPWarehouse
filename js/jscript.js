@@ -26,12 +26,12 @@ function validateFormAuth() {
 }
 
 function validateFormAddUser() {
-    let addFIO = document.forms["fadduser"]["add_FIO"].value;
+    let addfio = document.forms["fadduser"]["add_fio"].value;
     let addlogin = document.forms["fadduser"]["add_login"].value;
     let addpassword = document.forms["fadduser"]["add_password"].value;
     let confirmpass = document.forms["fadduser"]["confirm_pass"].value;
 
-    if (addFIO == "") {
+    if (addfio == "") {
         alert("Заполните поле: ФИО!");
         return false;
     }

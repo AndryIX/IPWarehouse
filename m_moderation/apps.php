@@ -19,7 +19,7 @@ require "../blocks/header.php";
                         while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
                             <ul>
                                 <li>
-                                    <div><?= $row->app_name?></div>
+                                    <div class="info"><?= $row->app_name?></div>
                                     <div class="interaction">
                                         <a href="../handlers/h_moderation/delete_app.php?id_app=<?=$row->id_app?>">Удалить</a>
                                         <a href="updateApp.php?id_app=<?=$row->id_app?>&app_name=<?=$row->app_name?>&url_address=<?=$row->url_address?>">Изменить</a>

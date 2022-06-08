@@ -7,6 +7,7 @@ require "../handlers/db_connect.php";
 require "../blocks/header.php";
 
 $selected = (int)$_GET['selected'];
+
 ?>
 
 <div class="content">
@@ -36,13 +37,13 @@ $selected = (int)$_GET['selected'];
                             from assignments, roles, users 
                             where assignments.id_user = users.id_user
                             and assignments.id_role = roles.id_role
-                            and assignments.id_role = ". $select = isset($selected) ? $selected : 1 ." 
+                            and assignments.id_role = ". $select = $selected != 0 ? $selected : 1 ." 
                             order by id_user asc");
 
                         while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
                 <ul>
                     <li>
-                        <div><?= $row->login?></div>
+                        <div class="info"><?= $row->login?></div>
                         <div class="interaction">
                             <?if($row->login != "admin"):?>
                             <a

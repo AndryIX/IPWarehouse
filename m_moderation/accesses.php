@@ -27,14 +27,14 @@ $selected = (int)$_GET['selected'];
                             from accesses, roles, apps 
                             where accesses.id_app = apps.id_app
                             and accesses.id_role = roles.id_role
-                            and accesses.id_role = ". $select = isset($selected) ? $selected : 1 ."
+                            and accesses.id_role = ". $select = $selected != 0 ? $selected : 1 ."
                             order by id_app asc");
                         
 
                         while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
                             <ul>
                                 <li>
-                                    <div><?= $row->app_name?></div>
+                                    <div class="info"><?= $row->app_name?></div>
                                     <div class="interaction">
                                         <a href="../handlers/h_moderation/delete_access.php?id_role=<?=$row->id_role?>&id_app=<?=$row->id_app?>">Удалить</a>
                                         <a href="updateAccess.php?id_role=<?=$row->id_role?>&id_app=<?=$row->id_app?>">Изменить</a>
