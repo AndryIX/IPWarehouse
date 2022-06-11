@@ -64,7 +64,7 @@ if(!$_SESSION['role']){
                                 </li>
                                 <li>
                                     <a href="../warehouse.php" class="header_link">Склад</a>
-                           
+                                  
                                 </li>
                                 <li>
                                     <a href="../work.php" class="header_link">Сотрудники</a>
