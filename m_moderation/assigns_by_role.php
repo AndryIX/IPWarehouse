@@ -1,21 +1,20 @@
 <? session_start();
-if($_SESSION['role'] != 'Администратор'){
-    header('Location: ../auth.php');
-    exit;
+if(!$_SESSION['login']){
+    header('Location: auth.php');
 }
-
 
 require "../handlers/db_connect.php";
 require "../blocks/header.php";
 
-$selected = $_GET['selected'];
+$selected = (int)$_GET['selected'];
+
 ?>
 
 <div class="content">
     <div class="container">
         <div class="content_text">
             <div class="view">
-                <h1>Назначения</h1>
+                <h1>Назначения по ролям</h1>
                 <form action="assigns_by_role.php" method="get">
                     <select name="selected" class="selection">
                         <?$search = $db -> query("select * from roles order by id_role asc");
@@ -34,26 +33,17 @@ $selected = $_GET['selected'];
 
                 <a href="assigns.php" class="inter">Просмотр ролей по пользователям</a>
 
-                <?if(isset($selected)){
-                            $result = $db -> query("select assignments.id_role, role_name, assignments.id_user, login 
+                <?$result = $db -> query("select assignments.id_role, role_name, assignments.id_user, login 
                             from assignments, roles, users 
                             where assignments.id_user = users.id_user
                             and assignments.id_role = roles.id_role
-                            and assignments.id_role = $selected
+                            and assignments.id_role = ". $select = $selected != 0 ? $selected : 1 ." 
                             order by id_user asc");
-                        }else{
-                            $result = $db -> query("select assignments.id_role, role_name, assignments.id_user, login 
-                            from assignments, roles, users 
-                            where assignments.id_user = users.id_user
-                            and assignments.id_role = roles.id_role
-                            and assignments.id_role = 1 
-                            order by id_user asc");
-                        }
 
                         while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
                 <ul>
                     <li>
-                        <div><?= $row->login?></div>
+                        <div class="info"><?= $row->login?></div>
                         <div class="interaction">
                             <?if($row->login != "admin"):?>
                             <a

@@ -86,7 +86,6 @@ h6 {
 }
 
 
-
 /*ХЭДЕР       ХЭДЕР       ХЭДЕР       ХЭДЕР      ХЭДЕР       ХЭДЕР     ХЭДЕР      ХЭДЕР       ХЭДЕР       ХЭДЕР       ХЭДЕР*/
 
 .header {
@@ -189,96 +188,6 @@ h6 {
 }
 
 
-/*----------------------------------------------------------------------------------------------------------------------------*/
-
-@media (max-width:767px) {
-
-    a:hover::after,
-    a:focus::after {
-        opacity: 0;
-    }
-    body.lock {
-        overflow: hidden;
-    }
-    .logo {
-        flex: 0 0 40px;
-    }
-    .header_body {
-        height: 50px;
-    }
-    .burger {
-        display: block;
-        position: relative;
-        width: 30px;
-        height: 20px;
-        z-index: 3;
-    }
-    .burger span {
-        position: absolute;
-        background-color: #fff;
-        top: 9px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        transition: all .3s ease 0s;
-    }
-    .burger:before,
-    .burger:after {
-        content: '';
-        background-color: #fff;
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        left: 0;
-        transition: all .3s ease 0s;
-    }
-    .burger:before {
-        top: 0;
-    }
-    .burger:after {
-        bottom: 0;
-    }
-    .menu {
-        position: fixed;
-        top: -100%;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #6c8bd5e1;
-        padding: 70px 10px 20px 10px;
-        transition: all .7s ease 0s;
-        overflow: auto;
-    }
-    
-    .menu.active {
-        top: 0;
-    }
-    .header_list {
-        display: block;
-    }
-    .header_list li {
-        margin: 0px 0px 20px 0px;
-    }
-    .burger.active:before {
-        transform: rotate(45deg);
-        top: 9px;
-        transition: all .3s ease 0s;
-    }
-    .burger.active:after {
-        transform: rotate(-45deg);
-        bottom: 9px;
-        transition: all .3s ease 0s;
-    }
-    .burger.active span {
-        transform: scale(0);
-        transition: all .3s ease 0s;
-    }
-    .header_link {
-        font-size: 24px;
-    }
-}
-
-
 /*КОНТЕНТ     КОНТЕНТ     КОНТЕНТ     КОНТЕНТ     КОНТЕНТ     КОНТЕНТ     КОНТЕНТ     КОНТЕНТ     КОНТЕНТ     КОНТЕНТ*/
 
 .content {
@@ -304,7 +213,7 @@ h6 {
     }
 }
 
-.title{
+.title {
     position: relative;
     margin: 0 auto;
     max-width: 750px;
@@ -316,7 +225,7 @@ h6 {
     text-align: center;
 }
 
-.news-icon{
+.news-icon {
     display: block;
     top: 0;
     left: 0;
@@ -329,12 +238,12 @@ h6 {
     margin: 60px auto 0 auto;
 }
 
-.news-icon img{
+.news-icon img {
     display: block;
     width: 100%;
 }
 
-.news-title{
+.news-title {
     text-decoration: none;
     display: block;
     text-align: center;
@@ -348,11 +257,11 @@ h6 {
     letter-spacing: 0.025em;
 }
 
-.news-title:nth-child(){
+.news-title:nth-child() {
     margin: 0;
 }
 
-.news-content{
+.news-content {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -361,7 +270,7 @@ h6 {
     align-content: center;
 }
 
-.news-item{
+.news-item {
     position: relative;
     display: inline-block;
     text-align: justify;
@@ -371,18 +280,15 @@ h6 {
     padding: 10px 0 0 0;
 }
 
-
-.more-news{
+.more-news {
     position: absolute;
     display: block;
     line-height: 44px;
     height: 37px;
     padding: 0 24px 10px 24px;
     border-radius: 30px;
-    box-shadow: 0px 6px 40px 0px rgba(128,183,179,0.54);
+    box-shadow: 0px 6px 40px 0px rgba(128, 183, 179, 0.54);
     background-color: #4080bb;
-
-
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     text-transform: uppercase;
@@ -390,12 +296,12 @@ h6 {
     color: #ffffff;
 }
 
-.more-news span::after{
+.more-news span::after {
     content: url(/img/strelka.png);
 }
 
 @media (max-width:970px) {
-    .news-content{
+    .news-content {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -404,8 +310,7 @@ h6 {
         align-content: center;
         flex-direction: column;
     }
-
-    .news-item{
+    .news-item {
         position: relative;
         display: inline-block;
         text-align: justify;
@@ -415,9 +320,8 @@ h6 {
         padding: 10px 0 0 0;
         margin: 10px 0 40px 0;
     }
-    
-    .more-news{
-     margin: 10px 0 0 0;
+    .more-news {
+        margin: 10px 0 0 0;
     }
 }
 
@@ -440,7 +344,7 @@ h6 {
 
 /*ТАБЛИЦА      ТАБЛИЦА       ТАБЛИЦА       ТАБЛИЦА      ТАБЛИЦА       ТАБЛИЦА         ТАБЛИЦА         ТАБЛИЦА        ТАБЛИЦА*/
 
-.employ p{
+.employ p {
     display: block;
     text-transform: uppercase;
     background: #d3d2d2;
@@ -453,6 +357,7 @@ h6 {
 .employ {
     text-align: center;
 }
+
 
 /*САЙДБАР     САЙДБАР     САЙДБАР         САЙДБАР    САЙДБАР     САЙДБАР       САЙДБАР       САЙДБАР        САЙДБАР*/
 
@@ -555,28 +460,28 @@ h6 {
     display: none;
 }
 
-
 @media (max-width:767px) {
-    .sidebar{
-    font-family: 'Comfortaa', cursive;
-    height: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 50px;
-    left: -100%;
-    padding: 0 15px;
-    background-color: #6c8bd5e1;
-    overflow-x: hidden;
-    overflow: hidden;
-    transition: all .5s ease 0s;
+    .sidebar {
+        font-family: 'Comfortaa', cursive;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 50px;
+        left: -100%;
+        padding: 0 15px;
+        background-color: #6c8bd5e1;
+        overflow-x: hidden;
+        overflow: hidden;
+        transition: all .5s ease 0s;
     }
-
     .sidebar.active {
         position: fixed;
         left: 0;
         top: 50px;
     }
 }
+
+
 /* --------------------------------------------------------------------------------------------- */
 
 .btn__exit {
@@ -601,6 +506,7 @@ h6 {
 /* Добавление ----------------- */
 
 .add__form {
+    display: flex;
     width: 100%;
 }
 
@@ -615,17 +521,18 @@ h6 {
 }
 
 .add {
-    display: block;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 35%;
 }
 
 .add__input {
     display: block;
+    width: 100%;
     padding: 10px;
     font-size: 12pt;
-    margin: 15px 0;
+    margin: 5px 0;
     font-family: 'Comfortaa';
-    width: 25%;
     font-weight: bold;
     background-color: #f0f0f0;
     border-radius: 10px;
@@ -642,7 +549,6 @@ h6 {
     font-weight: normal;
     padding: 10px;
     text-align: center;
-    width: 25%;
     text-transform: uppercase;
     background-color: #1240AB;
     border: 1px solid #1240AB;
@@ -662,6 +568,17 @@ h6 {
     color: #fff;
 }
 
+label {
+    font-size: 12pt;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    color: #1240AB;
+}
+
+.view {
+    margin-bottom: 10%;
+}
+
 .view h1 {
     font-size: 16pt;
     color: #1240AB;
@@ -674,6 +591,7 @@ h6 {
     text-transform: none;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     width: 100%;
     padding: 10px 15px;
     font-size: 12pt;
@@ -723,8 +641,7 @@ h6 {
 
 .selection {
     display: inline-block;
-    margin-top: 20px;
-    margin-right: 10px;
+    margin: 5px 0;
     padding: 10px 10px;
     font-size: 12pt;
     border-radius: 5px;
@@ -760,8 +677,245 @@ option {
     color: #1240AB;
 }
 
+
 /*----------------------------------------------------------------------------------------------------------------------*/
-.content_carousel{
+
+.content_carousel {
     margin: 40px 0 0 0;
 }
 
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
+@media (max-width:767px) {
+    a:hover::after,
+    a:focus::after {
+        opacity: 0;
+    }
+    body.lock {
+        overflow: hidden;
+    }
+    .logo {
+        flex: 0 0 40px;
+    }
+    .header_body {
+        height: 50px;
+    }
+    .burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+    }
+    .burger span {
+        position: absolute;
+        background-color: #fff;
+        top: 9px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        transition: all .3s ease 0s;
+    }
+    .burger:before,
+    .burger:after {
+        content: '';
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all .3s ease 0s;
+    }
+    .burger:before {
+        top: 0;
+    }
+    .burger:after {
+        bottom: 0;
+    }
+    .menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #6c8bd5e1;
+        padding: 70px 10px 20px 10px;
+        transition: all .7s ease 0s;
+        overflow: auto;
+    }
+    .menu.active {
+        top: 0;
+    }
+    .header_list {
+        display: block;
+    }
+    .header_list li {
+        margin: 0px 0px 20px 0px;
+    }
+    .burger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+        transition: all .3s ease 0s;
+    }
+    .burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+        transition: all .3s ease 0s;
+    }
+    .burger.active span {
+        transform: scale(0);
+        transition: all .3s ease 0s;
+    }
+    .header_link {
+        font-size: 24px;
+    }
+    .add {
+        width: 100%;
+    }
+    .view li {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info {
+        margin-bottom: 10px;
+    }
+}
+
+
+/*----------------ПРОДАЖИ-------------------------------------*/
+
+.sells {
+    padding: 0 0 0 50px;
+    margin: 0 auto;
+}
+
+.sells__row {
+    display: flex;
+}
+
+.sells__body {
+    max-width: 990px;
+    margin: 0 auto;
+}
+
+.sells__items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sells__column {
+    display: flex;
+    margin: 0 auto;
+}
+
+.sells__item {
+    margin: 30px 15px 10px 15px;
+    display: flex;
+    background-color: #445162;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #445162;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+.sells__add a {
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 12pt;
+    font-family: 'Comfortaa';
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    margin-left: 7px;
+    border: 1px solid #1240AB;
+    background-color: #1240AB;
+    color: #fff;
+    transition: .2s;
+}
+
+.sells__add a:hover {
+    color: #1240AB;
+    background-color: #fff;
+}
+
+.sells__add a:focus {
+    color: #1240AB;
+    background-color: rgb(227, 227, 227);
+}
+
+.sells__item__title,
+.sells__item__count,
+.sells__item__price {
+    padding: 3px 5px;
+}
+
+.sells__add__body select,
+.sells__add__body input {
+    display: inline-block;
+    padding: 10px 10px;
+    font-size: 12pt;
+    border-radius: 5px;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    background-color: #fff;
+    border: 2px solid #dcdcdc;
+    width: 125px;
+    margin: 20px 10px 10px 0;
+}
+
+.sells__add__body input {
+    width: 165px;
+}
+
+.selected_product {
+    width: 100px;
+}
+
+.information {
+    margin: 10px 0 0 0;
+}
+
+
+/*ТАБЛИЦААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААА*/
+
+.table {
+    width: 100%;
+    border: none;
+    margin: 10px 0 0 0;
+}
+
+.table thead th {
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    padding: 10px 15px;
+    background: #d8d8d8;
+    font-size: 14px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.table tbody td {
+    text-align: left;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 10px 15px;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.table thead tr th:first-child,
+.table tbody tr td:first-child {
+    border-left: none;
+}
+
+.table thead tr th:last-child,
+.table tbody tr td:last-child {
+    border-right: none;
+}
+
+.table tbody tr:nth-child(even) {
+    background: #f3f3f3;
+}

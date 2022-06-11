@@ -1,14 +1,11 @@
 <? session_start();
-if ($_SESSION['role'] != 'Администратор'){
-    header('Location: ../auth.php');
+if(!$_SESSION['login']){
+    header('Location: auth.php');
 }
 
-$id_user = $_GET['id_user'];
-$id_role = $_GET['id_role'];
+$_SESSION['upd_id_user'] = $_GET['id_user'];
+$_SESSION['upd_id_role'] = $_GET['id_role'];
 
-
-$_SESSION['upd_id_user'] = $id_user;
-$_SESSION['upd_id_role'] = $id_role;
 
 require "../handlers/db_connect.php";
 require "../blocks/header.php";?>
@@ -16,9 +13,10 @@ require "../blocks/header.php";?>
     <div class="content">
         <div class="container">
             <form class="add__form" action="../handlers/h_moderation/update_assign.php" method="post">
-                <h1 class="add__lab">Переопределение роли</h1>
                 <div class="add">
-                    <select name="upd_user_ass" class="selection">
+                    <h1 class="add__lab">Переопределение роли</h1>
+                    <label for="upduser">Пользователь</label>
+                    <select name="upd_user_ass" id="upduser" class="selection">
                         <?$search_user = $db -> query("select * from users order by id_user asc");
                         while($row = $search_user -> fetch(PDO::FETCH_OBJ)):
                             if($row->id_user == "$id_user"):?>
@@ -29,7 +27,8 @@ require "../blocks/header.php";?>
                         <?endwhile;?>
                     </select>
 
-                    <select name="upd_role_ass" class="selection">
+                    <label for="updrole">Роль</label>
+                    <select name="upd_role_ass" id="updrole" class="selection">
                         <?$search_role = $db -> query("select * from roles order by id_role asc");
                         while($row = $search_role -> fetch(PDO::FETCH_OBJ)):
                             if($row->id_role == "$id_role"):?>

@@ -76,6 +76,7 @@ h6 {
     font-weight: 400;
 }
 
+
 /***********************************************************************************************************************************/
 
 .auth__form {
@@ -110,10 +111,19 @@ h6 {
     text-transform: none;
 }
 
+label {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    font-size: 14pt;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    color: #1240AB;
+}
+
 input {
     border: none;
     outline: none;
-    font-family: sans-serif;
 }
 
 .input__auth {
@@ -121,11 +131,12 @@ input {
     margin: 30px 20px;
 }
 
-.login,
-.password {
+.signin {
     padding: 10px;
     width: 100%;
     font-size: 14pt;
+    font-weight: bold;
+    font-family: 'Comfortaa';
     color: rgb(80, 80, 80);
     overflow: hidden;
     background-color: #f3f3f3;
@@ -134,14 +145,14 @@ input {
     transition: .3s;
 }
 
-.login:focus,
-.password:focus {
+.signin:focus {
     color: #1240AB;
     border-bottom: 2px solid #1240AB;
 }
 
 .input__auth input[type="submit"] {
     font-size: 12pt;
+    font-family: 'Comfortaa';
     width: 100%;
     font-weight: 600;
     padding: 10px;

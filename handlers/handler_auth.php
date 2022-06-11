@@ -1,8 +1,8 @@
 <?session_start();
 require 'db_connect.php';
 
-$login = trim($_POST['login']);
-$password = trim($_POST['password']);
+$login = (string)$_POST['login'];
+$password = (string)$_POST['password'];
 
 $result = $db -> query("select role_name, login, password  
                         from assignments, users, roles
@@ -13,10 +13,10 @@ $result = $db -> query("select role_name, login, password
 
 $num_rows = $result -> rowCount();
 
-$role = $result -> fetch(PDO::FETCH_OBJ) -> role_name;
+$login = $result -> fetch(PDO::FETCH_OBJ) -> login;
 
 if($num_rows > 0){
-    $_SESSION['role'] = $role;
+    $_SESSION['login'] = $login;
     header('Location: ../index.php');
     exit;
 }else{

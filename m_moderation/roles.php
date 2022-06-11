@@ -1,7 +1,8 @@
 <? session_start();
-if($_SESSION['role'] != 'Администратор'){
-    header('Location: ../auth.php');
+if(!$_SESSION['login']){
+    header('Location: auth.php');
 }
+
 
 require "../handlers/db_connect.php";
 require "../blocks/header.php";
@@ -18,7 +19,7 @@ require "../blocks/header.php";
                         while($row = $result -> fetch(PDO::FETCH_OBJ)):?>
                             <ul>
                                 <li>
-                                    <div><?= $row->role_name?></div>
+                                    <div class="info"><?= $row->role_name?></div>
                                     <div class="interaction">
                                         <?if($row -> role_name != "Администратор"):?>
                                             <a href="../handlers/h_moderation/delete_role.php?id_role=<?=$row->id_role?>">Удалить</a>
