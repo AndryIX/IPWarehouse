@@ -5,7 +5,11 @@
 -- Dumped from database version 10.20
 -- Dumped by pg_dump version 10.20
 
+<<<<<<< Updated upstream
 -- Started on 2022-06-06 19:51:05
+=======
+-- Started on 2022-05-17 12:53:42
+>>>>>>> Stashed changes
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -50,7 +54,11 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 197 (class 1259 OID 24993)
+=======
+-- TOC entry 197 (class 1259 OID 24756)
+>>>>>>> Stashed changes
 -- Name: accesses; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -63,7 +71,11 @@ CREATE TABLE public.accesses (
 ALTER TABLE public.accesses OWNER TO postgres;
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 198 (class 1259 OID 24996)
+=======
+-- TOC entry 198 (class 1259 OID 24759)
+>>>>>>> Stashed changes
 -- Name: apps; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -77,7 +89,11 @@ CREATE TABLE public.apps (
 ALTER TABLE public.apps OWNER TO postgres;
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 199 (class 1259 OID 25002)
+=======
+-- TOC entry 199 (class 1259 OID 24765)
+>>>>>>> Stashed changes
 -- Name: assignments; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -90,7 +106,11 @@ CREATE TABLE public.assignments (
 ALTER TABLE public.assignments OWNER TO postgres;
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 200 (class 1259 OID 25005)
+=======
+-- TOC entry 200 (class 1259 OID 24768)
+>>>>>>> Stashed changes
 -- Name: roles; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -103,7 +123,11 @@ CREATE TABLE public.roles (
 ALTER TABLE public.roles OWNER TO postgres;
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 201 (class 1259 OID 25008)
+=======
+-- TOC entry 201 (class 1259 OID 24771)
+>>>>>>> Stashed changes
 -- Name: users; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -117,7 +141,11 @@ CREATE TABLE public.users (
 ALTER TABLE public.users OWNER TO postgres;
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 202 (class 1259 OID 25011)
+=======
+-- TOC entry 202 (class 1259 OID 24774)
+>>>>>>> Stashed changes
 -- Name: contacts; Type: TABLE; Schema: warehouse; Owner: postgres
 --
 
@@ -318,7 +346,11 @@ CREATE TABLE warehouse."сategories" (
 ALTER TABLE warehouse."сategories" OWNER TO postgres;
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2916 (class 0 OID 24993)
+=======
+-- TOC entry 2916 (class 0 OID 24756)
+>>>>>>> Stashed changes
 -- Dependencies: 197
 -- Data for Name: accesses; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -332,7 +364,11 @@ INSERT INTO public.accesses (id_role, id_app) VALUES (3, 6);
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2917 (class 0 OID 24996)
+=======
+-- TOC entry 2917 (class 0 OID 24759)
+>>>>>>> Stashed changes
 -- Dependencies: 198
 -- Data for Name: apps; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -346,7 +382,11 @@ INSERT INTO public.apps (id_app, app_name, url_address) VALUES (6, 'Покупк
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2918 (class 0 OID 25002)
+=======
+-- TOC entry 2918 (class 0 OID 24765)
+>>>>>>> Stashed changes
 -- Dependencies: 199
 -- Data for Name: assignments; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -370,7 +410,11 @@ INSERT INTO public.assignments (id_user, id_role) VALUES (12, 3);
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2919 (class 0 OID 25005)
+=======
+-- TOC entry 2919 (class 0 OID 24768)
+>>>>>>> Stashed changes
 -- Dependencies: 200
 -- Data for Name: roles; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -386,7 +430,11 @@ INSERT INTO public.roles (id_role, role_name) VALUES (2, 'Сис. Админ');
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2920 (class 0 OID 25008)
+=======
+-- TOC entry 2920 (class 0 OID 24771)
+>>>>>>> Stashed changes
 -- Dependencies: 201
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -405,18 +453,29 @@ INSERT INTO public.users (id_user, login, password) VALUES (12, 'Димон', '5
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2921 (class 0 OID 25011)
+=======
+-- TOC entry 2921 (class 0 OID 24774)
+>>>>>>> Stashed changes
 -- Dependencies: 202
 -- Data for Name: contacts; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
 
 INSERT INTO warehouse.contacts (id_contract, nomer_contract, date_contact, id_counterparty, id_status) VALUES (1, '0001', '2022-04-01', 1, 2);
 INSERT INTO warehouse.contacts (id_contract, nomer_contract, date_contact, id_counterparty, id_status) VALUES (2, '0002', '2022-03-28', 1, 2);
+<<<<<<< Updated upstream
 INSERT INTO warehouse.contacts (id_contract, nomer_contract, date_contact, id_counterparty, id_status) VALUES (5, '5', '2022-04-11', 1, 1);
 
 
 --
 -- TOC entry 2922 (class 0 OID 25014)
+=======
+
+
+--
+-- TOC entry 2922 (class 0 OID 24777)
+>>>>>>> Stashed changes
 -- Dependencies: 203
 -- Data for Name: counterparties; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
@@ -425,7 +484,11 @@ INSERT INTO warehouse.counterparties (id_counterparty, counterparty_name, "INN",
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2923 (class 0 OID 25017)
+=======
+-- TOC entry 2923 (class 0 OID 24780)
+>>>>>>> Stashed changes
 -- Dependencies: 204
 -- Data for Name: countries; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
@@ -434,7 +497,11 @@ INSERT INTO warehouse.countries (id_country, country_name) VALUES (1, 'Росс�
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2924 (class 0 OID 25020)
+=======
+-- TOC entry 2924 (class 0 OID 24783)
+>>>>>>> Stashed changes
 -- Dependencies: 205
 -- Data for Name: currencies; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
@@ -443,7 +510,11 @@ INSERT INTO warehouse.currencies (id_currency, currencies_name, designation) VAL
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2925 (class 0 OID 25023)
+=======
+-- TOC entry 2925 (class 0 OID 24786)
+>>>>>>> Stashed changes
 -- Dependencies: 206
 -- Data for Name: income_price; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
@@ -451,7 +522,11 @@ INSERT INTO warehouse.currencies (id_currency, currencies_name, designation) VAL
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2926 (class 0 OID 25026)
+=======
+-- TOC entry 2926 (class 0 OID 24789)
+>>>>>>> Stashed changes
 -- Dependencies: 207
 -- Data for Name: invoices; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
@@ -460,11 +535,18 @@ INSERT INTO warehouse.invoices (id_invoice, number_invoice, date_invoice, id_con
 INSERT INTO warehouse.invoices (id_invoice, number_invoice, date_invoice, id_contract) VALUES (4, '004', '2022-04-09', 1);
 INSERT INTO warehouse.invoices (id_invoice, number_invoice, date_invoice, id_contract) VALUES (2, '2', '2022-03-28', 1);
 INSERT INTO warehouse.invoices (id_invoice, number_invoice, date_invoice, id_contract) VALUES (3, '3', '2022-03-27', 1);
+<<<<<<< Updated upstream
 INSERT INTO warehouse.invoices (id_invoice, number_invoice, date_invoice, id_contract) VALUES (5, '005', '2022-04-12', 5);
 
 
 --
 -- TOC entry 2927 (class 0 OID 25032)
+=======
+
+
+--
+-- TOC entry 2927 (class 0 OID 24795)
+>>>>>>> Stashed changes
 -- Dependencies: 208
 -- Data for Name: products; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
@@ -479,19 +561,31 @@ INSERT INTO warehouse.products (id_product, name_product, condition, id_unit, id
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2928 (class 0 OID 25036)
+=======
+-- TOC entry 2928 (class 0 OID 24799)
+>>>>>>> Stashed changes
 -- Dependencies: 209
 -- Data for Name: products_invoice; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
 
 INSERT INTO warehouse.products_invoice (id_invoice, id_product, quantity, price, id_currency) VALUES (1, 1, 5, 1010101, 1);
+<<<<<<< Updated upstream
+=======
+INSERT INTO warehouse.products_invoice (id_invoice, id_product, quantity, price, id_currency) VALUES (4, 4, 50, 120, 1);
+>>>>>>> Stashed changes
 INSERT INTO warehouse.products_invoice (id_invoice, id_product, quantity, price, id_currency) VALUES (1, 6, 20, 130, 1);
 INSERT INTO warehouse.products_invoice (id_invoice, id_product, quantity, price, id_currency) VALUES (1, 7, 12, 500, 1);
 INSERT INTO warehouse.products_invoice (id_invoice, id_product, quantity, price, id_currency) VALUES (3, 3, 25, 750, 1);
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2929 (class 0 OID 25042)
+=======
+-- TOC entry 2929 (class 0 OID 24805)
+>>>>>>> Stashed changes
 -- Dependencies: 210
 -- Data for Name: sheets; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
@@ -500,7 +594,11 @@ INSERT INTO warehouse.sheets (id_price, start_date, end_date) VALUES (1, '2022-0
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2930 (class 0 OID 25046)
+=======
+-- TOC entry 2930 (class 0 OID 24809)
+>>>>>>> Stashed changes
 -- Dependencies: 211
 -- Data for Name: status; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
@@ -510,7 +608,11 @@ INSERT INTO warehouse.status (id_status, status_name) VALUES (2, 'Продажа
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2931 (class 0 OID 25049)
+=======
+-- TOC entry 2931 (class 0 OID 24812)
+>>>>>>> Stashed changes
 -- Dependencies: 212
 -- Data for Name: units; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
@@ -520,7 +622,11 @@ INSERT INTO warehouse.units (id_unit, title, "Designation") VALUES (2, 'кило
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2932 (class 0 OID 25052)
+=======
+-- TOC entry 2932 (class 0 OID 24815)
+>>>>>>> Stashed changes
 -- Dependencies: 213
 -- Data for Name: warehouse; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
@@ -530,7 +636,11 @@ INSERT INTO warehouse.warehouse (id_warehouse, denomination, footnote) VALUES (2
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2933 (class 0 OID 25059)
+=======
+-- TOC entry 2933 (class 0 OID 24822)
+>>>>>>> Stashed changes
 -- Dependencies: 214
 -- Data for Name: сategories; Type: TABLE DATA; Schema: warehouse; Owner: postgres
 --
@@ -540,7 +650,11 @@ INSERT INTO warehouse."сategories" (id_categ, title) VALUES (2, 'Химия');
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2746 (class 2606 OID 25064)
+=======
+-- TOC entry 2746 (class 2606 OID 24827)
+>>>>>>> Stashed changes
 -- Name: accesses accesses_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -549,7 +663,11 @@ ALTER TABLE ONLY public.accesses
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2748 (class 2606 OID 25066)
+=======
+-- TOC entry 2748 (class 2606 OID 24829)
+>>>>>>> Stashed changes
 -- Name: apps apps_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -558,7 +676,11 @@ ALTER TABLE ONLY public.apps
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2750 (class 2606 OID 25068)
+=======
+-- TOC entry 2750 (class 2606 OID 24831)
+>>>>>>> Stashed changes
 -- Name: assignments assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -567,7 +689,11 @@ ALTER TABLE ONLY public.assignments
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2752 (class 2606 OID 25070)
+=======
+-- TOC entry 2752 (class 2606 OID 24833)
+>>>>>>> Stashed changes
 -- Name: roles roles_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -576,7 +702,11 @@ ALTER TABLE ONLY public.roles
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2754 (class 2606 OID 25072)
+=======
+-- TOC entry 2754 (class 2606 OID 24835)
+>>>>>>> Stashed changes
 -- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -585,7 +715,11 @@ ALTER TABLE ONLY public.users
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2758 (class 2606 OID 25074)
+=======
+-- TOC entry 2758 (class 2606 OID 24837)
+>>>>>>> Stashed changes
 -- Name: counterparties Counterparties_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -594,7 +728,11 @@ ALTER TABLE ONLY warehouse.counterparties
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2774 (class 2606 OID 25076)
+=======
+-- TOC entry 2774 (class 2606 OID 24839)
+>>>>>>> Stashed changes
 -- Name: status Status_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -603,7 +741,11 @@ ALTER TABLE ONLY warehouse.status
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2756 (class 2606 OID 25078)
+=======
+-- TOC entry 2756 (class 2606 OID 24841)
+>>>>>>> Stashed changes
 -- Name: contacts contacts_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -612,7 +754,11 @@ ALTER TABLE ONLY warehouse.contacts
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2760 (class 2606 OID 25080)
+=======
+-- TOC entry 2760 (class 2606 OID 24843)
+>>>>>>> Stashed changes
 -- Name: countries countries_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -621,7 +767,11 @@ ALTER TABLE ONLY warehouse.countries
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2762 (class 2606 OID 25082)
+=======
+-- TOC entry 2762 (class 2606 OID 24845)
+>>>>>>> Stashed changes
 -- Name: currencies currencies_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -630,7 +780,11 @@ ALTER TABLE ONLY warehouse.currencies
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2764 (class 2606 OID 25084)
+=======
+-- TOC entry 2764 (class 2606 OID 24847)
+>>>>>>> Stashed changes
 -- Name: income_price income_price_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -639,7 +793,11 @@ ALTER TABLE ONLY warehouse.income_price
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2766 (class 2606 OID 25086)
+=======
+-- TOC entry 2766 (class 2606 OID 24849)
+>>>>>>> Stashed changes
 -- Name: invoices invoices_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -648,7 +806,11 @@ ALTER TABLE ONLY warehouse.invoices
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2772 (class 2606 OID 25088)
+=======
+-- TOC entry 2772 (class 2606 OID 24851)
+>>>>>>> Stashed changes
 -- Name: sheets price_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -657,7 +819,11 @@ ALTER TABLE ONLY warehouse.sheets
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2780 (class 2606 OID 25090)
+=======
+-- TOC entry 2780 (class 2606 OID 24853)
+>>>>>>> Stashed changes
 -- Name: сategories prod_categ_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -666,7 +832,11 @@ ALTER TABLE ONLY warehouse."сategories"
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2770 (class 2606 OID 25092)
+=======
+-- TOC entry 2770 (class 2606 OID 24855)
+>>>>>>> Stashed changes
 -- Name: products_invoice products_invoice_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -675,7 +845,11 @@ ALTER TABLE ONLY warehouse.products_invoice
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2768 (class 2606 OID 25094)
+=======
+-- TOC entry 2768 (class 2606 OID 24857)
+>>>>>>> Stashed changes
 -- Name: products products_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -684,7 +858,11 @@ ALTER TABLE ONLY warehouse.products
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2776 (class 2606 OID 25096)
+=======
+-- TOC entry 2776 (class 2606 OID 24859)
+>>>>>>> Stashed changes
 -- Name: units units_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -693,7 +871,11 @@ ALTER TABLE ONLY warehouse.units
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2778 (class 2606 OID 25098)
+=======
+-- TOC entry 2778 (class 2606 OID 24861)
+>>>>>>> Stashed changes
 -- Name: warehouse warehouse_pkey; Type: CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -702,7 +884,11 @@ ALTER TABLE ONLY warehouse.warehouse
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2781 (class 2606 OID 25099)
+=======
+-- TOC entry 2781 (class 2606 OID 24862)
+>>>>>>> Stashed changes
 -- Name: accesses accesses_id_app_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -711,7 +897,11 @@ ALTER TABLE ONLY public.accesses
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2782 (class 2606 OID 25104)
+=======
+-- TOC entry 2782 (class 2606 OID 24867)
+>>>>>>> Stashed changes
 -- Name: accesses accesses_id_role_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -720,7 +910,11 @@ ALTER TABLE ONLY public.accesses
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2783 (class 2606 OID 25109)
+=======
+-- TOC entry 2783 (class 2606 OID 24872)
+>>>>>>> Stashed changes
 -- Name: assignments assignments_id_role_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -729,7 +923,11 @@ ALTER TABLE ONLY public.assignments
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2784 (class 2606 OID 25114)
+=======
+-- TOC entry 2784 (class 2606 OID 24877)
+>>>>>>> Stashed changes
 -- Name: assignments assignments_id_user_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -738,7 +936,11 @@ ALTER TABLE ONLY public.assignments
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2785 (class 2606 OID 25119)
+=======
+-- TOC entry 2785 (class 2606 OID 24882)
+>>>>>>> Stashed changes
 -- Name: contacts contacts_id_counterparty_fkey; Type: FK CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -747,7 +949,11 @@ ALTER TABLE ONLY warehouse.contacts
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2786 (class 2606 OID 25124)
+=======
+-- TOC entry 2786 (class 2606 OID 24887)
+>>>>>>> Stashed changes
 -- Name: contacts contacts_id_status_fkey; Type: FK CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -756,7 +962,11 @@ ALTER TABLE ONLY warehouse.contacts
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2787 (class 2606 OID 25129)
+=======
+-- TOC entry 2787 (class 2606 OID 24892)
+>>>>>>> Stashed changes
 -- Name: counterparties counterparties_id_country_fkey; Type: FK CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -765,7 +975,11 @@ ALTER TABLE ONLY warehouse.counterparties
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2788 (class 2606 OID 25134)
+=======
+-- TOC entry 2788 (class 2606 OID 24897)
+>>>>>>> Stashed changes
 -- Name: invoices invoices_id_contract_fkey; Type: FK CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -774,7 +988,11 @@ ALTER TABLE ONLY warehouse.invoices
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2789 (class 2606 OID 25139)
+=======
+-- TOC entry 2789 (class 2606 OID 24902)
+>>>>>>> Stashed changes
 -- Name: products products_id_unit_fkey; Type: FK CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -783,7 +1001,11 @@ ALTER TABLE ONLY warehouse.products
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2790 (class 2606 OID 25144)
+=======
+-- TOC entry 2790 (class 2606 OID 24907)
+>>>>>>> Stashed changes
 -- Name: products products_id_warehouse_fkey; Type: FK CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -792,7 +1014,11 @@ ALTER TABLE ONLY warehouse.products
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2791 (class 2606 OID 25149)
+=======
+-- TOC entry 2791 (class 2606 OID 24912)
+>>>>>>> Stashed changes
 -- Name: products products_id_сategory_fkey; Type: FK CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -801,7 +1027,11 @@ ALTER TABLE ONLY warehouse.products
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2792 (class 2606 OID 25154)
+=======
+-- TOC entry 2792 (class 2606 OID 24917)
+>>>>>>> Stashed changes
 -- Name: products_invoice products_invoice_id_currency_fkey; Type: FK CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -810,7 +1040,11 @@ ALTER TABLE ONLY warehouse.products_invoice
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2793 (class 2606 OID 25159)
+=======
+-- TOC entry 2793 (class 2606 OID 24922)
+>>>>>>> Stashed changes
 -- Name: products_invoice products_invoice_id_invoice_fkey; Type: FK CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -819,7 +1053,11 @@ ALTER TABLE ONLY warehouse.products_invoice
 
 
 --
+<<<<<<< Updated upstream
 -- TOC entry 2794 (class 2606 OID 25164)
+=======
+-- TOC entry 2794 (class 2606 OID 24927)
+>>>>>>> Stashed changes
 -- Name: products_invoice products_invoice_id_product_fkey; Type: FK CONSTRAINT; Schema: warehouse; Owner: postgres
 --
 
@@ -829,14 +1067,22 @@ ALTER TABLE ONLY warehouse.products_invoice
 
 --
 -- TOC entry 2941 (class 0 OID 0)
+<<<<<<< Updated upstream
 -- Dependencies: 5
+=======
+-- Dependencies: 8
+>>>>>>> Stashed changes
 -- Name: SCHEMA warehouse; Type: ACL; Schema: -; Owner: postgres
 --
 
 GRANT ALL ON SCHEMA warehouse TO PUBLIC;
 
 
+<<<<<<< Updated upstream
 -- Completed on 2022-06-06 19:51:05
+=======
+-- Completed on 2022-05-17 12:53:43
+>>>>>>> Stashed changes
 
 --
 -- PostgreSQL database dump complete

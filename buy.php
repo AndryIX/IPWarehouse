@@ -15,8 +15,8 @@ require "blocks/header.php";
                     <h1>Покупки</h1>
                 </div>
                 <div class="sells__add">
-                    <a href="../m_sells/sells_add.php">Оформить накладную</a>
-                    <a href="../m_sells/invoices.php">Просмотр накладных</a>
+                    <a href="../m_buy/buy_add.php">Оформить накладную</a>
+                    <a href="../m_buy/invoices.php">Просмотр накладных</a>
             </div>
             <div class="sells__body">
                 <div class="sells__row">
