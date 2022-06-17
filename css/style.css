@@ -343,18 +343,21 @@ h6 {
 
 /*ТАБЛИЦА      ТАБЛИЦА       ТАБЛИЦА       ТАБЛИЦА      ТАБЛИЦА       ТАБЛИЦА         ТАБЛИЦА         ТАБЛИЦА        ТАБЛИЦА*/
 
-.employ p {
-    display: block;
-    text-transform: uppercase;
-    background: #d3d2d2;
-    font-size: 24px;
-    color: #fff;
-    border: 1px solid #000;
+.employ div {
+    background: #fff;
+    font-size: 16pt;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    color: #1240AB;
+    box-shadow: 0 0 5px gray;
+    border-radius: 15px;
+    padding: 15px;
     width: 100%;
 }
 
 .employ {
-    text-align: center;
+    display: flex;
+    justify-content: flex-start;
 }
 
 

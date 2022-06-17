@@ -100,6 +100,9 @@ if(!$_SESSION['login']){
                                     <a href="../work.php" class="header_link">Сотрудники</a>
                                 </li>
                                 <li>
+                                    <a href="../counterparties.php" class="header_link">Контрагенты</a>
+                                </li>
+                                <li>
                                     <a href="#" class="header_link">Контакты</a>
                                 </li>
                                     <li>
